@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BNI 서초 메이저 챕터 · 멤버 PR</title>
+<meta name="description" content="BNI 서초 메이저 챕터 39명의 대표를 매주 한 명씩 깊이 소개합니다. 서로의 사업을 추천하는 사람들." />
+<meta property="og:title" content="BNI 서초 메이저 챕터 · 멤버 PR" />
+<meta property="og:description" content="매주 한 명, 39명의 대표를 깊이 소개합니다." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+<style>
+:root{
+  --bni-orange:#FF8200;
+  --bni-orange-soft:#FFB763;
+  --bni-orange-bg:#FFF4E5;
+  --bni-navy:#0E1F5C;
+  --bni-navy-2:#1B3380;
+  --ink:#0E1422;
+  --ink-2:#3A435A;
+  --ink-3:#6B7388;
+  --line:#E5E8EF;
+  --line-2:#F1F3F8;
+  --bg:#FAFBFD;
+  --white:#FFFFFF;
+  --shadow-sm:0 1px 2px rgba(14,31,92,.04), 0 4px 12px rgba(14,31,92,.04);
+  --shadow-md:0 6px 24px rgba(14,31,92,.08), 0 1px 4px rgba(14,31,92,.06);
+  --shadow-lg:0 24px 60px rgba(14,31,92,.18);
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-xl:28px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue",Arial,"Noto Sans KR",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ── Top bar ────────────────────────────── */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:1240px;margin:0 auto;padding:14px 24px;
+  display:flex;align-items:center;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.01em}
+.brand-mark{
+  width:30px;height:30px;border-radius:8px;
+  background:linear-gradient(135deg,var(--bni-orange),#FF6A00);
+  display:grid;place-items:center;color:#fff;font-size:13px;font-weight:900;
+  box-shadow:0 4px 12px rgba(255,130,0,.35);
+}
+.brand-text{font-size:15px}
+.brand-text small{display:block;font-size:11px;font-weight:600;color:var(--ink-3)}
+.topbar-spacer{flex:1}
+.topbar-actions{display:flex;gap:8px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 14px;border-radius:999px;
+  font-weight:600;font-size:13px;letter-spacing:-.01em;
+  transition:transform .12s ease, box-shadow .12s ease, background .15s;
+}
+.btn-ghost{color:var(--ink-2)}
+.btn-ghost:hover{background:var(--line-2);color:var(--ink)}
+.btn-primary{background:var(--bni-navy);color:#fff}
+.btn-primary:hover{background:var(--bni-navy-2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(14,31,92,.25)}
+.btn-orange{background:var(--bni-orange);color:#fff}
+.btn-orange:hover{background:#FF6A00;transform:translateY(-1px);box-shadow:0 6px 18px rgba(255,130,0,.32)}
+
+/* ── Hero ────────────────────────────── */
+.hero{position:relative;overflow:hidden;background:var(--bni-navy);color:#fff}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(255,130,0,.35), transparent 60%),
+    radial-gradient(700px 500px at -10% 110%, rgba(255,130,0,.18), transparent 60%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1240px;margin:0 auto;padding:80px 24px 64px;position:relative;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 12px;border-radius:999px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+  font-size:12px;font-weight:600;letter-spacing:.02em;
+}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--bni-orange);box-shadow:0 0 0 4px rgba(255,130,0,.25)}
+.hero h1{
+  margin:18px 0 14px;font-size:clamp(34px,5.4vw,58px);line-height:1.05;letter-spacing:-.025em;font-weight:800;
+}
+.hero h1 em{font-style:normal;color:var(--bni-orange)}
+.hero p{font-size:clamp(15px,1.4vw,18px);color:#D5DBEC;max-width:640px;margin:0 0 26px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:18px}
+.hero-stat .num{font-size:32px;font-weight:800;letter-spacing:-.02em}
+.hero-stat .lab{font-size:12px;color:#A6B0CC;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+
+/* ── Featured (이번 주의 대표) ────────────────────────────── */
+.featured-wrap{max-width:1240px;margin:-44px auto 0;padding:0 24px;position:relative;z-index:2}
+.featured{
+  background:#fff;border-radius:var(--r-xl);box-shadow:var(--shadow-lg);
+  display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;
+  border:1px solid rgba(14,31,92,.05);
+}
+.featured-meta{padding:36px 36px 32px;display:flex;flex-direction:column}
+.feature-tag{
+  align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+  padding:6px 12px;border-radius:999px;background:var(--bni-orange-bg);color:#A95400;
+  font-size:12px;font-weight:700;letter-spacing:.02em;margin-bottom:18px;
+}
+.feature-tag::before{content:"★";font-size:11px}
+.featured-name{font-size:14px;color:var(--ink-3);font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+.featured-headline{margin:6px 0 8px;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.02em;font-weight:800}
+.featured-headline em{font-style:normal;color:var(--bni-orange)}
+.featured-sub{font-size:15px;color:var(--ink-2);margin:0 0 18px}
+.featured-info{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:14px;margin:6px 0 22px}
+.featured-info dt{color:var(--ink-3);font-weight:600}
+.featured-info dd{margin:0;color:var(--ink-2)}
+.featured-cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.chip{padding:5px 10px;border-radius:999px;background:var(--line-2);color:var(--ink-2);font-size:12px;font-weight:600}
+.featured-art{
+  position:relative;background:linear-gradient(135deg,#0B1849 0%,#1B3380 60%,#27408F 100%);
+  display:grid;place-items:center;padding:24px;min-height:380px;
+}
+.featured-art img{
+  width:100%;max-width:420px;border-radius:18px;
+  box-shadow:0 30px 80px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.2);
+  transform:rotate(-2deg);transition:transform .4s cubic-bezier(.2,.7,.2,1);
+}
+.featured-art:hover img{transform:rotate(0deg) scale(1.02)}
+.featured-art-tag{
+  position:absolute;top:18px;right:18px;
+  padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;
+  border:1px solid rgba(255,255,255,.22);font-size:11px;font-weight:600;letter-spacing:.04em;
+  backdrop-filter:blur(8px);
+}
+
+/* ── Section header ────────────────────────────── */
+.section{max-width:1240px;margin:0 auto;padding:80px 24px 24px}
+.section-h{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:22px}
+.section-h h2{margin:0;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;font-weight:800}
+.section-h .meta{color:var(--ink-3);font-size:14px;font-weight:600}
+
+/* ── Filters ────────────────────────────── */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 22px;align-items:center}
+.search{
+  display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;
+  background:#fff;border:1px solid var(--line);color:var(--ink-2);
+  flex:1 1 240px;max-width:340px;
+}
+.search input{
+  border:none;outline:none;background:transparent;color:var(--ink);
+  width:100%;font:inherit;
+}
+.search svg{flex-shrink:0;color:var(--ink-3)}
+.cat-chip{
+  padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);
+  color:var(--ink-2);font-size:13px;font-weight:600;transition:all .15s;
+}
+.cat-chip:hover{border-color:var(--bni-orange);color:var(--bni-orange)}
+.cat-chip.active{background:var(--bni-navy);border-color:var(--bni-navy);color:#fff}
+
+/* ── Grid ────────────────────────────── */
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;
+}
+.card{
+  position:relative;background:#fff;border-radius:var(--r-lg);
+  border:1px solid var(--line);box-shadow:var(--shadow-sm);
+  overflow:hidden;transition:transform .18s ease, box-shadow .18s ease, border-color .18s;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#D7DDE9}
+.card-top{
+  position:relative;height:130px;
+  background:linear-gradient(135deg,#1B3380,#0E1F5C);
+  display:flex;align-items:flex-end;padding:16px;
+}
+.card-top.featured-bg{background:linear-gradient(135deg,#FF8200,#FF6A00)}
+.card-status{
+  position:absolute;top:12px;right:12px;
+  padding:4px 10px;border-radius:999px;
+  background:rgba(255,255,255,.18);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.04em;
+  backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2);
+}
+.card-status.feat{background:#fff;color:#A95400}
+.card-order{
+  position:absolute;left:14px;top:12px;
+  font-size:11px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.04em;
+}
+.card-body{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1}
+.card-name{font-size:18px;font-weight:800;letter-spacing:-.01em;margin:0}
+.card-role{font-size:13px;color:var(--ink-3);margin:4px 0 10px}
+.card-company{font-size:14px;font-weight:700;color:var(--bni-navy);margin:0 0 6px}
+.card-industry{font-size:13px;color:var(--ink-2);margin:0 0 14px;flex:1}
+.card-go{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 14px;border-radius:999px;
+  background:var(--line-2);color:var(--ink);font-size:12px;font-weight:700;
+  align-self:flex-start;transition:all .15s;
+}
+.card:hover .card-go{background:var(--bni-navy);color:#fff}
+.card-go.disabled{color:var(--ink-3);background:transparent;border:1px dashed var(--line);pointer-events:none}
+
+/* ── How it works ────────────────────────────── */
+.how{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);
+  padding:34px;margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.how-step{display:flex;flex-direction:column;gap:8px}
+.how-num{
+  width:32px;height:32px;border-radius:10px;display:grid;place-items:center;
+  background:var(--bni-orange-bg);color:#A95400;font-weight:900;font-size:14px;
+}
+.how-step h3{margin:0;font-size:16px;letter-spacing:-.01em}
+.how-step p{margin:0;color:var(--ink-2);font-size:14px}
+
+/* ── Footer ────────────────────────────── */
+footer{
+  margin-top:80px;background:var(--bni-navy);color:#A6B0CC;
+}
+.foot-inner{max-width:1240px;margin:0 auto;padding:40px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+.foot-brand{color:#fff;font-weight:700}
+.foot-tag{font-size:12px}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width:880px){
+  .featured{grid-template-columns:1fr}
+  .featured-art{min-height:280px;padding:36px 24px}
+  .featured-art img{max-width:340px}
+  .how{grid-template-columns:1fr;padding:24px}
+}
+@media (max-width:640px){
+  .topbar-inner{padding:12px 16px}
+  .hero-inner{padding:56px 16px 48px}
+  .featured-wrap{padding:0 16px}
+  .featured-meta{padding:28px 22px 24px}
+  .section{padding:56px 16px 16px}
+  .hero-stats{gap:18px}
+  .hero-stat .num{font-size:26px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark">B</span>
+      <span class="brand-text">서초 BNI 메이저<small>Member PR · 매주 1명</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="topbar-actions">
+      <a class="btn btn-ghost" href="#members">멤버</a>
+      <a class="btn btn-ghost" href="#how">참여 방법</a>
+      <a class="btn btn-orange" id="featuredCta" href="#featured">이번 주 피처드 →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="dot"></span>BNI Major · Seocho Chapter</div>
+    <h1>매주 한 명,<br/>서로의 사업을 <em>추천</em>합니다.</h1>
+    <p>BNI 서초 메이저 챕터 39명의 대표가 매주 한 명씩 깊이 있게 소개됩니다. 디지털 명함 · 실물 명함 · 인포그래픽 · 상세 PPT까지, 한 페이지에서 만나보세요.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num" id="statTotal">39</div><div class="lab">총 멤버 수</div></div>
+      <div class="hero-stat"><div class="num" id="statFeatured">1</div><div class="lab">이번 주 피처드</div></div>
+      <div class="hero-stat"><div class="num" id="statCategories">10+</div><div class="lab">전문 업종</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="featured-wrap" id="featured">
+  <article class="featured" id="featuredCard">
+    <!-- populated by JS -->
+  </article>
+</div>
+
+<section class="section" id="members">
+  <div class="section-h">
+    <h2>전체 멤버</h2>
+    <div class="meta" id="resultCount">39명</div>
+  </div>
+
+  <div class="filters">
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="search" type="search" placeholder="이름·회사·업종 검색" />
+    </label>
+    <div id="cats" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="section" id="how">
+  <div class="section-h"><h2>이렇게 운영됩니다</h2></div>
+  <div class="how">
+    <div class="how-step">
+      <div class="how-num">1</div>
+      <h3>매주 1명 피처드</h3>
+      <p>한 주에 한 분씩 디지털 명함 · 명함 앞뒤 · 인포그래픽 · 상세 PPT까지 4종 자산을 공개합니다.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-num">2</div>
+      <h3>리퍼럴 가이드 제공</h3>
+      <p>각 대표님이 찾고 있는 리퍼럴 타깃이 명확히 적혀 있어, 주변 분 누구를 소개해야 할지 바로 판단됩니다.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-num">3</div>
+      <h3>누구나 공유 가능</h3>
+      <p>링크 한 줄이면 카톡·메일·SNS 어디든 공유. PDF·PPT 다운로드도 한 번에 됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">서초 BNI 메이저 챕터</div>
+      <div class="foot-tag">Givers Gain · Business Referral Organization</div>
+    </div>
+    <div class="foot-tag" id="updatedAt"></div>
+  </div>
+</footer>
+
+<script>
+const STATUS_LABEL = { featured:"이번 주", upcoming:"공개 예정", archived:"이전 피처드" };
+
+let data = null;
+
+async function loadData(){
+  const res = await fetch("data/members.json", {cache:"no-store"});
+  data = await res.json();
+  renderAll();
+}
+
+function renderAll(){
+  document.getElementById("statTotal").textContent = data.members.length;
+  document.getElementById("statFeatured").textContent = data.members.filter(m=>m.status==="featured").length;
+  const cats = [...new Set(data.members.map(m=>m.category).filter(Boolean))];
+  document.getElementById("statCategories").textContent = cats.length;
+  document.getElementById("updatedAt").textContent = "마지막 업데이트 · " + (data.lastUpdated || "");
+
+  renderFeatured();
+  renderCats(cats);
+  renderGrid();
+}
+
+function renderFeatured(){
+  const m = data.members.find(x => x.id === data.featuredId) || data.members[0];
+  const el = document.getElementById("featuredCard");
+  const expertiseChips = (m.expertise||[]).map(x=>`<span class="chip">${x}</span>`).join("");
+  const referralChips = (m.referralTargets||[]).map(x=>`<span class="chip">${x}</span>`).join("");
+  el.innerHTML = `
+    <div class="featured-meta">
+      <span class="feature-tag">FEATURED · ${data.lastUpdated}</span>
+      <div class="featured-name">${m.company} · ${m.title || "대표"} ${m.name}</div>
+      <h3 class="featured-headline">${m.tagline || ""}</h3>
+      <p class="featured-sub">${m.subTagline || ""}</p>
+      <dl class="featured-info">
+        <dt>전문분야</dt><dd>${(m.expertise||[]).join(" · ") || "-"}</dd>
+        <dt>희망 리퍼럴</dt><dd>${(m.referralTargets||[]).join(" · ") || "-"}</dd>
+        <dt>연락처</dt><dd>${m.phone || "-"}</dd>
+      </dl>
+      ${expertiseChips ? `<div class="chips">${expertiseChips}</div>` : ""}
+      <div class="featured-cta">
+        <a class="btn btn-primary" href="member.html?id=${m.id}">상세 페이지 보기 →</a>
+        <a class="btn btn-ghost" href="${m.assets?.presentation || '#'}" download>PPT 다운로드</a>
+      </div>
+    </div>
+    <div class="featured-art">
+      <span class="featured-art-tag">디지털 명함</span>
+      <a href="member.html?id=${m.id}"><img src="${m.assets?.digitalCard || ''}" alt="${m.name} 디지털 명함" onerror="this.style.opacity=.3" /></a>
+    </div>
+  `;
+}
+
+function renderCats(cats){
+  const container = document.getElementById("cats");
+  const all = ["전체", ...cats];
+  container.innerHTML = all.map((c,i)=>`<button class="cat-chip ${i===0?'active':''}" data-cat="${c}">${c}</button>`).join("");
+  container.addEventListener("click", e=>{
+    const btn = e.target.closest(".cat-chip"); if(!btn) return;
+    container.querySelectorAll(".cat-chip").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    renderGrid();
+  });
+}
+
+function renderGrid(){
+  const q = (document.getElementById("search").value || "").trim().toLowerCase();
+  const activeCat = document.querySelector(".cat-chip.active")?.dataset.cat || "전체";
+  const filtered = data.members.filter(m=>{
+    if(activeCat!=="전체" && m.category !== activeCat) return false;
+    if(q){
+      const hay = [m.name,m.company,m.industry,m.category,m.tagline].filter(Boolean).join(" ").toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  document.getElementById("resultCount").textContent = `${filtered.length}명`;
+  const grid = document.getElementById("grid");
+  grid.innerHTML = filtered.map(m=>{
+    const isFeat = m.status==="featured";
+    const isReady = isFeat || m.status==="archived";
+    const stCls = isFeat ? "card-status feat" : "card-status";
+    const topCls = isFeat ? "card-top featured-bg" : "card-top";
+    const status = STATUS_LABEL[m.status] || "공개 예정";
+    return `
+      <a class="card" href="${isReady?`member.html?id=${m.id}`:'#'}" ${isReady?'':'onclick="return false" style="cursor:default"'}>
+        <div class="${topCls}">
+          <span class="card-order">No. ${String(m.order).padStart(2,"0")}</span>
+          <span class="${stCls}">${status}</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">${m.name}</h3>
+          <div class="card-role">${m.title || "대표"}${m.category ? " · " + m.category : ""}</div>
+          <div class="card-company">${m.company || ""}</div>
+          <div class="card-industry">${m.industry || ""}</div>
+          <span class="card-go ${isReady?'':'disabled'}">${isReady?'프로필 보기 →':'준비중'}</span>
+        </div>
+      </a>
+    `;
+  }).join("");
+}
+
+document.getElementById("search").addEventListener("input", renderGrid);
+
+loadData().catch(err=>{
+  console.error(err);
+  document.getElementById("grid").innerHTML = `<div style="color:var(--ink-3);grid-column:1/-1;text-align:center;padding:40px">데이터 로드 실패. 로컬 서버로 열어주세요. (예: <code>python -m http.server 8765</code>)</div>`;
+});
+</script>
+</body>
+</html>

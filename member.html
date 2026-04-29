@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>로딩 중… · BNI 서초 메이저</title>
+<meta name="description" content="BNI 서초 메이저 챕터 멤버 상세 소개" />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+<style>
+:root{
+  --bni-orange:#FF8200;
+  --bni-orange-soft:#FFB763;
+  --bni-orange-bg:#FFF4E5;
+  --bni-navy:#0E1F5C;
+  --bni-navy-2:#1B3380;
+  --ink:#0E1422;
+  --ink-2:#3A435A;
+  --ink-3:#6B7388;
+  --line:#E5E8EF;
+  --line-2:#F1F3F8;
+  --bg:#FAFBFD;
+  --shadow-sm:0 1px 2px rgba(14,31,92,.04), 0 4px 12px rgba(14,31,92,.04);
+  --shadow-md:0 6px 24px rgba(14,31,92,.08), 0 1px 4px rgba(14,31,92,.06);
+  --shadow-lg:0 24px 60px rgba(14,31,92,.18);
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-xl:28px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue",Arial,"Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+img{max-width:100%;display:block}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.01em}
+.brand-mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--bni-orange),#FF6A00);display:grid;place-items:center;color:#fff;font-size:13px;font-weight:900;box-shadow:0 4px 12px rgba(255,130,0,.35)}
+.brand-text{font-size:15px}
+.brand-text small{display:block;font-size:11px;font-weight:600;color:var(--ink-3)}
+.topbar-spacer{flex:1}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:-.01em;transition:all .12s}
+.btn-ghost{color:var(--ink-2)}
+.btn-ghost:hover{background:var(--line-2);color:var(--ink)}
+.btn-primary{background:var(--bni-navy);color:#fff}
+.btn-primary:hover{background:var(--bni-navy-2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(14,31,92,.25)}
+.btn-orange{background:var(--bni-orange);color:#fff}
+.btn-orange:hover{background:#FF6A00;transform:translateY(-1px);box-shadow:0 6px 18px rgba(255,130,0,.32)}
+
+/* Hero */
+.profile-hero{
+  position:relative;background:var(--bni-navy);color:#fff;overflow:hidden;
+}
+.profile-hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(800px 400px at 90% 0%, rgba(255,130,0,.32), transparent 60%),
+    radial-gradient(700px 500px at -10% 110%, rgba(255,130,0,.16), transparent 60%);
+  pointer-events:none;
+}
+.profile-hero-inner{max-width:1240px;margin:0 auto;padding:50px 24px 70px;position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+.crumb{font-size:12px;font-weight:700;letter-spacing:.06em;color:#A6B0CC;text-transform:uppercase;margin-bottom:14px}
+.crumb a{color:var(--bni-orange-soft)}
+.profile-h1{font-size:clamp(28px,4.4vw,46px);line-height:1.08;letter-spacing:-.025em;font-weight:800;margin:0 0 12px}
+.profile-h1 em{font-style:normal;color:var(--bni-orange)}
+.profile-sub{font-size:clamp(14px,1.4vw,17px);color:#D5DBEC;margin:0 0 22px;max-width:580px}
+.profile-meta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
+.profile-meta .pill{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:600}
+.profile-cta{display:flex;flex-wrap:wrap;gap:8px}
+.profile-cta .btn-orange{box-shadow:0 8px 22px rgba(255,130,0,.32)}
+
+.hero-card{
+  background:#fff;border-radius:var(--r-xl);box-shadow:var(--shadow-lg);
+  padding:6px;
+  transform:rotate(-1.5deg);transition:transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.hero-card:hover{transform:rotate(0deg) translateY(-3px)}
+.hero-card img{border-radius:22px;display:block;width:100%}
+
+/* Sections */
+.wrap{max-width:1240px;margin:0 auto;padding:48px 24px}
+.row{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:flex-start}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:30px;box-shadow:var(--shadow-sm)}
+.card h2{margin:0 0 6px;font-size:20px;letter-spacing:-.01em}
+.card .lead{color:var(--ink-3);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin:0 0 14px}
+.card p{margin:0 0 12px;color:var(--ink-2)}
+
+.bullet-list{list-style:none;padding:0;margin:6px 0 0}
+.bullet-list li{position:relative;padding:8px 0 8px 26px;border-bottom:1px solid var(--line-2);font-size:15px;color:var(--ink-2)}
+.bullet-list li:last-child{border-bottom:none}
+.bullet-list li::before{
+  content:"";position:absolute;left:0;top:14px;width:14px;height:14px;border-radius:4px;
+  background:var(--bni-orange);box-shadow:inset 0 0 0 3px #fff, 0 0 0 1px var(--bni-orange);
+}
+
+.contact{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px}
+.contact dt{color:var(--ink-3);font-weight:700;letter-spacing:.02em}
+.contact dd{margin:0;color:var(--ink)}
+.contact dd a{color:var(--bni-navy);font-weight:600;border-bottom:1px solid transparent;transition:border .15s}
+.contact dd a:hover{border-bottom-color:var(--bni-navy)}
+
+/* Asset grid */
+.assets-section h2{font-size:24px;letter-spacing:-.02em;margin:0 0 6px}
+.assets-section .lead{color:var(--ink-3);margin:0 0 22px}
+.asset-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.asset{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:all .18s}
+.asset:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.asset-thumb{aspect-ratio:4/3;background:var(--line-2);position:relative;overflow:hidden;display:grid;place-items:center}
+.asset-thumb img{width:100%;height:100%;object-fit:cover}
+.asset-thumb.empty{background:repeating-linear-gradient(45deg,#F3F5FA 0 12px,#EDF0F6 12px 24px);color:var(--ink-3);font-size:13px;text-align:center;padding:24px;font-weight:600}
+.asset-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.asset-kind{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--bni-orange);text-transform:uppercase}
+.asset-title{margin:0;font-size:15px;font-weight:700;letter-spacing:-.01em}
+.asset-desc{margin:0;font-size:13px;color:var(--ink-3);flex:1}
+.asset-actions{display:flex;gap:6px;flex-wrap:wrap}
+.asset-actions a{padding:6px 12px;border-radius:999px;background:var(--line-2);font-size:12px;font-weight:700;color:var(--ink-2);transition:all .15s}
+.asset-actions a:hover{background:var(--bni-navy);color:#fff}
+
+/* PPT preview */
+.ppt-card{background:linear-gradient(135deg,#0B1849 0%,#1B3380 100%);color:#fff;border-radius:var(--r-xl);padding:40px;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center;margin-top:18px}
+.ppt-card h2{margin:0 0 6px;font-size:24px;letter-spacing:-.02em}
+.ppt-card p{color:#C4CCE3;margin:0 0 14px;font-size:15px}
+.ppt-card .ppt-icon{display:grid;place-items:center}
+.ppt-card svg{width:120px;height:120px;opacity:.92}
+
+/* Nav prev/next */
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:48px}
+.pager a{flex:1;padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);transition:all .15s}
+.pager a:hover{border-color:var(--bni-orange);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.pager small{display:block;color:var(--ink-3);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.pager strong{display:block;margin-top:4px;font-size:15px;letter-spacing:-.01em}
+
+footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
+.foot-inner{max-width:1240px;margin:0 auto;padding:34px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+.foot-brand{color:#fff;font-weight:700}
+.foot-tag{font-size:12px}
+
+/* Empty state */
+.empty-page{max-width:560px;margin:80px auto;padding:40px;text-align:center;background:#fff;border-radius:var(--r-xl);border:1px solid var(--line);box-shadow:var(--shadow-md)}
+.empty-page h1{margin:0 0 12px;font-size:24px}
+.empty-page p{color:var(--ink-3);margin:0 0 22px}
+
+@media (max-width:880px){
+  .profile-hero-inner{grid-template-columns:1fr;gap:24px;padding:40px 16px 56px}
+  .row{grid-template-columns:1fr}
+  .ppt-card{grid-template-columns:1fr;padding:30px 24px}
+  .ppt-card svg{width:80px;height:80px;margin:0 auto}
+  .topbar-inner{padding:12px 16px}
+  .wrap{padding:36px 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark">B</span>
+      <span class="brand-text">서초 BNI 메이저<small>Member PR</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <a class="btn btn-ghost" href="./">← 멤버 목록</a>
+    <button class="btn btn-orange" id="shareBtn">공유 링크 복사</button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="empty-page">
+    <h1>로딩 중…</h1>
+    <p>잠시만 기다려주세요.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">서초 BNI 메이저 챕터</div>
+      <div class="foot-tag">Givers Gain · Business Referral Organization</div>
+    </div>
+    <div class="foot-tag" id="updatedAt"></div>
+  </div>
+</footer>
+
+<script>
+const params = new URLSearchParams(location.search);
+const memberId = params.get("id");
+
+async function load(){
+  const res = await fetch("data/members.json", {cache:"no-store"});
+  const data = await res.json();
+  document.getElementById("updatedAt").textContent = "마지막 업데이트 · " + (data.lastUpdated || "");
+  const m = data.members.find(x => x.id === memberId);
+  if(!m){ renderNotFound(); return; }
+  if(!m.tagline && m.status === "upcoming"){ renderUpcoming(m); return; }
+  render(m, data);
+}
+
+function renderNotFound(){
+  document.title = "찾을 수 없음 · BNI 서초 메이저";
+  document.getElementById("main").innerHTML = `
+    <div class="empty-page">
+      <h1>대표님을 찾을 수 없습니다</h1>
+      <p>잘못된 링크이거나, 아직 공개되지 않은 멤버일 수 있어요.</p>
+      <a class="btn btn-primary" href="./">멤버 목록으로 돌아가기</a>
+    </div>`;
+}
+
+function renderUpcoming(m){
+  document.title = `${m.name} 대표 · 공개 예정`;
+  document.getElementById("main").innerHTML = `
+    <div class="empty-page">
+      <h1>${m.name} 대표 (${m.company})</h1>
+      <p>곧 공개 예정입니다. 매주 1명씩 자료가 업데이트되니 조금만 기다려주세요.</p>
+      <p style="font-size:13px"><strong>업종:</strong> ${m.industry || "-"} &nbsp;·&nbsp; <strong>분야:</strong> ${m.category || "-"}</p>
+      <a class="btn btn-primary" href="./">멤버 목록으로 돌아가기</a>
+    </div>`;
+}
+
+function render(m, data){
+  document.title = `${m.name} 대표 · ${m.company} · BNI 서초 메이저`;
+  const expertise = (m.expertise || []).map(x => `<li>${x}</li>`).join("");
+  const referrals = (m.referralTargets || []).map(x => `<li>${x}</li>`).join("");
+  const value = (m.valueProps || []).map(x => `<p>${x}</p>`).join("");
+
+  // pager (prev/next)
+  const idx = data.members.findIndex(x => x.id === m.id);
+  const prev = data.members[idx-1];
+  const next = data.members[idx+1];
+  const pagerHtml = `
+    <div class="pager">
+      ${prev ? `<a href="member.html?id=${prev.id}"><small>← 이전</small><strong>${prev.name} · ${prev.company}</strong></a>` : `<span></span>`}
+      ${next ? `<a href="member.html?id=${next.id}" style="text-align:right"><small>다음 →</small><strong>${next.name} · ${next.company}</strong></a>` : `<span></span>`}
+    </div>`;
+
+  const assets = m.assets || {};
+  const assetsHtml = `
+    <div class="asset-grid">
+      ${assetCard("디지털 명함", "한 장으로 보는 핵심 정보. 카톡·SNS 공유에 최적.", assets.digitalCard, "이미지 보기")}
+      ${assetCard("실물 명함 · 앞", "실제 명함의 정면 디자인.", assets.cardFront, "이미지 보기")}
+      ${assetCard("실물 명함 · 뒤", "연락처와 주소가 담긴 명함 뒷면.", assets.cardBack, "이미지 보기")}
+      ${assetCard("인포그래픽", "한 장으로 정리된 사업 소개 인포그래픽.", assets.infographic, "이미지 보기")}
+    </div>
+  `;
+
+  document.getElementById("main").innerHTML = `
+    <section class="profile-hero">
+      <div class="profile-hero-inner">
+        <div>
+          <div class="crumb"><a href="./">멤버 목록</a> &nbsp;/&nbsp; ${m.category || "BNI Major"}</div>
+          <h1 class="profile-h1">${m.tagline || `${m.name} 대표`}</h1>
+          <p class="profile-sub">${m.subTagline || ""}</p>
+          <div class="profile-meta">
+            <span class="pill">${m.company}</span>
+            <span class="pill">${m.title || "대표"} ${m.name}</span>
+            ${m.industry ? `<span class="pill">${m.industry}</span>` : ""}
+          </div>
+          <div class="profile-cta">
+            ${assets.presentation ? `<a class="btn btn-orange" href="${assets.presentation}" download>📑 상세 PPT 다운로드</a>` : ""}
+            ${m.phone ? `<a class="btn btn-primary" href="tel:${m.phone.replace(/[^0-9]/g,'')}">전화 ${m.phone}</a>` : ""}
+            ${m.email ? `<a class="btn btn-ghost" href="mailto:${m.email}">${m.email}</a>` : ""}
+          </div>
+        </div>
+        ${assets.digitalCard ? `<div class="hero-card"><img src="${assets.digitalCard}" alt="${m.name} 디지털 명함" /></div>` : ""}
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="row">
+        <div class="card">
+          <p class="lead">About</p>
+          <h2>${m.tagline || `${m.name} 대표`}</h2>
+          ${value || `<p>${m.subTagline || ""}</p>`}
+          ${expertise ? `<p class="lead" style="margin-top:24px">전문 분야</p><ul class="bullet-list">${expertise}</ul>` : ""}
+        </div>
+
+        <aside style="display:flex;flex-direction:column;gap:18px">
+          <div class="card">
+            <p class="lead">희망 리퍼럴</p>
+            <h2>이런 분을 소개해주세요</h2>
+            ${referrals ? `<ul class="bullet-list">${referrals}</ul>` : "<p>준비중</p>"}
+          </div>
+
+          <div class="card">
+            <p class="lead">Contact</p>
+            <h2>연락처</h2>
+            <dl class="contact" style="margin-top:14px">
+              ${m.phone ? `<dt>M</dt><dd><a href="tel:${m.phone.replace(/[^0-9]/g,'')}">${m.phone}</a></dd>` : ""}
+              ${m.email ? `<dt>E</dt><dd><a href="mailto:${m.email}">${m.email}</a></dd>` : ""}
+              ${m.address ? `<dt>A</dt><dd>${m.address}</dd>` : ""}
+            </dl>
+          </div>
+        </aside>
+      </div>
+
+      <section class="wrap" style="padding:60px 0 0">
+        <div class="assets-section">
+          <h2>자료 4종</h2>
+          <p class="lead">디지털 명함 · 실물 명함 앞/뒤 · 인포그래픽까지 한 페이지에서 확인하세요.</p>
+          ${assetsHtml}
+        </div>
+      </section>
+
+      ${assets.presentation ? `
+      <div class="ppt-card">
+        <div>
+          <p style="color:#FFB763;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px">상세 자료</p>
+          <h2>${m.name} 대표 · 상세 소개 PPT</h2>
+          <p>${m.tagline || ""} ${m.subTagline ? "— " + m.subTagline : ""}</p>
+          <a class="btn btn-orange" href="${assets.presentation}" download>📑 PPT 다운로드</a>
+        </div>
+        <div class="ppt-icon">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="14" width="80" height="100" rx="8" fill="#fff" opacity=".95"/>
+            <rect x="32" y="34" width="56" height="6" rx="2" fill="#FF8200"/>
+            <rect x="32" y="48" width="40" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
+            <rect x="32" y="58" width="56" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
+            <rect x="32" y="68" width="48" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
+            <rect x="32" y="84" width="56" height="20" rx="3" fill="#FFF4E5"/>
+            <rect x="38" y="92" width="44" height="4" rx="2" fill="#FF8200"/>
+          </svg>
+        </div>
+      </div>` : ""}
+
+      ${pagerHtml}
+    </div>
+  `;
+}
+
+function assetCard(kind, desc, src, btn){
+  if(src){
+    return `
+      <div class="asset">
+        <a class="asset-thumb" href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${kind}" onerror="this.parentElement.classList.add('empty');this.parentElement.innerHTML='이미지를 곧 추가합니다'"></a>
+        <div class="asset-body">
+          <div class="asset-kind">${kind}</div>
+          <h3 class="asset-title">${kind}</h3>
+          <p class="asset-desc">${desc}</p>
+          <div class="asset-actions">
+            <a href="${src}" target="_blank" rel="noopener">${btn}</a>
+            <a href="${src}" download>다운로드</a>
+          </div>
+        </div>
+      </div>`;
+  }
+  return `
+    <div class="asset">
+      <div class="asset-thumb empty">${kind}<br/><small style="font-weight:500;color:var(--ink-3);font-size:11px">곧 업데이트됩니다</small></div>
+      <div class="asset-body">
+        <div class="asset-kind">${kind}</div>
+        <h3 class="asset-title">${kind}</h3>
+        <p class="asset-desc">${desc}</p>
+        <div class="asset-actions"><span style="padding:6px 12px;border-radius:999px;background:var(--line-2);font-size:12px;font-weight:700;color:var(--ink-3)">준비중</span></div>
+      </div>
+    </div>`;
+}
+
+document.getElementById("shareBtn").addEventListener("click", async ()=>{
+  const url = location.href;
+  try{
+    if(navigator.share){ await navigator.share({title:document.title, url}); return; }
+    await navigator.clipboard.writeText(url);
+    const b = document.getElementById("shareBtn");
+    const orig = b.textContent; b.textContent = "복사 완료 ✓";
+    setTimeout(()=>b.textContent = orig, 2000);
+  }catch(e){ console.warn(e); }
+});
+
+load().catch(err=>{
+  console.error(err);
+  document.getElementById("main").innerHTML = `
+    <div class="empty-page">
+      <h1>데이터를 불러오지 못했습니다</h1>
+      <p>로컬에서 열 때는 <code>python -m http.server 8765</code>로 서버를 띄우거나, GitHub Pages에서 확인해주세요.</p>
+    </div>`;
+});
+</script>
+</body>
+</html>
