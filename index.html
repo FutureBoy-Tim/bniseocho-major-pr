@@ -8,9 +8,14 @@
 <meta property="og:title" content="BNI 서초 메이저 챕터 · 멤버 PR" />
 <meta property="og:description" content="매주 한 명, 39명의 대표를 깊이 소개합니다." />
 <meta property="og:type" content="website" />
+<meta property="og:image" id="ogImage" content="" />
+<meta property="og:site_name" content="BNI 서초 메이저 챕터" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js" defer></script>
+<script src="assets/share-kit.js" defer></script>
 <style>
 :root{
   --bni-orange:#FF8200;
@@ -216,6 +221,18 @@ img{max-width:100%;display:block}
 .card:hover .card-go{background:var(--bni-navy);color:#fff}
 .card-go.disabled{color:var(--ink-3);background:transparent;border:1px dashed var(--line);pointer-events:none}
 
+/* ── Share CTA section ─────────────────────────── */
+.share-cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.share-cta-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:30px;display:flex;flex-direction:column;gap:8px;transition:all .18s}
+.share-cta-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.share-cta-card.highlight{background:linear-gradient(135deg,#FFF4E5,#FFE6C9);border-color:#FFD09A}
+.share-cta-card.highlight .cta-eyebrow{color:var(--bni-orange-deep,#A95400)}
+.cta-eyebrow{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--bni-orange);text-transform:uppercase}
+.share-cta-card h3{margin:6px 0 4px;font-size:20px;letter-spacing:-.015em}
+.share-cta-card p{margin:0 0 14px;color:var(--ink-2);font-size:14px;line-height:1.55;flex:1}
+.share-cta-actions{display:flex;flex-wrap:wrap;gap:8px}
+@media (max-width:760px){.share-cta-grid{grid-template-columns:1fr}}
+
 /* ── How it works ────────────────────────────── */
 .how{
   background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);
@@ -266,9 +283,9 @@ footer{
     </a>
     <span class="topbar-spacer"></span>
     <nav class="topbar-actions">
+      <a class="btn btn-ghost" href="intro.html">챕터 소개</a>
       <a class="btn btn-ghost" href="#members">멤버</a>
-      <a class="btn btn-ghost" href="#how">참여 방법</a>
-      <a class="btn btn-orange" id="featuredCta" href="#featured">이번 주 피처드 →</a>
+      <button class="btn btn-orange" id="topShareBtn">📢 외부에 공유</button>
     </nav>
   </div>
 </header>
@@ -307,6 +324,36 @@ footer{
   </div>
 
   <div class="grid" id="grid"></div>
+</section>
+
+<section class="section" id="share">
+  <div class="section-h">
+    <div>
+      <h2>다른 모임·커뮤니티에 알리고 싶다면</h2>
+      <div class="meta" style="margin-top:6px">링크 한 줄로 챕터 전체 또는 이번 주 피처드를 공유하세요. 메시지 템플릿·QR·채널별 공유까지 한 번에.</div>
+    </div>
+    <button class="btn btn-orange" id="openShareKit">📢 공유 키트 열기 →</button>
+  </div>
+  <div class="share-cta-grid">
+    <div class="share-cta-card">
+      <span class="cta-eyebrow">CHAPTER LINK</span>
+      <h3>챕터 전체를 한 번에 소개</h3>
+      <p>BNI 서초 메이저가 어떤 챕터인지, 어떤 멤버 39명이 있는지, 매주 어떻게 운영되는지를 한 페이지로 보여줍니다.</p>
+      <div class="share-cta-actions">
+        <a class="btn btn-primary" href="intro.html">소개 페이지 →</a>
+        <button class="btn btn-outline" data-share-mode="chapter">📋 메시지 템플릿</button>
+      </div>
+    </div>
+    <div class="share-cta-card highlight">
+      <span class="cta-eyebrow">FEATURED LINK · 이번 주</span>
+      <h3 id="featuredShareTitle">이번 주 피처드 공유</h3>
+      <p id="featuredShareDesc"></p>
+      <div class="share-cta-actions">
+        <a class="btn btn-primary" id="featuredShareLink" href="#">상세 페이지 →</a>
+        <button class="btn btn-orange" id="featuredShareBtn">📢 이 분 공유하기</button>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="how">
@@ -365,6 +412,19 @@ function renderAll(){
 
 function renderFeatured(){
   const m = data.members.find(x => x.id === data.featuredId) || data.members[0];
+  // Update OG image dynamically with featured member's digital card
+  if(m.assets?.digitalCard){
+    const ogImg = document.getElementById("ogImage");
+    if(ogImg) ogImg.setAttribute("content", new URL(m.assets.digitalCard, location.href).toString());
+  }
+  // Update share section with featured member info
+  const ftTitle = document.getElementById("featuredShareTitle");
+  const ftDesc = document.getElementById("featuredShareDesc");
+  const ftLink = document.getElementById("featuredShareLink");
+  if(ftTitle) ftTitle.textContent = `${m.company} · ${m.name} 대표`;
+  if(ftDesc) ftDesc.textContent = (m.tagline || "") + (m.subTagline ? " — " + m.subTagline : "");
+  if(ftLink) ftLink.href = `member.html?id=${m.id}`;
+
   const el = document.getElementById("featuredCard");
   const expertiseChips = (m.expertise||[]).map(x=>`<span class="chip">${x}</span>`).join("");
   const referralChips = (m.referralTargets||[]).map(x=>`<span class="chip">${x}</span>`).join("");
@@ -442,6 +502,33 @@ function renderGrid(){
 }
 
 document.getElementById("search").addEventListener("input", renderGrid);
+
+// Share Kit wiring
+function getFeaturedMember(){ return data?.members?.find(x => x.id === data.featuredId) || data?.members?.[0]; }
+function chapterUrl(){ return location.origin + location.pathname.replace(/[^/]*$/, ""); }
+document.getElementById("topShareBtn").addEventListener("click", ()=>{
+  if(!data || !window.ShareKit) return;
+  ShareKit.open({ mode:"chapter", member:getFeaturedMember(), data, url:chapterUrl(), chapterUrl:chapterUrl() });
+});
+document.getElementById("openShareKit").addEventListener("click", ()=>{
+  if(!data || !window.ShareKit) return;
+  ShareKit.open({ mode:"chapter", member:getFeaturedMember(), data, url:chapterUrl(), chapterUrl:chapterUrl() });
+});
+document.getElementById("featuredShareBtn").addEventListener("click", ()=>{
+  if(!data || !window.ShareKit) return;
+  const m = getFeaturedMember();
+  const memberUrl = chapterUrl() + "member.html?id=" + m.id;
+  ShareKit.open({ mode:"member", member:m, data, url:memberUrl, chapterUrl:chapterUrl() });
+});
+document.querySelectorAll("[data-share-mode]").forEach(b=>{
+  b.addEventListener("click", ()=>{
+    if(!data || !window.ShareKit) return;
+    const mode = b.dataset.shareMode;
+    const m = getFeaturedMember();
+    const url = mode === "member" ? chapterUrl() + "member.html?id=" + m.id : chapterUrl();
+    ShareKit.open({ mode, member:m, data, url, chapterUrl:chapterUrl() });
+  });
+});
 
 loadData().catch(err=>{
   console.error(err);

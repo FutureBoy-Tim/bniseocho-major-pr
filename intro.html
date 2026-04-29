@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BNI 서초 메이저 챕터 · 챕터 소개</title>
+<meta name="description" content="BNI 서초 메이저 챕터는 39명의 대표가 매주 모여 서로의 사업을 추천하는 비즈니스 네트워킹 모임입니다." />
+<meta property="og:title" content="BNI 서초 메이저 챕터 · 챕터 소개" />
+<meta property="og:description" content="39명의 대표 · 매주 한 명 깊이 소개 · 정확한 리퍼럴이 일어나는 모임" />
+<meta property="og:type" content="website" />
+<meta property="og:image" id="ogImage" content="" />
+<meta property="og:site_name" content="BNI 서초 메이저 챕터" />
+<meta name="twitter:card" content="summary_large_image" />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js" defer></script>
+<script src="assets/share-kit.js" defer></script>
+<style>
+:root{
+  --bni-orange:#FF8200; --bni-orange-soft:#FFB763; --bni-orange-bg:#FFF4E5; --bni-orange-deep:#A95400;
+  --bni-navy:#0E1F5C; --bni-navy-2:#1B3380; --bni-navy-3:#27408F;
+  --ink:#0E1422; --ink-2:#3A435A; --ink-3:#6B7388;
+  --line:#E5E8EF; --line-2:#F1F3F8; --bg:#FAFBFD;
+  --shadow-sm:0 1px 2px rgba(14,31,92,.04), 0 4px 12px rgba(14,31,92,.04);
+  --shadow-md:0 6px 24px rgba(14,31,92,.08);
+  --shadow-lg:0 24px 60px rgba(14,31,92,.18);
+  --shadow-xl:0 40px 80px rgba(14,31,92,.22);
+  --r-md:14px; --r-lg:22px; --r-xl:28px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,system-ui,Roboto,Arial,"Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+img{max-width:100%;display:block}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.01em}
+.brand-mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--bni-orange),#FF6A00);display:grid;place-items:center;color:#fff;font-size:13px;font-weight:900;box-shadow:0 4px 12px rgba(255,130,0,.35)}
+.brand-text{font-size:15px}
+.brand-text small{display:block;font-size:11px;font-weight:600;color:var(--ink-3)}
+.topbar-spacer{flex:1}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:-.01em;transition:all .14s;white-space:nowrap}
+.btn-ghost{color:var(--ink-2)}
+.btn-ghost:hover{background:var(--line-2);color:var(--ink)}
+.btn-primary{background:var(--bni-navy);color:#fff}
+.btn-primary:hover{background:var(--bni-navy-2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(14,31,92,.25)}
+.btn-orange{background:var(--bni-orange);color:#fff}
+.btn-orange:hover{background:#FF6A00;transform:translateY(-1px);box-shadow:0 6px 18px rgba(255,130,0,.32)}
+.btn-outline{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-outline:hover{border-color:var(--bni-navy);color:var(--bni-navy)}
+
+/* Hero */
+.hero{position:relative;background:radial-gradient(1100px 700px at 20% -20%, #1B3380 0%, #0E1F5C 50%, #08123E 100%);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 110% 0%, rgba(255,130,0,.42), transparent 60%), radial-gradient(700px 500px at -10% 110%, rgba(255,130,0,.18), transparent 60%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(180deg,#000 0%,transparent 100%);opacity:.6;pointer-events:none}
+.hero-inner{position:relative;max-width:1280px;margin:0 auto;padding:60px 24px 80px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:700;letter-spacing:.04em}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--bni-orange);box-shadow:0 0 0 4px rgba(255,130,0,.25)}
+.hero h1{margin:18px 0 14px;font-size:clamp(34px,5.4vw,62px);line-height:1.04;letter-spacing:-.025em;font-weight:800;max-width:920px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#FFB763,#FF8200);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:clamp(15px,1.5vw,18px);color:#D5DBEC;max-width:680px;margin:0 0 26px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:36px;margin-top:18px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
+.hero-stat .num{font-size:34px;font-weight:800;letter-spacing:-.02em}
+.hero-stat .num em{font-style:normal;color:var(--bni-orange)}
+.hero-stat .lab{font-size:12px;color:#A6B0CC;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
+
+/* Section */
+.section{max-width:1280px;margin:0 auto;padding:80px 24px}
+.section-head{margin-bottom:32px}
+.section-head .eyebrow{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--bni-orange);text-transform:uppercase;display:inline-block;margin-bottom:10px}
+.section-head h2{margin:0 0 8px;font-size:clamp(26px,3vw,38px);letter-spacing:-.025em;font-weight:800}
+.section-head p{margin:0;color:var(--ink-3);font-size:15px;max-width:680px}
+
+/* What is BNI */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.value-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:32px;display:flex;flex-direction:column;gap:8px;transition:all .18s}
+.value-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.value-icon{width:48px;height:48px;border-radius:14px;background:var(--bni-orange-bg);color:var(--bni-orange-deep);display:grid;place-items:center;font-size:22px;font-weight:800;margin-bottom:6px}
+.value-card h3{margin:0 0 4px;font-size:18px;letter-spacing:-.01em}
+.value-card p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.6}
+
+/* Process */
+.process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+.process-step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;text-align:left}
+.process-num{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--bni-orange);text-transform:uppercase}
+.process-step h4{margin:6px 0 6px;font-size:16px;letter-spacing:-.01em}
+.process-step p{margin:0;color:var(--ink-3);font-size:13px;line-height:1.55}
+
+/* Categories */
+.cats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.cat-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px;transition:all .15s}
+.cat-card:hover{border-color:var(--bni-orange);transform:translateY(-2px)}
+.cat-card-name{font-weight:700;font-size:14px;letter-spacing:-.01em}
+.cat-card-count{background:var(--bni-orange-bg);color:var(--bni-orange-deep);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800}
+
+/* Members preview */
+.member-preview{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.mp-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:14px;transition:all .15s}
+.mp-card:hover{border-color:var(--bni-navy);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.mp-name{font-weight:800;font-size:14px;letter-spacing:-.01em;margin:0}
+.mp-comp{font-size:12px;color:var(--ink-2);margin:2px 0 0;font-weight:700}
+.mp-ind{font-size:11px;color:var(--ink-3);margin:6px 0 0}
+
+/* Featured banner */
+.featured-banner{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:0;margin-top:24px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;align-items:stretch;box-shadow:var(--shadow-lg)}
+.fb-meta{padding:36px}
+.fb-meta .eyebrow{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--bni-orange);text-transform:uppercase;margin-bottom:10px;display:inline-block}
+.fb-meta h3{margin:0 0 8px;font-size:24px;letter-spacing:-.02em}
+.fb-meta p{margin:0 0 14px;color:var(--ink-2);font-size:15px}
+.fb-art{background:linear-gradient(135deg,#0B1849 0%,#1B3380 60%,#27408F 100%);display:grid;place-items:center;padding:24px;min-height:340px;position:relative}
+.fb-art img{max-width:340px;width:100%;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.2);transform:rotate(-2deg);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.fb-art:hover img{transform:rotate(0deg) scale(1.02)}
+
+/* Share CTA */
+.share-section{background:linear-gradient(135deg,#FFF4E5,#FFE6C9);border-radius:var(--r-xl);padding:48px 40px;display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:center;border:1px solid #FFD09A;margin-top:24px}
+.share-section h2{margin:0 0 8px;font-size:28px;letter-spacing:-.02em}
+.share-section p{margin:0 0 18px;color:var(--ink-2);font-size:15px;line-height:1.6}
+.share-section-actions{display:flex;flex-wrap:wrap;gap:8px}
+.share-qr-card{background:#fff;border-radius:var(--r-lg);padding:20px;display:flex;flex-direction:column;align-items:center;gap:10px;box-shadow:var(--shadow-md)}
+.share-qr-card canvas{width:160px;height:160px}
+.share-qr-card span{font-size:11px;color:var(--ink-3);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+
+/* Footer */
+footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
+.foot-inner{max-width:1280px;margin:0 auto;padding:34px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+.foot-brand{color:#fff;font-weight:700}
+.foot-tag{font-size:12px}
+
+@media (max-width:880px){
+  .value-grid{grid-template-columns:1fr}
+  .process-row{grid-template-columns:repeat(2,1fr)}
+  .featured-banner{grid-template-columns:1fr}
+  .fb-art{min-height:240px;padding:30px 20px}
+  .fb-art img{max-width:260px}
+  .share-section{grid-template-columns:1fr;padding:32px 24px}
+  .topbar-inner{padding:12px 16px}
+  .hero-inner{padding:48px 16px 64px}
+  .section{padding:56px 16px}
+  .topbar .btn-ghost{display:none}
+  .hero-stats{gap:20px}
+  .hero-stat .num{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark">B</span>
+      <span class="brand-text">서초 BNI 메이저<small>Chapter Intro</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <a class="btn btn-ghost" href="./">멤버 목록 →</a>
+    <button class="btn btn-orange" id="openShareKit">📢 외부에 공유</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="dot"></span>BNI Major · Seocho Chapter</div>
+    <h1>전문가 39명이<br/>서로의 사업을 <em>추천</em>합니다.</h1>
+    <p>BNI 서초 메이저 챕터는 한국에서 가장 규모 있는 BNI 챕터 중 하나입니다. 매주 모여 서로의 비즈니스를 정확히 이해하고, 진짜 도움이 되는 리퍼럴을 만들어냅니다.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num"><em id="stat39">39</em>명</div><div class="lab">전문가 멤버</div></div>
+      <div class="hero-stat"><div class="num"><em id="statCats">10</em>+</div><div class="lab">전문 업종</div></div>
+      <div class="hero-stat"><div class="num"><em>매주</em></div><div class="lab">정기 미팅 + 1명 피처드</div></div>
+      <div class="hero-stat"><div class="num"><em>1</em>업종 1명</div><div class="lab">한 챕터 1전문가 원칙</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="eyebrow">Why BNI Major</span>
+    <h2>왜 다른 모임과 다른가</h2>
+    <p>일반 네트워킹 모임이 아니라, "서로의 사업을 책임지고 추천하는" 비즈니스 리퍼럴 조직입니다.</p>
+  </div>
+  <div class="value-grid">
+    <div class="value-card">
+      <div class="value-icon">🎯</div>
+      <h3>한 챕터 한 업종</h3>
+      <p>같은 챕터 안에 같은 업종은 단 한 명. 경쟁이 없으니 멤버 간 신뢰와 협업이 가능합니다.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🤝</div>
+      <h3>실명 추천 (Givers Gain)</h3>
+      <p>서로 정확히 검증된 분만 실명으로 추천합니다. "받은 만큼 준다"가 아니라 "먼저 준다"가 운영 철학입니다.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">📅</div>
+      <h3>매주 정기 미팅</h3>
+      <p>출석률·기여도가 공식적으로 관리되는 구조. "한 번 모였다 흩어지는" 모임이 아닙니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="section-head">
+    <span class="eyebrow">How it works</span>
+    <h2>매주 한 명을 깊이 소개합니다</h2>
+    <p>외부에서도 우리 챕터 멤버를 정확히 이해할 수 있도록, 매주 한 명씩 4종 자산으로 공개합니다.</p>
+  </div>
+  <div class="process-row">
+    <div class="process-step"><span class="process-num">STEP 1</span><h4>디지털 명함</h4><p>한 장으로 보는 핵심 정보. 카톡·SNS에 바로 보내는 영웅 자산.</p></div>
+    <div class="process-step"><span class="process-num">STEP 2</span><h4>실물 명함 앞·뒤</h4><p>오프라인 미팅에서 그대로 사용하는 명함 디자인 그대로.</p></div>
+    <div class="process-step"><span class="process-num">STEP 3</span><h4>한 페이지 인포그래픽</h4><p>업종 현실 → 해결책 → 누구를 소개해야 할지까지 한 장에.</p></div>
+    <div class="process-step"><span class="process-num">STEP 4</span><h4>상세 소개 PPT</h4><p>10분짜리 깊이 있는 사업 설명. 의사결정자에게 바로 보낼 수 있는 자료.</p></div>
+  </div>
+
+  <div class="featured-banner" id="featuredBanner" style="display:none">
+    <div class="fb-meta">
+      <span class="eyebrow">FEATURED · <span id="featuredDate"></span></span>
+      <h3 id="featuredName"></h3>
+      <p id="featuredTagline"></p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <a class="btn btn-primary" id="featuredLink" href="#">상세 페이지 →</a>
+        <button class="btn btn-orange" id="featuredShare">📢 이 분 공유하기</button>
+      </div>
+    </div>
+    <div class="fb-art"><img id="featuredImg" src="" alt="" /></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="section-head">
+    <span class="eyebrow">Categories</span>
+    <h2>이런 전문가들이 모였습니다</h2>
+    <p>업종별 한 명씩, 비즈니스 사이클의 거의 모든 영역을 커버합니다.</p>
+  </div>
+  <div class="cats-grid" id="catsGrid"></div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="section-head">
+    <span class="eyebrow">Members</span>
+    <h2>전체 멤버 (가나다 순)</h2>
+    <p>각 카드를 누르면 상세 프로필을 볼 수 있습니다. 매주 한 분씩 자료가 공개됩니다.</p>
+  </div>
+  <div class="member-preview" id="memberPreview"></div>
+</section>
+
+<section class="section" style="padding-top:0" id="share">
+  <div class="share-section">
+    <div>
+      <span class="eyebrow" style="font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--bni-orange-deep);text-transform:uppercase">SHARE</span>
+      <h2>다른 모임·커뮤니티에 알리고 싶다면</h2>
+      <p>이 페이지 링크 한 줄로 챕터 전체를 소개할 수 있습니다. 공유 키트에서는 4가지 톤의 메시지 템플릿, 채널별 직접 공유 버튼, QR 다운로드까지 한 번에 사용 가능합니다.</p>
+      <div class="share-section-actions">
+        <button class="btn btn-orange" id="openShareKitFooter">📢 공유 키트 열기</button>
+        <button class="btn btn-primary" id="copyChapterLink">🔗 링크 복사</button>
+        <a class="btn btn-outline" href="./">39명 전체 보기 →</a>
+      </div>
+    </div>
+    <div class="share-qr-card">
+      <canvas id="introQr" width="160" height="160"></canvas>
+      <span>QR · 이 페이지로 바로 가기</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">서초 BNI 메이저 챕터</div>
+      <div class="foot-tag">Givers Gain · Business Referral Organization</div>
+    </div>
+    <div class="foot-tag" id="updatedAt"></div>
+  </div>
+</footer>
+
+<script>
+const $ = sel => document.querySelector(sel);
+let DATA = null;
+
+async function load(){
+  const res = await fetch("data/members.json", {cache:"no-store"});
+  DATA = await res.json();
+  $("#updatedAt").textContent = "마지막 업데이트 · " + (DATA.lastUpdated || "");
+
+  const featured = DATA.members.find(x => x.id === DATA.featuredId);
+  if(featured && featured.assets?.digitalCard){
+    $("#ogImage").setAttribute("content", new URL(featured.assets.digitalCard, location.href).toString());
+  }
+
+  // Stats
+  $("#stat39").textContent = DATA.members.length;
+  const cats = [...new Set(DATA.members.map(m=>m.category).filter(Boolean))];
+  $("#statCats").textContent = cats.length;
+
+  // Categories grid
+  const counts = {};
+  DATA.members.forEach(m => { if(m.category){ counts[m.category] = (counts[m.category]||0) + 1; } });
+  $("#catsGrid").innerHTML = Object.entries(counts)
+    .sort((a,b) => b[1]-a[1])
+    .map(([cat, n]) => `<a class="cat-card" href="./#members"><span class="cat-card-name">${cat}</span><span class="cat-card-count">${n}명</span></a>`).join("");
+
+  // Member preview (sorted by 가나다)
+  const sorted = [...DATA.members].sort((a,b) => (a.name||"").localeCompare(b.name||"", "ko"));
+  $("#memberPreview").innerHTML = sorted.map(m =>
+    `<a class="mp-card" href="member.html?id=${m.id}">
+       <h4 class="mp-name">${m.name}</h4>
+       <p class="mp-comp">${m.company || ""}</p>
+       <p class="mp-ind">${m.industry || ""}</p>
+     </a>`).join("");
+
+  // Featured banner
+  if(featured && featured.tagline){
+    $("#featuredBanner").style.display = "grid";
+    $("#featuredDate").textContent = DATA.lastUpdated || "";
+    $("#featuredName").textContent = `${featured.company} · ${featured.title || "대표"} ${featured.name}`;
+    $("#featuredTagline").textContent = featured.tagline + (featured.subTagline ? " — " + featured.subTagline : "");
+    $("#featuredLink").href = `member.html?id=${featured.id}`;
+    if(featured.assets?.digitalCard){ $("#featuredImg").src = featured.assets.digitalCard; }
+    $("#featuredShare").addEventListener("click", ()=>{
+      if(!window.ShareKit) return;
+      const chapter = chapterUrl();
+      ShareKit.open({mode:"member", member:featured, data:DATA, url:chapter+"member.html?id="+featured.id, chapterUrl:chapter});
+    });
+  }
+
+  // QR
+  const introQrUrl = location.href.replace(/[?#].*$/,"");
+  if(window.QRCode){
+    QRCode.toCanvas($("#introQr"), introQrUrl, {margin:1,width:320,color:{dark:"#0E1F5C",light:"#FFFFFF"}}, ()=>{});
+  }
+}
+
+function chapterUrl(){ return location.origin + location.pathname.replace(/[^/]*$/,""); }
+
+function bindShare(id){
+  $(id)?.addEventListener("click", ()=>{
+    if(!DATA || !window.ShareKit) return;
+    const featured = DATA.members.find(x => x.id === DATA.featuredId);
+    ShareKit.open({mode:"chapter", member:featured, data:DATA, url:chapterUrl(), chapterUrl:chapterUrl()});
+  });
+}
+bindShare("#openShareKit");
+bindShare("#openShareKitFooter");
+
+$("#copyChapterLink")?.addEventListener("click", async ()=>{
+  await navigator.clipboard.writeText(chapterUrl());
+  const b = $("#copyChapterLink"); const orig = b.textContent;
+  b.textContent = "✓ 복사 완료";
+  setTimeout(() => b.textContent = orig, 2000);
+});
+
+load().catch(err => {
+  console.error(err);
+  $("#memberPreview").innerHTML = `<p style="color:var(--ink-3)">데이터 로드 실패. 로컬 서버로 열어주세요.</p>`;
+});
+</script>
+</body>
+</html>

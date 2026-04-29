@@ -5,24 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>로딩 중… · BNI 서초 메이저</title>
 <meta name="description" content="BNI 서초 메이저 챕터 멤버 상세 소개" />
+<meta property="og:type" content="profile" />
+<meta property="og:site_name" content="BNI 서초 메이저 챕터" />
+<meta property="og:title" id="ogTitle" content="BNI 서초 메이저 챕터" />
+<meta property="og:description" id="ogDesc" content="매주 한 명, 39명의 대표를 깊이 있게 소개합니다." />
+<meta property="og:image" id="ogImage" content="" />
+<meta name="twitter:card" content="summary_large_image" />
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js" defer></script>
+<script src="assets/share-kit.js" defer></script>
 <style>
 :root{
-  --bni-orange:#FF8200;
-  --bni-orange-soft:#FFB763;
-  --bni-orange-bg:#FFF4E5;
-  --bni-navy:#0E1F5C;
-  --bni-navy-2:#1B3380;
-  --ink:#0E1422;
-  --ink-2:#3A435A;
-  --ink-3:#6B7388;
-  --line:#E5E8EF;
-  --line-2:#F1F3F8;
-  --bg:#FAFBFD;
+  --bni-orange:#FF8200; --bni-orange-soft:#FFB763; --bni-orange-bg:#FFF4E5; --bni-orange-deep:#A95400;
+  --bni-navy:#0E1F5C; --bni-navy-2:#1B3380; --bni-navy-3:#27408F;
+  --ink:#0E1422; --ink-2:#3A435A; --ink-3:#6B7388; --ink-4:#9098AC;
+  --line:#E5E8EF; --line-2:#F1F3F8; --bg:#FAFBFD; --paper:#FFFFFF;
   --shadow-sm:0 1px 2px rgba(14,31,92,.04), 0 4px 12px rgba(14,31,92,.04);
   --shadow-md:0 6px 24px rgba(14,31,92,.08), 0 1px 4px rgba(14,31,92,.06);
   --shadow-lg:0 24px 60px rgba(14,31,92,.18);
-  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-xl:28px;
+  --shadow-xl:0 40px 80px rgba(14,31,92,.22);
+  --r-sm:8px; --r-md:14px; --r-lg:22px; --r-xl:28px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -31,121 +33,213 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 img{max-width:100%;display:block}
 
+/* ── Top bar ───────────────────────────── */
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
-.topbar-inner{max-width:1240px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:16px}
+.topbar-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.01em}
 .brand-mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--bni-orange),#FF6A00);display:grid;place-items:center;color:#fff;font-size:13px;font-weight:900;box-shadow:0 4px 12px rgba(255,130,0,.35)}
 .brand-text{font-size:15px}
 .brand-text small{display:block;font-size:11px;font-weight:600;color:var(--ink-3)}
 .topbar-spacer{flex:1}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:-.01em;transition:all .12s}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;font-weight:600;font-size:13px;letter-spacing:-.01em;transition:all .14s; white-space:nowrap}
 .btn-ghost{color:var(--ink-2)}
 .btn-ghost:hover{background:var(--line-2);color:var(--ink)}
 .btn-primary{background:var(--bni-navy);color:#fff}
 .btn-primary:hover{background:var(--bni-navy-2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(14,31,92,.25)}
 .btn-orange{background:var(--bni-orange);color:#fff}
 .btn-orange:hover{background:#FF6A00;transform:translateY(-1px);box-shadow:0 6px 18px rgba(255,130,0,.32)}
+.btn-outline{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-outline:hover{border-color:var(--bni-navy);color:var(--bni-navy)}
 
-/* Hero */
-.profile-hero{
-  position:relative;background:var(--bni-navy);color:#fff;overflow:hidden;
-}
-.profile-hero::before{
-  content:"";position:absolute;inset:0;
-  background:
-    radial-gradient(800px 400px at 90% 0%, rgba(255,130,0,.32), transparent 60%),
-    radial-gradient(700px 500px at -10% 110%, rgba(255,130,0,.16), transparent 60%);
-  pointer-events:none;
-}
-.profile-hero-inner{max-width:1240px;margin:0 auto;padding:50px 24px 70px;position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
-.crumb{font-size:12px;font-weight:700;letter-spacing:.06em;color:#A6B0CC;text-transform:uppercase;margin-bottom:14px}
-.crumb a{color:var(--bni-orange-soft)}
-.profile-h1{font-size:clamp(28px,4.4vw,46px);line-height:1.08;letter-spacing:-.025em;font-weight:800;margin:0 0 12px}
-.profile-h1 em{font-style:normal;color:var(--bni-orange)}
-.profile-sub{font-size:clamp(14px,1.4vw,17px);color:#D5DBEC;margin:0 0 22px;max-width:580px}
-.profile-meta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
-.profile-meta .pill{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:600}
+/* ── Hero ───────────────────────────── */
+.hero{position:relative;background:radial-gradient(1100px 700px at 80% -20%, #1B3380 0%, #0E1F5C 50%, #08123E 100%);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 95% -10%, rgba(255,130,0,.4), transparent 60%), radial-gradient(700px 500px at -10% 110%, rgba(255,130,0,.18), transparent 60%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(180deg,#000 0%,transparent 100%);opacity:.5;pointer-events:none}
+.hero-inner{position:relative;max-width:1280px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.crumb{font-size:11px;font-weight:700;letter-spacing:.08em;color:#A6B0CC;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.crumb a{color:var(--bni-orange-soft);transition:opacity .15s}
+.crumb a:hover{opacity:.7}
+.crumb .sep{opacity:.4}
+.feature-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:linear-gradient(135deg,#FF8200,#FF5A00);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;box-shadow:0 8px 20px rgba(255,90,0,.4)}
+.feature-badge::before{content:"★"}
+.profile-h1{font-size:clamp(30px,4.6vw,50px);line-height:1.06;letter-spacing:-.025em;font-weight:800;margin:0 0 14px}
+.profile-h1 em{font-style:normal;background:linear-gradient(135deg,#FFB763,#FF8200);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.profile-sub{font-size:clamp(15px,1.5vw,18px);color:#D5DBEC;margin:0 0 24px;max-width:560px;line-height:1.55}
+.profile-meta{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+.profile-meta .pill{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:12px;font-weight:600;backdrop-filter:blur(6px)}
+.profile-meta .pill.org{background:rgba(255,130,0,.18);border-color:rgba(255,130,0,.4);color:#FFD09A}
 .profile-cta{display:flex;flex-wrap:wrap;gap:8px}
-.profile-cta .btn-orange{box-shadow:0 8px 22px rgba(255,130,0,.32)}
+.profile-cta .btn-orange{box-shadow:0 12px 28px rgba(255,130,0,.34)}
 
-.hero-card{
-  background:#fff;border-radius:var(--r-xl);box-shadow:var(--shadow-lg);
-  padding:6px;
-  transform:rotate(-1.5deg);transition:transform .35s cubic-bezier(.2,.7,.2,1);
-}
-.hero-card:hover{transform:rotate(0deg) translateY(-3px)}
-.hero-card img{border-radius:22px;display:block;width:100%}
+/* Hero card stack */
+.hero-card-stack{position:relative;display:grid;place-items:center;min-height:380px}
+.hero-card{position:relative;background:#fff;border-radius:24px;padding:6px;box-shadow:var(--shadow-xl),0 0 0 1px rgba(255,255,255,.1);transform:rotate(-2deg) translateZ(0);transition:transform .5s cubic-bezier(.2,.8,.2,1);max-width:380px;width:100%;cursor:zoom-in}
+.hero-card:hover{transform:rotate(0deg) translateY(-4px) scale(1.02)}
+.hero-card img{border-radius:20px;display:block;width:100%}
+.hero-card-shine{position:absolute;inset:6px;border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.18) 0%,transparent 30%,transparent 70%,rgba(255,130,0,.12) 100%);pointer-events:none;mix-blend-mode:overlay}
 
-/* Sections */
-.wrap{max-width:1240px;margin:0 auto;padding:48px 24px}
-.row{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:flex-start}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:30px;box-shadow:var(--shadow-sm)}
-.card h2{margin:0 0 6px;font-size:20px;letter-spacing:-.01em}
-.card .lead{color:var(--ink-3);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin:0 0 14px}
-.card p{margin:0 0 12px;color:var(--ink-2)}
+/* ── Quick info bar (under hero) ───────────────────────────── */
+.quickbar{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.quickbar-inner{max-width:1280px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;justify-content:space-between}
+.quick-stats{display:flex;flex-wrap:wrap;gap:32px}
+.quick-stat{display:flex;align-items:center;gap:10px;font-size:13px}
+.quick-stat .label{color:var(--ink-3);font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.quick-stat .value{color:var(--ink);font-weight:700;font-size:14px}
+.quick-stat svg{color:var(--bni-orange);flex-shrink:0}
+.quickbar-share{display:flex;gap:6px}
 
-.bullet-list{list-style:none;padding:0;margin:6px 0 0}
-.bullet-list li{position:relative;padding:8px 0 8px 26px;border-bottom:1px solid var(--line-2);font-size:15px;color:var(--ink-2)}
+/* ── Sections ───────────────────────────── */
+.wrap{max-width:1280px;margin:0 auto;padding:64px 24px 24px}
+.section-head{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:24px}
+.section-head h2{margin:0;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;font-weight:800}
+.section-head p{margin:6px 0 0;color:var(--ink-3);font-size:14px}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--bni-orange);text-transform:uppercase;margin-bottom:8px}
+
+/* ── About + Side row ───────────────────────────── */
+.row{display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:flex-start}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:32px;box-shadow:var(--shadow-sm);transition:box-shadow .2s}
+.card:hover{box-shadow:var(--shadow-md)}
+.card .lead{color:var(--ink-3);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+.card h2{margin:0 0 8px;font-size:22px;letter-spacing:-.015em}
+.card p{margin:0 0 12px;color:var(--ink-2);line-height:1.65}
+.card p:last-child{margin-bottom:0}
+
+.bullet-list{list-style:none;padding:0;margin:14px 0 0}
+.bullet-list li{position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--line-2);font-size:15px;color:var(--ink)}
 .bullet-list li:last-child{border-bottom:none}
-.bullet-list li::before{
-  content:"";position:absolute;left:0;top:14px;width:14px;height:14px;border-radius:4px;
-  background:var(--bni-orange);box-shadow:inset 0 0 0 3px #fff, 0 0 0 1px var(--bni-orange);
-}
+.bullet-list li::before{content:"";position:absolute;left:2px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--bni-orange-bg);box-shadow:inset 0 0 0 3px var(--bni-orange)}
 
-.contact{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px}
-.contact dt{color:var(--ink-3);font-weight:700;letter-spacing:.02em}
-.contact dd{margin:0;color:var(--ink)}
-.contact dd a{color:var(--bni-navy);font-weight:600;border-bottom:1px solid transparent;transition:border .15s}
-.contact dd a:hover{border-bottom-color:var(--bni-navy)}
+.referral-list li::before{background:#E8EEFF;box-shadow:inset 0 0 0 3px var(--bni-navy-3)}
 
-/* Asset grid */
-.assets-section h2{font-size:24px;letter-spacing:-.02em;margin:0 0 6px}
-.assets-section .lead{color:var(--ink-3);margin:0 0 22px}
-.asset-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.asset{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:all .18s}
-.asset:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.asset-thumb{aspect-ratio:4/3;background:var(--line-2);position:relative;overflow:hidden;display:grid;place-items:center}
-.asset-thumb img{width:100%;height:100%;object-fit:cover}
-.asset-thumb.empty{background:repeating-linear-gradient(45deg,#F3F5FA 0 12px,#EDF0F6 12px 24px);color:var(--ink-3);font-size:13px;text-align:center;padding:24px;font-weight:600}
-.asset-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
-.asset-kind{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--bni-orange);text-transform:uppercase}
-.asset-title{margin:0;font-size:15px;font-weight:700;letter-spacing:-.01em}
-.asset-desc{margin:0;font-size:13px;color:var(--ink-3);flex:1}
-.asset-actions{display:flex;gap:6px;flex-wrap:wrap}
-.asset-actions a{padding:6px 12px;border-radius:999px;background:var(--line-2);font-size:12px;font-weight:700;color:var(--ink-2);transition:all .15s}
-.asset-actions a:hover{background:var(--bni-navy);color:#fff}
+.contact-card{display:grid;grid-template-columns:auto 1fr;gap:14px 18px;font-size:14px;margin-top:14px}
+.contact-card dt{color:var(--ink-3);font-weight:800;letter-spacing:.08em;font-size:11px;text-transform:uppercase;align-self:center}
+.contact-card dd{margin:0}
+.contact-card dd a{color:var(--bni-navy);font-weight:700;border-bottom:1px solid transparent;transition:border .15s}
+.contact-card dd a:hover{border-bottom-color:var(--bni-navy)}
 
-/* PPT preview */
-.ppt-card{background:linear-gradient(135deg,#0B1849 0%,#1B3380 100%);color:#fff;border-radius:var(--r-xl);padding:40px;display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center;margin-top:18px}
-.ppt-card h2{margin:0 0 6px;font-size:24px;letter-spacing:-.02em}
-.ppt-card p{color:#C4CCE3;margin:0 0 14px;font-size:15px}
-.ppt-card .ppt-icon{display:grid;place-items:center}
-.ppt-card svg{width:120px;height:120px;opacity:.92}
+/* ── Asset showcase (the centerpiece) ───────────────────────────── */
+.showcase{margin-top:80px}
+.showcase-head{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:32px}
+.showcase-head h2{margin:0;font-size:clamp(26px,3vw,36px);letter-spacing:-.025em;font-weight:800}
+.showcase-head p{margin:8px 0 0;color:var(--ink-3);font-size:15px}
 
-/* Nav prev/next */
-.pager{display:flex;justify-content:space-between;gap:12px;margin-top:48px}
-.pager a{flex:1;padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);transition:all .15s}
+.showcase-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+
+.spotlight{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;transition:all .2s;cursor:zoom-in;display:flex;flex-direction:column}
+.spotlight:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#D7DDE9}
+.spotlight-art{position:relative;background:linear-gradient(135deg,#F1F3F8,#E5E8EF);overflow:hidden;display:grid;place-items:center}
+.spotlight-art img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.spotlight:hover .spotlight-art img{transform:scale(1.04)}
+.spotlight-tag{position:absolute;top:14px;left:14px;padding:5px 11px;border-radius:999px;background:rgba(0,0,0,.65);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);z-index:2}
+.spotlight-zoom{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.15);opacity:0;transform:translateY(-4px);transition:all .2s}
+.spotlight:hover .spotlight-zoom{opacity:1;transform:translateY(0)}
+.spotlight-body{padding:18px 22px 20px;display:flex;flex-direction:column;gap:6px}
+.spotlight-title{margin:0;font-size:16px;font-weight:800;letter-spacing:-.01em}
+.spotlight-desc{margin:0;font-size:13px;color:var(--ink-3);line-height:1.5}
+.spotlight-empty{aspect-ratio:4/3;display:grid;place-items:center;color:var(--ink-3);text-align:center;padding:24px;background:repeating-linear-gradient(45deg,#F4F6FB 0 12px,#EDF0F7 12px 24px);font-size:13px;font-weight:600}
+.spotlight-empty .em-icon{width:38px;height:38px;border-radius:12px;background:#fff;display:grid;place-items:center;margin-bottom:10px;color:var(--ink-4)}
+
+/* Layout: digital-card big + infographic big + cards small */
+.spot-digital{grid-column:span 5}
+.spot-digital .spotlight-art{aspect-ratio:9/16}
+.spot-info{grid-column:span 7}
+.spot-info .spotlight-art{aspect-ratio:1/1; min-height:480px}
+.spot-card-front,.spot-card-back{grid-column:span 6}
+.spot-card-front .spotlight-art,.spot-card-back .spotlight-art{aspect-ratio:16/9}
+
+/* PPT card — separate style */
+.ppt-card{margin-top:24px;background:linear-gradient(135deg,#0B1849 0%,#1B3380 60%,#27408F 100%);color:#fff;border-radius:var(--r-xl);padding:0;display:grid;grid-template-columns:1fr auto;gap:0;align-items:stretch;overflow:hidden;position:relative}
+.ppt-card::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 300px at 90% -20%, rgba(255,130,0,.3), transparent 70%);pointer-events:none}
+.ppt-meta{padding:36px 36px 32px;position:relative}
+.ppt-meta .eyebrow{color:#FFB763}
+.ppt-meta h2{margin:0 0 6px;font-size:24px;letter-spacing:-.02em}
+.ppt-meta p{color:#C4CCE3;margin:0 0 18px;font-size:15px;line-height:1.55;max-width:480px}
+.ppt-icon{display:grid;place-items:center;padding:30px 40px;background:rgba(0,0,0,.18);position:relative}
+.ppt-icon svg{width:140px;height:140px;filter:drop-shadow(0 12px 24px rgba(0,0,0,.3))}
+.ppt-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+
+/* ── Share & QR card ───────────────────────────── */
+.share-card{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:24px;margin-top:24px}
+.share-qr{width:140px;height:140px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:8px;display:grid;place-items:center}
+.share-qr canvas, .share-qr img{width:100%;height:100%;display:block}
+.share-info h3{margin:0 0 6px;font-size:18px;letter-spacing:-.01em}
+.share-info p{margin:0 0 12px;color:var(--ink-3);font-size:14px}
+.share-actions{display:flex;flex-wrap:wrap;gap:8px}
+.copy-block{display:flex;gap:8px;align-items:center;padding:10px 14px;border-radius:var(--r-md);background:var(--line-2);font-size:13px;color:var(--ink-2);font-family:ui-monospace,Menlo,Consolas,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:200px}
+
+/* ── Pager ───────────────────────────── */
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:60px}
+.pager a, .pager .ph{padding:22px 26px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);transition:all .18s;display:block;min-height:80px}
 .pager a:hover{border-color:var(--bni-orange);transform:translateY(-2px);box-shadow:var(--shadow-md)}
-.pager small{display:block;color:var(--ink-3);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.pager strong{display:block;margin-top:4px;font-size:15px;letter-spacing:-.01em}
+.pager small{display:block;color:var(--ink-3);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.pager strong{display:block;margin-top:6px;font-size:15px;letter-spacing:-.01em;font-weight:700}
+.pager .next{text-align:right}
+.pager .ph{background:transparent;border:none;visibility:hidden}
 
+/* ── Footer ───────────────────────────── */
 footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
-.foot-inner{max-width:1240px;margin:0 auto;padding:34px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+.foot-inner{max-width:1280px;margin:0 auto;padding:34px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
 .foot-brand{color:#fff;font-weight:700}
 .foot-tag{font-size:12px}
 
-/* Empty state */
-.empty-page{max-width:560px;margin:80px auto;padding:40px;text-align:center;background:#fff;border-radius:var(--r-xl);border:1px solid var(--line);box-shadow:var(--shadow-md)}
-.empty-page h1{margin:0 0 12px;font-size:24px}
+/* ── Empty / Upcoming ───────────────────────────── */
+.empty-page{max-width:560px;margin:80px auto;padding:48px 40px;text-align:center;background:#fff;border-radius:var(--r-xl);border:1px solid var(--line);box-shadow:var(--shadow-md)}
+.empty-page h1{margin:0 0 12px;font-size:26px;letter-spacing:-.02em}
 .empty-page p{color:var(--ink-3);margin:0 0 22px}
+.empty-icon{width:64px;height:64px;border-radius:18px;background:var(--bni-orange-bg);display:grid;place-items:center;margin:0 auto 18px;color:var(--bni-orange)}
 
+/* ── Lightbox ───────────────────────────── */
+.lightbox{position:fixed;inset:0;background:rgba(8,12,30,.92);z-index:200;display:none;place-items:center;padding:24px;cursor:zoom-out;backdrop-filter:blur(8px)}
+.lightbox.open{display:grid}
+.lightbox img{max-width:min(1100px,95vw);max-height:90vh;border-radius:14px;box-shadow:0 40px 100px rgba(0,0,0,.7);cursor:default}
+.lightbox-close{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;font-size:20px;border:1px solid rgba(255,255,255,.2);transition:background .15s}
+.lightbox-close:hover{background:rgba(255,255,255,.2)}
+.lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;font-size:13px;font-weight:600;letter-spacing:.04em;background:rgba(0,0,0,.4);padding:8px 16px;border-radius:999px;backdrop-filter:blur(8px)}
+
+/* ── Toast ───────────────────────────── */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--bni-navy);color:#fff;padding:12px 20px;border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 12px 32px rgba(14,31,92,.4);opacity:0;transition:all .25s;pointer-events:none;z-index:300}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width:1000px){
+  .spot-digital,.spot-info,.spot-card-front,.spot-card-back{grid-column:span 12}
+  .spot-info .spotlight-art{min-height:auto}
+}
 @media (max-width:880px){
-  .profile-hero-inner{grid-template-columns:1fr;gap:24px;padding:40px 16px 56px}
+  .hero-inner{grid-template-columns:1fr;gap:24px;padding:36px 16px 56px}
   .row{grid-template-columns:1fr}
-  .ppt-card{grid-template-columns:1fr;padding:30px 24px}
-  .ppt-card svg{width:80px;height:80px;margin:0 auto}
-  .topbar-inner{padding:12px 16px}
-  .wrap{padding:36px 16px}
+  .ppt-card{grid-template-columns:1fr}
+  .ppt-icon{padding:24px;background:rgba(0,0,0,.25)}
+  .ppt-icon svg{width:88px;height:88px}
+  .topbar-inner{padding:12px 16px;gap:8px}
+  .wrap{padding:48px 16px 16px}
+  .quickbar-inner{padding:14px 16px}
+  .quick-stats{gap:18px}
+  .share-card{grid-template-columns:1fr;text-align:center}
+  .share-qr{margin:0 auto}
+  .pager{grid-template-columns:1fr}
+  .pager .next{text-align:left}
+}
+@media (max-width:560px){
+  .profile-h1{font-size:30px}
+  .feature-badge{font-size:10px}
+  .card{padding:24px 22px}
+  .ppt-meta{padding:28px 24px}
+  .topbar .btn-ghost{display:none}
+}
+
+/* ── Print ───────────────────────────── */
+@media print{
+  body{background:#fff}
+  .topbar,.lightbox,.toast,.pager,footer,.profile-cta,.quickbar-share,.spotlight-zoom,.share-card{display:none !important}
+  .hero{background:#0E1F5C !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;color:#fff}
+  .hero-inner{padding:24px;page-break-inside:avoid}
+  .card,.spotlight,.ppt-card{box-shadow:none !important;page-break-inside:avoid}
+  .showcase{margin-top:24px}
+  .showcase-grid{gap:12px}
+  .spot-digital,.spot-card-front,.spot-card-back{grid-column:span 6}
+  .spot-info{grid-column:span 12}
+  .wrap{padding:24px}
 }
 </style>
 </head>
@@ -159,15 +253,13 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
     </a>
     <span class="topbar-spacer"></span>
     <a class="btn btn-ghost" href="./">← 멤버 목록</a>
-    <button class="btn btn-orange" id="shareBtn">공유 링크 복사</button>
+    <button class="btn btn-outline" id="printBtn" title="PDF로 저장">🖨 인쇄</button>
+    <button class="btn btn-orange" id="shareBtn">공유</button>
   </div>
 </header>
 
 <main id="main">
-  <div class="empty-page">
-    <h1>로딩 중…</h1>
-    <p>잠시만 기다려주세요.</p>
-  </div>
+  <div class="empty-page"><h1>로딩 중…</h1><p>잠시만 기다려주세요.</p></div>
 </main>
 
 <footer>
@@ -180,24 +272,46 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
   </div>
 </footer>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="자료 크게 보기">
+  <button class="lightbox-close" id="lightboxClose" aria-label="닫기">✕</button>
+  <img id="lightboxImg" src="" alt="" />
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">복사되었습니다</div>
+
+<!-- Schema.org structured data slot -->
+<script type="application/ld+json" id="ldjson">{}</script>
+
 <script>
 const params = new URLSearchParams(location.search);
 const memberId = params.get("id");
 
+const $ = sel => document.querySelector(sel);
+
 async function load(){
   const res = await fetch("data/members.json", {cache:"no-store"});
   const data = await res.json();
-  document.getElementById("updatedAt").textContent = "마지막 업데이트 · " + (data.lastUpdated || "");
+  $("#updatedAt").textContent = "마지막 업데이트 · " + (data.lastUpdated || "");
   const m = data.members.find(x => x.id === memberId);
   if(!m){ renderNotFound(); return; }
   if(!m.tagline && m.status === "upcoming"){ renderUpcoming(m); return; }
+  window._currentMember = m;
+  window._currentData = data;
   render(m, data);
+  setupOG(m);
+  setupSchema(m);
+  setupLightbox();
+  setupQR();
 }
 
 function renderNotFound(){
   document.title = "찾을 수 없음 · BNI 서초 메이저";
-  document.getElementById("main").innerHTML = `
+  $("#main").innerHTML = `
     <div class="empty-page">
+      <div class="empty-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 9 15 15M15 9 9 15"/></svg></div>
       <h1>대표님을 찾을 수 없습니다</h1>
       <p>잘못된 링크이거나, 아직 공개되지 않은 멤버일 수 있어요.</p>
       <a class="btn btn-primary" href="./">멤버 목록으로 돌아가기</a>
@@ -205,13 +319,14 @@ function renderNotFound(){
 }
 
 function renderUpcoming(m){
-  document.title = `${m.name} 대표 · 공개 예정`;
-  document.getElementById("main").innerHTML = `
+  document.title = `${m.name} 대표 · 공개 예정 · BNI 서초 메이저`;
+  $("#main").innerHTML = `
     <div class="empty-page">
-      <h1>${m.name} 대표 (${m.company})</h1>
-      <p>곧 공개 예정입니다. 매주 1명씩 자료가 업데이트되니 조금만 기다려주세요.</p>
-      <p style="font-size:13px"><strong>업종:</strong> ${m.industry || "-"} &nbsp;·&nbsp; <strong>분야:</strong> ${m.category || "-"}</p>
-      <a class="btn btn-primary" href="./">멤버 목록으로 돌아가기</a>
+      <div class="empty-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <h1>${m.name} 대표 · ${m.company}</h1>
+      <p>곧 공개 예정입니다. 매주 한 명씩 자료가 업데이트되니 조금만 기다려주세요.</p>
+      <p style="font-size:13px;background:var(--bni-orange-bg);color:var(--bni-orange-deep);padding:8px 14px;border-radius:999px;display:inline-block"><strong>${m.industry || "-"}</strong> · ${m.category || "-"}</p>
+      <div style="margin-top:24px"><a class="btn btn-primary" href="./">멤버 목록으로 돌아가기</a></div>
     </div>`;
 }
 
@@ -221,156 +336,278 @@ function render(m, data){
   const referrals = (m.referralTargets || []).map(x => `<li>${x}</li>`).join("");
   const value = (m.valueProps || []).map(x => `<p>${x}</p>`).join("");
 
-  // pager (prev/next)
   const idx = data.members.findIndex(x => x.id === m.id);
   const prev = data.members[idx-1];
   const next = data.members[idx+1];
   const pagerHtml = `
-    <div class="pager">
-      ${prev ? `<a href="member.html?id=${prev.id}"><small>← 이전</small><strong>${prev.name} · ${prev.company}</strong></a>` : `<span></span>`}
-      ${next ? `<a href="member.html?id=${next.id}" style="text-align:right"><small>다음 →</small><strong>${next.name} · ${next.company}</strong></a>` : `<span></span>`}
-    </div>`;
+    <nav class="pager" aria-label="이전/다음 멤버">
+      ${prev ? `<a href="member.html?id=${prev.id}"><small>← 이전</small><strong>${prev.name} 대표 · ${prev.company}</strong></a>` : `<span class="ph"></span>`}
+      ${next ? `<a class="next" href="member.html?id=${next.id}"><small>다음 →</small><strong>${next.name} 대표 · ${next.company}</strong></a>` : `<span class="ph"></span>`}
+    </nav>`;
 
-  const assets = m.assets || {};
-  const assetsHtml = `
-    <div class="asset-grid">
-      ${assetCard("디지털 명함", "한 장으로 보는 핵심 정보. 카톡·SNS 공유에 최적.", assets.digitalCard, "이미지 보기")}
-      ${assetCard("실물 명함 · 앞", "실제 명함의 정면 디자인.", assets.cardFront, "이미지 보기")}
-      ${assetCard("실물 명함 · 뒤", "연락처와 주소가 담긴 명함 뒷면.", assets.cardBack, "이미지 보기")}
-      ${assetCard("인포그래픽", "한 장으로 정리된 사업 소개 인포그래픽.", assets.infographic, "이미지 보기")}
-    </div>
-  `;
+  const a = m.assets || {};
 
-  document.getElementById("main").innerHTML = `
-    <section class="profile-hero">
-      <div class="profile-hero-inner">
+  const showcaseHtml = `
+    <section class="showcase">
+      <div class="showcase-head">
         <div>
-          <div class="crumb"><a href="./">멤버 목록</a> &nbsp;/&nbsp; ${m.category || "BNI Major"}</div>
+          <span class="eyebrow">PR Assets</span>
+          <h2>${m.name} 대표를 한 페이지로</h2>
+          <p>디지털 명함 · 실물 명함 앞뒤 · 인포그래픽까지, 클릭하면 크게 볼 수 있습니다.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          ${a.presentation ? `<a class="btn btn-outline" href="${a.presentation}" download>📑 PPT 다운로드</a>` : ""}
+        </div>
+      </div>
+      <div class="showcase-grid">
+        ${spotlight("digital", "디지털 명함", "한 장으로 보는 핵심 정보 · 카톡/SNS 공유에 최적", a.digitalCard, "spot-digital")}
+        ${spotlight("info", "인포그래픽", "사업·해결책·리퍼럴 가이드를 한 페이지로 정리", a.infographic, "spot-info")}
+        ${spotlight("front", "실물 명함 · 앞면", "오프라인 미팅에서 건네는 명함 정면 디자인", a.cardFront, "spot-card-front")}
+        ${spotlight("back", "실물 명함 · 뒷면", "연락처·주소가 담긴 명함 뒷면", a.cardBack, "spot-card-back")}
+      </div>
+    </section>`;
+
+  const pptHtml = a.presentation ? `
+    <section class="ppt-card">
+      <div class="ppt-meta">
+        <span class="eyebrow">상세 자료</span>
+        <h2>${m.name} 대표 · 상세 소개 PPT</h2>
+        <p>${m.tagline || ""}${m.subTagline ? " — " + m.subTagline : ""}</p>
+        <div class="ppt-actions">
+          <a class="btn btn-orange" href="${a.presentation}" download>📑 PPT 다운로드</a>
+          <a class="btn btn-ghost" style="color:#fff;background:rgba(255,255,255,.1)" href="${a.presentation}" target="_blank" rel="noopener">새 탭에서 열기 ↗</a>
+        </div>
+      </div>
+      <div class="ppt-icon">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="14" y="10" width="92" height="100" rx="10" fill="#fff" opacity=".96"/>
+          <rect x="28" y="30" width="64" height="8" rx="3" fill="#FF8200"/>
+          <rect x="28" y="46" width="44" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
+          <rect x="28" y="56" width="64" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
+          <rect x="28" y="66" width="52" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
+          <rect x="28" y="80" width="64" height="22" rx="4" fill="#FFF4E5"/>
+          <rect x="34" y="88" width="40" height="3" rx="1.5" fill="#FF8200"/>
+          <rect x="34" y="94" width="52" height="3" rx="1.5" fill="#FF8200" opacity=".5"/>
+        </svg>
+      </div>
+    </section>` : "";
+
+  const shareHtml = `
+    <section class="share-card">
+      <div class="share-qr"><canvas id="qrcode"></canvas></div>
+      <div class="share-info">
+        <h3>이 분을 다른 모임·커뮤니티에 추천하고 싶다면</h3>
+        <p>📢 공유 키트를 열면 채널별 공유 버튼, 4가지 톤의 메시지 템플릿, QR 다운로드까지 한 번에 사용할 수 있습니다.</p>
+        <div class="share-actions">
+          <button class="btn btn-orange" id="openShareKitMember">📢 공유 키트 열기</button>
+          <button class="btn btn-primary" id="copyLink">🔗 링크 복사</button>
+          <button class="btn btn-outline" id="copyTemplate">💬 추천 메시지 복사</button>
+        </div>
+      </div>
+    </section>`;
+
+  $("#main").innerHTML = `
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="crumb"><a href="./">멤버 목록</a> <span class="sep">/</span> ${m.category || "BNI Major"} <span class="sep">/</span> No. ${String(m.order).padStart(2,"0")}</div>
+          ${m.status === "featured" ? `<div class="feature-badge">FEATURED · ${data.lastUpdated || ""}</div>` : ""}
           <h1 class="profile-h1">${m.tagline || `${m.name} 대표`}</h1>
           <p class="profile-sub">${m.subTagline || ""}</p>
           <div class="profile-meta">
-            <span class="pill">${m.company}</span>
+            <span class="pill org">${m.company}</span>
             <span class="pill">${m.title || "대표"} ${m.name}</span>
             ${m.industry ? `<span class="pill">${m.industry}</span>` : ""}
           </div>
           <div class="profile-cta">
-            ${assets.presentation ? `<a class="btn btn-orange" href="${assets.presentation}" download>📑 상세 PPT 다운로드</a>` : ""}
-            ${m.phone ? `<a class="btn btn-primary" href="tel:${m.phone.replace(/[^0-9]/g,'')}">전화 ${m.phone}</a>` : ""}
-            ${m.email ? `<a class="btn btn-ghost" href="mailto:${m.email}">${m.email}</a>` : ""}
+            ${a.presentation ? `<a class="btn btn-orange" href="${a.presentation}" download>📑 상세 PPT 다운로드</a>` : ""}
+            ${m.phone ? `<a class="btn btn-primary" href="tel:${m.phone.replace(/[^0-9]/g,'')}">📞 ${m.phone}</a>` : ""}
+            ${m.email ? `<a class="btn btn-ghost" style="color:#fff;background:rgba(255,255,255,.1)" href="mailto:${m.email}">✉️ ${m.email}</a>` : ""}
           </div>
         </div>
-        ${assets.digitalCard ? `<div class="hero-card"><img src="${assets.digitalCard}" alt="${m.name} 디지털 명함" /></div>` : ""}
+        ${a.digitalCard ? `<div class="hero-card-stack"><figure class="hero-card" data-zoom="${a.digitalCard}" data-caption="${m.name} 대표 · 디지털 명함"><img src="${a.digitalCard}" alt="${m.name} 대표 디지털 명함" /><span class="hero-card-shine"></span></figure></div>` : ""}
       </div>
     </section>
 
+    <div class="quickbar">
+      <div class="quickbar-inner">
+        <div class="quick-stats">
+          ${m.industry ? quickStat("briefcase", "업종", m.industry) : ""}
+          ${m.category ? quickStat("tag", "분야", m.category) : ""}
+          ${m.publishedAt ? quickStat("calendar", "공개일", m.publishedAt) : ""}
+          ${m.address ? quickStat("pin", "오피스", m.address) : ""}
+        </div>
+      </div>
+    </div>
+
     <div class="wrap">
       <div class="row">
-        <div class="card">
+        <article class="card">
           <p class="lead">About</p>
           <h2>${m.tagline || `${m.name} 대표`}</h2>
           ${value || `<p>${m.subTagline || ""}</p>`}
-          ${expertise ? `<p class="lead" style="margin-top:24px">전문 분야</p><ul class="bullet-list">${expertise}</ul>` : ""}
-        </div>
+          ${expertise ? `<p class="lead" style="margin-top:26px">전문 분야</p><ul class="bullet-list">${expertise}</ul>` : ""}
+        </article>
 
-        <aside style="display:flex;flex-direction:column;gap:18px">
-          <div class="card">
-            <p class="lead">희망 리퍼럴</p>
+        <aside style="display:flex;flex-direction:column;gap:20px">
+          <article class="card">
+            <p class="lead">Referral Guide</p>
             <h2>이런 분을 소개해주세요</h2>
-            ${referrals ? `<ul class="bullet-list">${referrals}</ul>` : "<p>준비중</p>"}
-          </div>
+            ${referrals ? `<ul class="bullet-list referral-list">${referrals}</ul>` : "<p>준비중</p>"}
+          </article>
 
-          <div class="card">
+          <article class="card">
             <p class="lead">Contact</p>
             <h2>연락처</h2>
-            <dl class="contact" style="margin-top:14px">
+            <dl class="contact-card">
               ${m.phone ? `<dt>M</dt><dd><a href="tel:${m.phone.replace(/[^0-9]/g,'')}">${m.phone}</a></dd>` : ""}
               ${m.email ? `<dt>E</dt><dd><a href="mailto:${m.email}">${m.email}</a></dd>` : ""}
               ${m.address ? `<dt>A</dt><dd>${m.address}</dd>` : ""}
             </dl>
-          </div>
+          </article>
         </aside>
       </div>
 
-      <section class="wrap" style="padding:60px 0 0">
-        <div class="assets-section">
-          <h2>자료 4종</h2>
-          <p class="lead">디지털 명함 · 실물 명함 앞/뒤 · 인포그래픽까지 한 페이지에서 확인하세요.</p>
-          ${assetsHtml}
-        </div>
-      </section>
-
-      ${assets.presentation ? `
-      <div class="ppt-card">
-        <div>
-          <p style="color:#FFB763;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px">상세 자료</p>
-          <h2>${m.name} 대표 · 상세 소개 PPT</h2>
-          <p>${m.tagline || ""} ${m.subTagline ? "— " + m.subTagline : ""}</p>
-          <a class="btn btn-orange" href="${assets.presentation}" download>📑 PPT 다운로드</a>
-        </div>
-        <div class="ppt-icon">
-          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="20" y="14" width="80" height="100" rx="8" fill="#fff" opacity=".95"/>
-            <rect x="32" y="34" width="56" height="6" rx="2" fill="#FF8200"/>
-            <rect x="32" y="48" width="40" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
-            <rect x="32" y="58" width="56" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
-            <rect x="32" y="68" width="48" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
-            <rect x="32" y="84" width="56" height="20" rx="3" fill="#FFF4E5"/>
-            <rect x="38" y="92" width="44" height="4" rx="2" fill="#FF8200"/>
-          </svg>
-        </div>
-      </div>` : ""}
-
+      ${showcaseHtml}
+      ${pptHtml}
+      ${shareHtml}
       ${pagerHtml}
     </div>
   `;
+
+  // Wire up share card buttons
+  const url = location.href;
+  $("#copyLink")?.addEventListener("click", ()=>copy(url, "링크가 복사되었습니다"));
+  $("#copyTemplate")?.addEventListener("click", ()=>{
+    const tpl = `[BNI 서초 메이저 챕터 추천]\n${m.company} · ${m.title || "대표"} ${m.name}\n${m.tagline || ""}\n\n${m.subTagline || ""}\n\n전문분야: ${(m.expertise||[]).join(", ")}\n연락: ${m.phone || ""}\n\n자세히 보기 → ${url}`;
+    copy(tpl, "추천 메시지가 복사되었습니다");
+  });
+  $("#openShareKitMember")?.addEventListener("click", ()=>{
+    if(!window.ShareKit) return;
+    const chapter = location.origin + location.pathname.replace(/[^/]*$/,"");
+    ShareKit.open({ mode:"member", member:m, data, url, chapterUrl:chapter });
+  });
 }
 
-function assetCard(kind, desc, src, btn){
+function quickStat(icon, label, value){
+  const icons = {
+    briefcase:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>',
+    tag:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41 12 22l-9-9V3h10l8.59 8.59a2 2 0 0 1 0 2.82Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>',
+    calendar:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+    pin:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-7.5 7-13a7 7 0 1 0-14 0c0 5.5 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>'
+  };
+  return `<div class="quick-stat">${icons[icon]||""}<div><div class="label">${label}</div><div class="value">${value}</div></div></div>`;
+}
+
+function spotlight(kind, title, desc, src, cls){
   if(src){
     return `
-      <div class="asset">
-        <a class="asset-thumb" href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${kind}" onerror="this.parentElement.classList.add('empty');this.parentElement.innerHTML='이미지를 곧 추가합니다'"></a>
-        <div class="asset-body">
-          <div class="asset-kind">${kind}</div>
-          <h3 class="asset-title">${kind}</h3>
-          <p class="asset-desc">${desc}</p>
-          <div class="asset-actions">
-            <a href="${src}" target="_blank" rel="noopener">${btn}</a>
-            <a href="${src}" download>다운로드</a>
-          </div>
+      <figure class="spotlight ${cls}" data-zoom="${src}" data-caption="${title}">
+        <div class="spotlight-art">
+          <span class="spotlight-tag">${title}</span>
+          <span class="spotlight-zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span>
+          <img src="${src}" alt="${title}" loading="lazy" />
         </div>
-      </div>`;
+        <figcaption class="spotlight-body">
+          <h3 class="spotlight-title">${title}</h3>
+          <p class="spotlight-desc">${desc}</p>
+        </figcaption>
+      </figure>`;
   }
   return `
-    <div class="asset">
-      <div class="asset-thumb empty">${kind}<br/><small style="font-weight:500;color:var(--ink-3);font-size:11px">곧 업데이트됩니다</small></div>
-      <div class="asset-body">
-        <div class="asset-kind">${kind}</div>
-        <h3 class="asset-title">${kind}</h3>
-        <p class="asset-desc">${desc}</p>
-        <div class="asset-actions"><span style="padding:6px 12px;border-radius:999px;background:var(--line-2);font-size:12px;font-weight:700;color:var(--ink-3)">준비중</span></div>
+    <figure class="spotlight ${cls}" style="cursor:default">
+      <div class="spotlight-art spotlight-empty">
+        <div class="em-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 16l5-5 4 4 3-3 6 6"/></svg></div>
+        ${title}<br/><small style="font-weight:500;color:var(--ink-3);font-size:11px">곧 업데이트됩니다</small>
       </div>
-    </div>`;
+      <figcaption class="spotlight-body">
+        <h3 class="spotlight-title">${title}</h3>
+        <p class="spotlight-desc">${desc}</p>
+      </figcaption>
+    </figure>`;
 }
 
-document.getElementById("shareBtn").addEventListener("click", async ()=>{
+function setupOG(m){
+  const a = m.assets || {};
+  const title = `${m.name} 대표 · ${m.company} · BNI 서초 메이저`;
+  const desc = (m.tagline || "") + (m.subTagline ? " — " + m.subTagline : "");
+  $("#ogTitle").setAttribute("content", title);
+  $("#ogDesc").setAttribute("content", desc);
+  if(a.digitalCard){
+    const abs = new URL(a.digitalCard, location.href).toString();
+    $("#ogImage").setAttribute("content", abs);
+  }
+}
+
+function setupSchema(m){
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": m.name,
+    "jobTitle": m.title || "대표",
+    "telephone": m.phone || undefined,
+    "email": m.email || undefined,
+    "worksFor": { "@type": "Organization", "name": m.company },
+    "memberOf": { "@type": "Organization", "name": "BNI 서초 메이저 챕터" },
+    "description": m.tagline || ""
+  };
+  $("#ldjson").textContent = JSON.stringify(ld, null, 2);
+}
+
+function setupLightbox(){
+  const lb = $("#lightbox"), lbImg = $("#lightboxImg"), lbCap = $("#lightboxCaption");
+  document.querySelectorAll("[data-zoom]").forEach(el=>{
+    el.addEventListener("click", e=>{
+      e.preventDefault();
+      lbImg.src = el.dataset.zoom;
+      lbImg.alt = el.dataset.caption || "";
+      lbCap.textContent = el.dataset.caption || "";
+      lb.classList.add("open");
+      document.body.style.overflow = "hidden";
+    });
+  });
+  const close = ()=>{ lb.classList.remove("open"); document.body.style.overflow = ""; };
+  $("#lightboxClose").addEventListener("click", close);
+  lb.addEventListener("click", e=>{ if(e.target === lb) close(); });
+  document.addEventListener("keydown", e=>{ if(e.key === "Escape" && lb.classList.contains("open")) close(); });
+}
+
+function setupQR(){
+  const canvas = $("#qrcode");
+  if(!canvas || !window.QRCode) return;
+  QRCode.toCanvas(canvas, location.href, {margin:1,width:280,color:{dark:"#0E1F5C",light:"#FFFFFF"}}, ()=>{});
+}
+
+async function copy(text, msg){
+  try{ await navigator.clipboard.writeText(text); showToast(msg || "복사되었습니다"); }
+  catch{ showToast("복사 실패. 직접 복사해주세요"); }
+}
+
+function showToast(msg){
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(showToast._t); showToast._t = setTimeout(()=>t.classList.remove("show"), 2000);
+}
+
+// Top bar buttons
+$("#printBtn").addEventListener("click", ()=>window.print());
+$("#shareBtn").addEventListener("click", async ()=>{
+  // Open Share Kit if available
+  if(window.ShareKit && window._currentMember && window._currentData){
+    const chapter = location.origin + location.pathname.replace(/[^/]*$/,"");
+    ShareKit.open({ mode:"member", member:window._currentMember, data:window._currentData, url:location.href, chapterUrl:chapter });
+    return;
+  }
+  // Fallback: native share or copy
   const url = location.href;
-  try{
-    if(navigator.share){ await navigator.share({title:document.title, url}); return; }
-    await navigator.clipboard.writeText(url);
-    const b = document.getElementById("shareBtn");
-    const orig = b.textContent; b.textContent = "복사 완료 ✓";
-    setTimeout(()=>b.textContent = orig, 2000);
-  }catch(e){ console.warn(e); }
+  if(navigator.share){
+    try{ await navigator.share({title: document.title, url}); return; }catch{}
+  }
+  copy(url, "링크가 복사되었습니다");
 });
 
 load().catch(err=>{
   console.error(err);
-  document.getElementById("main").innerHTML = `
-    <div class="empty-page">
-      <h1>데이터를 불러오지 못했습니다</h1>
-      <p>로컬에서 열 때는 <code>python -m http.server 8765</code>로 서버를 띄우거나, GitHub Pages에서 확인해주세요.</p>
-    </div>`;
+  $("#main").innerHTML = `<div class="empty-page"><h1>데이터를 불러오지 못했습니다</h1><p>로컬에서 열 때는 <code>python -m http.server 8765</code>로 서버를 띄우거나, GitHub Pages에서 확인해주세요.</p></div>`;
 });
 </script>
 </body>
