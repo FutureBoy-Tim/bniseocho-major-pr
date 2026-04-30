@@ -43,8 +43,7 @@
         "cardFront": "assets/members/lee-woochang/card-front.png",
         "cardBack": "assets/members/lee-woochang/card-back.png",
         "infographic": "assets/members/lee-woochang/infographic.png",
-        "presentation": "assets/members/lee-woochang/presentation.pptx",
-        "profile": "assets/members/lee-woochang/profile.jpg"
+        "presentation": "assets/members/lee-woochang/presentation.pptx"
       }
     },
     { "id": "jung-wonok", "order": 2, "name": "정원옥", "company": "모티브21", "category": "금융", "industry": "해외저축연금보험", "status": "upcoming" },

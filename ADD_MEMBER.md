@@ -27,11 +27,10 @@ assets/members/{영문ID}/
 ├── card-back.png          ← 실물 명함 뒷면 (가로 16:9, 3500×2000 권장)
 ├── infographic.png        ← 한 장 인포그래픽 (정사각형 1:1, 1920×1920 권장)
 ├── presentation.pptx      ← 상세 PPT (10~20장)
-├── slides/                ← PPT 슬라이드를 PNG로 추출 (슬라이드 뷰어 자동 활성화)
-│   ├── slide-01.png       ← 첫 슬라이드 (1920×1080 권장)
-│   ├── slide-02.png
-│   └── ... (이후 순서대로)
-└── profile.jpg            ← (옵션) 정면 인물 사진
+└── slides/                ← PPT 슬라이드를 PNG로 추출 (슬라이드 뷰어 자동 활성화)
+    ├── slide-01.png       ← 첫 슬라이드 (1920×1080 권장)
+    ├── slide-02.png
+    └── ... (이후 순서대로)
 ```
 
 > 파일명을 정확히 일치시키면 별도 코드 수정 없이 자동 노출됩니다.
@@ -98,8 +97,7 @@ $pres.Close(); $pp.Quit()
     "cardFront": "assets/members/lee-woochang/card-front.png",
     "cardBack": "assets/members/lee-woochang/card-back.png",
     "infographic": "assets/members/lee-woochang/infographic.png",
-    "presentation": "assets/members/lee-woochang/presentation.pptx",
-    "profile": "assets/members/lee-woochang/profile.jpg"
+    "presentation": "assets/members/lee-woochang/presentation.pptx"
   }
 }
 ```

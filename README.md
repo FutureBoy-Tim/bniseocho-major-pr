@@ -17,12 +17,12 @@ bni-major-pr/
 ├── assets/
 │   └── members/
 │       └── lee-woochang/
-│           ├── digital-card.png       # 디지털 명함 (BNI 카드형)
-│           ├── card-front.png         # 실물 명함 앞면
-│           ├── card-back.png          # 실물 명함 뒷면
-│           ├── infographic.png        # 한 장 인포그래픽
-│           ├── presentation.pptx      # 상세 PPT
-│           └── profile.jpg            # (옵션) 프로필 사진
+│           ├── digital-card.png       # 디지털 명함 (BNI 공통 9:16)
+│           ├── card-front.png         # 실물 명함 앞면 (16:9)
+│           ├── card-back.png          # 실물 명함 뒷면 (16:9)
+│           ├── infographic.png        # 한 장 인포그래픽 (정사각 1:1)
+│           ├── presentation.pptx      # 상세 PPT (10~20장)
+│           └── slides/                # PPT를 PNG로 추출한 슬라이드 (선택)
 ├── ADD_MEMBER.md           # 매주 새 멤버 추가하는 방법
 └── README.md               # 이 파일
 ```
