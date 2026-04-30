@@ -71,14 +71,13 @@ img{max-width:100%;display:block}
 .profile-cta{display:flex;flex-wrap:wrap;gap:8px}
 .profile-cta .btn-orange{box-shadow:0 12px 28px rgba(255,130,0,.34)}
 
-/* Hero card stack */
-.hero-card-stack{position:relative;display:grid;place-items:center;min-height:380px}
-.hero-card{position:relative;background:#fff;border-radius:24px;padding:6px;box-shadow:var(--shadow-xl),0 0 0 1px rgba(255,255,255,.1);transform:rotate(-2deg) translateZ(0);transition:transform .5s cubic-bezier(.2,.8,.2,1);max-width:380px;width:100%;cursor:zoom-in}
+/* Hero card stack — digital card 9:16 */
+.hero-card-stack{position:relative;display:grid;place-items:center;min-height:420px}
+.hero-card{position:relative;background:#fff;border-radius:24px;padding:6px;box-shadow:var(--shadow-xl),0 0 0 1px rgba(255,255,255,.1);transform:rotate(-2deg) translateZ(0);transition:transform .5s cubic-bezier(.2,.8,.2,1);max-width:300px;width:100%;cursor:zoom-in}
 .hero-card:hover{transform:rotate(0deg) translateY(-4px) scale(1.02)}
-.hero-card img{border-radius:20px;display:block;width:100%}
-.hero-card-shine{position:absolute;inset:6px;border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.18) 0%,transparent 30%,transparent 70%,rgba(255,130,0,.12) 100%);pointer-events:none;mix-blend-mode:overlay}
+.hero-card img{border-radius:20px;display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#0E1F5C}
 
-/* ── Quick info bar (under hero) ───────────────────────────── */
+/* ── Quick info bar ───────────────────────────── */
 .quickbar{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .quickbar-inner{max-width:1280px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;justify-content:space-between}
 .quick-stats{display:flex;flex-wrap:wrap;gap:32px}
@@ -86,7 +85,6 @@ img{max-width:100%;display:block}
 .quick-stat .label{color:var(--ink-3);font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
 .quick-stat .value{color:var(--ink);font-weight:700;font-size:14px}
 .quick-stat svg{color:var(--bni-orange);flex-shrink:0}
-.quickbar-share{display:flex;gap:6px}
 
 /* ── Sections ───────────────────────────── */
 .wrap{max-width:1280px;margin:0 auto;padding:64px 24px 24px}
@@ -108,7 +106,6 @@ img{max-width:100%;display:block}
 .bullet-list li{position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--line-2);font-size:15px;color:var(--ink)}
 .bullet-list li:last-child{border-bottom:none}
 .bullet-list li::before{content:"";position:absolute;left:2px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--bni-orange-bg);box-shadow:inset 0 0 0 3px var(--bni-orange)}
-
 .referral-list li::before{background:#E8EEFF;box-shadow:inset 0 0 0 3px var(--bni-navy-3)}
 
 .contact-card{display:grid;grid-template-columns:auto 1fr;gap:14px 18px;font-size:14px;margin-top:14px}
@@ -117,55 +114,96 @@ img{max-width:100%;display:block}
 .contact-card dd a{color:var(--bni-navy);font-weight:700;border-bottom:1px solid transparent;transition:border .15s}
 .contact-card dd a:hover{border-bottom-color:var(--bni-navy)}
 
-/* ── Asset showcase (the centerpiece) ───────────────────────────── */
+/* ── Asset showcase (NEW LAYOUT with correct aspect ratios) ─── */
 .showcase{margin-top:80px}
 .showcase-head{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:32px}
 .showcase-head h2{margin:0;font-size:clamp(26px,3vw,36px);letter-spacing:-.025em;font-weight:800}
 .showcase-head p{margin:8px 0 0;color:var(--ink-3);font-size:15px}
 
-.showcase-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+/* Top row: digital card (9:16) + infographic (1:1)
+ * Column ratio 9:16 makes both heights equal */
+.showcase-row{display:grid;gap:20px;margin-bottom:20px}
+.showcase-row.top{grid-template-columns:9fr 16fr}
+.showcase-row.bottom{grid-template-columns:1fr 1fr}
 
-.spotlight{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;transition:all .2s;cursor:zoom-in;display:flex;flex-direction:column}
-.spotlight:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#D7DDE9}
-.spotlight-art{position:relative;background:linear-gradient(135deg,#F1F3F8,#E5E8EF);overflow:hidden;display:grid;place-items:center}
-.spotlight-art img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.spotlight:hover .spotlight-art img{transform:scale(1.04)}
+.spotlight{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;transition:all .2s;display:flex;flex-direction:column}
+.spotlight:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:#D7DDE9}
+.spotlight-art{position:relative;background:#F4F6FB;overflow:hidden;display:grid;place-items:center;cursor:zoom-in}
+.spotlight-art img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1);background:#fff}
+.spotlight:hover .spotlight-art img{transform:scale(1.03)}
+
+/* Aspect ratios per asset type */
+.spot-digital .spotlight-art{aspect-ratio:9/16}
+.spot-digital .spotlight-art img{object-fit:cover}
+.spot-info .spotlight-art{aspect-ratio:1/1}
+.spot-info .spotlight-art img{object-fit:cover}
+.spot-card .spotlight-art{aspect-ratio:16/9}
+.spot-card .spotlight-art img{object-fit:cover}
+
 .spotlight-tag{position:absolute;top:14px;left:14px;padding:5px 11px;border-radius:999px;background:rgba(0,0,0,.65);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px);z-index:2}
-.spotlight-zoom{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.15);opacity:0;transform:translateY(-4px);transition:all .2s}
+.spotlight-zoom{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.15);opacity:0;transform:translateY(-4px);transition:all .2s;z-index:2;cursor:zoom-in}
 .spotlight:hover .spotlight-zoom{opacity:1;transform:translateY(0)}
-.spotlight-body{padding:18px 22px 20px;display:flex;flex-direction:column;gap:6px}
+
+.spotlight-body{padding:18px 22px 18px;display:flex;flex-direction:column;gap:10px}
+.spotlight-meta{flex:1}
 .spotlight-title{margin:0;font-size:16px;font-weight:800;letter-spacing:-.01em}
-.spotlight-desc{margin:0;font-size:13px;color:var(--ink-3);line-height:1.5}
-.spotlight-empty{aspect-ratio:4/3;display:grid;place-items:center;color:var(--ink-3);text-align:center;padding:24px;background:repeating-linear-gradient(45deg,#F4F6FB 0 12px,#EDF0F7 12px 24px);font-size:13px;font-weight:600}
+.spotlight-desc{margin:4px 0 0;font-size:13px;color:var(--ink-3);line-height:1.5}
+.spotlight-actions{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.spot-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;transition:all .14s;cursor:pointer;border:none;line-height:1}
+.spot-btn-primary{background:var(--bni-orange);color:#fff}
+.spot-btn-primary:hover{background:#FF6A00}
+.spot-btn-outline{background:var(--line-2);color:var(--ink-2)}
+.spot-btn-outline:hover{background:#E5E8EF;color:var(--ink)}
+
+.spotlight-empty{aspect-ratio:inherit;display:grid;place-items:center;color:var(--ink-3);text-align:center;padding:24px;background:repeating-linear-gradient(45deg,#F4F6FB 0 12px,#EDF0F7 12px 24px);font-size:13px;font-weight:600;height:100%}
 .spotlight-empty .em-icon{width:38px;height:38px;border-radius:12px;background:#fff;display:grid;place-items:center;margin-bottom:10px;color:var(--ink-4)}
 
-/* Layout: digital-card big + infographic big + cards small */
-.spot-digital{grid-column:span 5}
-.spot-digital .spotlight-art{aspect-ratio:9/16}
-.spot-info{grid-column:span 7}
-.spot-info .spotlight-art{aspect-ratio:1/1; min-height:480px}
-.spot-card-front,.spot-card-back{grid-column:span 6}
-.spot-card-front .spotlight-art,.spot-card-back .spotlight-art{aspect-ratio:16/9}
+/* ── PPT Slide Viewer (NEW) ───────────────────────────── */
+.slide-viewer{margin-top:80px;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-md)}
+.sv-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px;padding:30px 32px 22px;border-bottom:1px solid var(--line)}
+.sv-head .sv-title h2{margin:6px 0 4px;font-size:24px;letter-spacing:-.02em}
+.sv-head .sv-title p{margin:0;color:var(--ink-3);font-size:14px}
+.sv-actions{display:flex;gap:6px;flex-wrap:wrap}
 
-/* PPT card — separate style */
-.ppt-card{margin-top:24px;background:linear-gradient(135deg,#0B1849 0%,#1B3380 60%,#27408F 100%);color:#fff;border-radius:var(--r-xl);padding:0;display:grid;grid-template-columns:1fr auto;gap:0;align-items:stretch;overflow:hidden;position:relative}
-.ppt-card::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 300px at 90% -20%, rgba(255,130,0,.3), transparent 70%);pointer-events:none}
-.ppt-meta{padding:36px 36px 32px;position:relative}
-.ppt-meta .eyebrow{color:#FFB763}
-.ppt-meta h2{margin:0 0 6px;font-size:24px;letter-spacing:-.02em}
-.ppt-meta p{color:#C4CCE3;margin:0 0 18px;font-size:15px;line-height:1.55;max-width:480px}
-.ppt-icon{display:grid;place-items:center;padding:30px 40px;background:rgba(0,0,0,.18);position:relative}
-.ppt-icon svg{width:140px;height:140px;filter:drop-shadow(0 12px 24px rgba(0,0,0,.3))}
-.ppt-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.sv-stage{position:relative;background:linear-gradient(135deg,#0B1849 0%,#1B3380 100%);aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden}
+.sv-stage img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;display:block;background:#fff;transition:opacity .25s}
+.sv-stage img.loading{opacity:.4}
+.sv-empty{color:#A6B0CC;text-align:center;padding:40px;font-size:14px}
+.sv-empty h3{margin:0 0 8px;color:#fff;font-size:18px;letter-spacing:-.01em}
 
-/* ── Share & QR card ───────────────────────────── */
+.sv-nav-prev,.sv-nav-next{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;font-size:20px;font-weight:300;backdrop-filter:blur(8px);transition:all .15s;border:1px solid rgba(255,255,255,.18);cursor:pointer;z-index:3}
+.sv-nav-prev{left:18px}
+.sv-nav-next{right:18px}
+.sv-nav-prev:hover,.sv-nav-next:hover{background:rgba(0,0,0,.8);transform:translateY(-50%) scale(1.05)}
+.sv-nav-prev:disabled,.sv-nav-next:disabled{opacity:.3;cursor:not-allowed;transform:translateY(-50%)}
+
+.sv-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.04em;backdrop-filter:blur(8px);z-index:3}
+.sv-fullscreen{position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;font-size:14px;backdrop-filter:blur(8px);transition:all .15s;border:1px solid rgba(255,255,255,.18);cursor:pointer;z-index:3}
+.sv-fullscreen:hover{background:rgba(0,0,0,.8)}
+
+.sv-thumbs{padding:18px 24px;background:#FAFBFD;display:flex;gap:8px;overflow-x:auto;scroll-behavior:smooth;border-top:1px solid var(--line)}
+.sv-thumbs::-webkit-scrollbar{height:6px}
+.sv-thumbs::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.sv-thumb{flex-shrink:0;width:120px;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:2px solid transparent;background:#fff;cursor:pointer;transition:all .15s;padding:0;position:relative}
+.sv-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.sv-thumb:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.sv-thumb.active{border-color:var(--bni-orange);box-shadow:0 0 0 2px rgba(255,130,0,.2)}
+.sv-thumb-num{position:absolute;top:4px;left:4px;background:rgba(0,0,0,.7);color:#fff;font-size:10px;font-weight:800;padding:2px 6px;border-radius:4px}
+
+/* Fullscreen mode */
+.slide-viewer.fullscreen{position:fixed;inset:0;z-index:200;border-radius:0;margin:0;display:flex;flex-direction:column;background:#08123E}
+.slide-viewer.fullscreen .sv-head,.slide-viewer.fullscreen .sv-thumbs{background:#0E1F5C;color:#fff;border-color:rgba(255,255,255,.08)}
+.slide-viewer.fullscreen .sv-head h2,.slide-viewer.fullscreen .sv-head p{color:#fff}
+.slide-viewer.fullscreen .sv-stage{flex:1;aspect-ratio:auto}
+.slide-viewer.fullscreen .sv-thumb{background:rgba(255,255,255,.06)}
+
+/* ── Share & QR ───────────────────────────── */
 .share-card{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:24px;margin-top:24px}
 .share-qr{width:140px;height:140px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:8px;display:grid;place-items:center}
 .share-qr canvas, .share-qr img{width:100%;height:100%;display:block}
 .share-info h3{margin:0 0 6px;font-size:18px;letter-spacing:-.01em}
 .share-info p{margin:0 0 12px;color:var(--ink-3);font-size:14px}
 .share-actions{display:flex;flex-wrap:wrap;gap:8px}
-.copy-block{display:flex;gap:8px;align-items:center;padding:10px 14px;border-radius:var(--r-md);background:var(--line-2);font-size:13px;color:var(--ink-2);font-family:ui-monospace,Menlo,Consolas,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:200px}
 
 /* ── Pager ───────────────────────────── */
 .pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:60px}
@@ -192,9 +230,10 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
 .lightbox{position:fixed;inset:0;background:rgba(8,12,30,.92);z-index:200;display:none;place-items:center;padding:24px;cursor:zoom-out;backdrop-filter:blur(8px)}
 .lightbox.open{display:grid}
 .lightbox img{max-width:min(1100px,95vw);max-height:90vh;border-radius:14px;box-shadow:0 40px 100px rgba(0,0,0,.7);cursor:default}
-.lightbox-close{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;font-size:20px;border:1px solid rgba(255,255,255,.2);transition:background .15s}
+.lightbox-close{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;font-size:20px;border:1px solid rgba(255,255,255,.2);transition:background .15s;cursor:pointer}
 .lightbox-close:hover{background:rgba(255,255,255,.2)}
 .lightbox-caption{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;font-size:13px;font-weight:600;letter-spacing:.04em;background:rgba(0,0,0,.4);padding:8px 16px;border-radius:999px;backdrop-filter:blur(8px)}
+.lightbox-actions{position:absolute;bottom:70px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
 
 /* ── Toast ───────────────────────────── */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--bni-navy);color:#fff;padding:12px 20px;border-radius:999px;font-size:13px;font-weight:600;box-shadow:0 12px 32px rgba(14,31,92,.4);opacity:0;transition:all .25s;pointer-events:none;z-index:300}
@@ -202,15 +241,14 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
 
 /* ── Responsive ───────────────────────────── */
 @media (max-width:1000px){
-  .spot-digital,.spot-info,.spot-card-front,.spot-card-back{grid-column:span 12}
-  .spot-info .spotlight-art{min-height:auto}
+  .showcase-row.top{grid-template-columns:1fr}
+  .showcase-row.bottom{grid-template-columns:1fr}
+  .spot-digital .spotlight-art{aspect-ratio:9/16;max-height:600px}
+  .sv-thumb{width:96px}
 }
 @media (max-width:880px){
   .hero-inner{grid-template-columns:1fr;gap:24px;padding:36px 16px 56px}
   .row{grid-template-columns:1fr}
-  .ppt-card{grid-template-columns:1fr}
-  .ppt-icon{padding:24px;background:rgba(0,0,0,.25)}
-  .ppt-icon svg{width:88px;height:88px}
   .topbar-inner{padding:12px 16px;gap:8px}
   .wrap{padding:48px 16px 16px}
   .quickbar-inner{padding:14px 16px}
@@ -219,27 +257,26 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
   .share-qr{margin:0 auto}
   .pager{grid-template-columns:1fr}
   .pager .next{text-align:left}
+  .sv-head{padding:22px 18px 16px}
+  .sv-thumbs{padding:14px 18px}
+  .sv-nav-prev,.sv-nav-next{width:40px;height:40px}
 }
 @media (max-width:560px){
   .profile-h1{font-size:30px}
   .feature-badge{font-size:10px}
   .card{padding:24px 22px}
-  .ppt-meta{padding:28px 24px}
   .topbar .btn-ghost{display:none}
 }
 
 /* ── Print ───────────────────────────── */
 @media print{
   body{background:#fff}
-  .topbar,.lightbox,.toast,.pager,footer,.profile-cta,.quickbar-share,.spotlight-zoom,.share-card{display:none !important}
+  .topbar,.lightbox,.toast,.pager,footer,.profile-cta,.spotlight-zoom,.share-card,.sv-thumbs,.sv-nav-prev,.sv-nav-next,.sv-fullscreen,.sv-actions,.spotlight-actions{display:none !important}
   .hero{background:#0E1F5C !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;color:#fff}
   .hero-inner{padding:24px;page-break-inside:avoid}
-  .card,.spotlight,.ppt-card{box-shadow:none !important;page-break-inside:avoid}
+  .card,.spotlight,.slide-viewer{box-shadow:none !important;page-break-inside:avoid}
   .showcase{margin-top:24px}
-  .showcase-grid{gap:12px}
-  .spot-digital,.spot-card-front,.spot-card-back{grid-column:span 6}
-  .spot-info{grid-column:span 12}
-  .wrap{padding:24px}
+  .showcase-row{gap:12px}
 }
 </style>
 </head>
@@ -254,7 +291,7 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
     <span class="topbar-spacer"></span>
     <a class="btn btn-ghost" href="./">← 멤버 목록</a>
     <button class="btn btn-outline" id="printBtn" title="PDF로 저장">🖨 인쇄</button>
-    <button class="btn btn-orange" id="shareBtn">공유</button>
+    <button class="btn btn-orange" id="shareBtn">📢 공유</button>
   </div>
 </header>
 
@@ -276,19 +313,19 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="자료 크게 보기">
   <button class="lightbox-close" id="lightboxClose" aria-label="닫기">✕</button>
   <img id="lightboxImg" src="" alt="" />
+  <div class="lightbox-actions" id="lightboxActions"></div>
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
 
 <!-- Toast -->
 <div class="toast" id="toast">복사되었습니다</div>
 
-<!-- Schema.org structured data slot -->
+<!-- Schema.org structured data -->
 <script type="application/ld+json" id="ldjson">{}</script>
 
 <script>
 const params = new URLSearchParams(location.search);
 const memberId = params.get("id");
-
 const $ = sel => document.querySelector(sel);
 
 async function load(){
@@ -305,6 +342,7 @@ async function load(){
   setupSchema(m);
   setupLightbox();
   setupQR();
+  await setupSlideViewer(m);
 }
 
 function renderNotFound(){
@@ -353,44 +391,41 @@ function render(m, data){
         <div>
           <span class="eyebrow">PR Assets</span>
           <h2>${m.name} 대표를 한 페이지로</h2>
-          <p>디지털 명함 · 실물 명함 앞뒤 · 인포그래픽까지, 클릭하면 크게 볼 수 있습니다.</p>
-        </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          ${a.presentation ? `<a class="btn btn-outline" href="${a.presentation}" download>📑 PPT 다운로드</a>` : ""}
+          <p>각 자료를 클릭하면 크게 볼 수 있고, 다운로드 버튼으로 바로 받을 수 있습니다.</p>
         </div>
       </div>
-      <div class="showcase-grid">
-        ${spotlight("digital", "디지털 명함", "한 장으로 보는 핵심 정보 · 카톡/SNS 공유에 최적", a.digitalCard, "spot-digital")}
-        ${spotlight("info", "인포그래픽", "사업·해결책·리퍼럴 가이드를 한 페이지로 정리", a.infographic, "spot-info")}
-        ${spotlight("front", "실물 명함 · 앞면", "오프라인 미팅에서 건네는 명함 정면 디자인", a.cardFront, "spot-card-front")}
-        ${spotlight("back", "실물 명함 · 뒷면", "연락처·주소가 담긴 명함 뒷면", a.cardBack, "spot-card-back")}
+      <div class="showcase-row top">
+        ${spotlight("digital", "디지털 명함", "BNI 서초 공통 디지털 명함 포맷", a.digitalCard, "spot-digital", `${m.name}_digital-card.png`)}
+        ${spotlight("info", "인포그래픽", "사업·해결책·리퍼럴 가이드를 한 페이지로", a.infographic, "spot-info", `${m.name}_infographic.png`)}
+      </div>
+      <div class="showcase-row bottom">
+        ${spotlight("front", "실물 명함 · 앞면", "오프라인 미팅에서 건네는 명함 정면", a.cardFront, "spot-card", `${m.name}_card-front.png`)}
+        ${spotlight("back", "실물 명함 · 뒷면", "연락처와 주소가 담긴 명함 뒷면", a.cardBack, "spot-card", `${m.name}_card-back.png`)}
       </div>
     </section>`;
 
-  const pptHtml = a.presentation ? `
-    <section class="ppt-card">
-      <div class="ppt-meta">
-        <span class="eyebrow">상세 자료</span>
-        <h2>${m.name} 대표 · 상세 소개 PPT</h2>
-        <p>${m.tagline || ""}${m.subTagline ? " — " + m.subTagline : ""}</p>
-        <div class="ppt-actions">
-          <a class="btn btn-orange" href="${a.presentation}" download>📑 PPT 다운로드</a>
-          <a class="btn btn-ghost" style="color:#fff;background:rgba(255,255,255,.1)" href="${a.presentation}" target="_blank" rel="noopener">새 탭에서 열기 ↗</a>
+  const slideViewerHtml = `
+    <section class="slide-viewer" id="slideViewer">
+      <div class="sv-head">
+        <div class="sv-title">
+          <span class="eyebrow">상세 소개 PPT</span>
+          <h2>${m.name} 대표 · 슬라이드 뷰어</h2>
+          <p>좌우 화살표 또는 키보드 ← → 로 슬라이드를 넘기세요. 첫 화면부터 차례로 볼 수 있습니다.</p>
+        </div>
+        <div class="sv-actions">
+          ${a.presentation ? `<a class="btn btn-orange" href="${a.presentation}" download="${m.name}_상세PPT.pptx">📑 PPT 다운로드</a>` : ""}
+          ${a.presentation ? `<a class="btn btn-outline" href="${a.presentation}" target="_blank" rel="noopener">새 탭 ↗</a>` : ""}
         </div>
       </div>
-      <div class="ppt-icon">
-        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="14" y="10" width="92" height="100" rx="10" fill="#fff" opacity=".96"/>
-          <rect x="28" y="30" width="64" height="8" rx="3" fill="#FF8200"/>
-          <rect x="28" y="46" width="44" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
-          <rect x="28" y="56" width="64" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
-          <rect x="28" y="66" width="52" height="4" rx="2" fill="#0E1F5C" opacity=".4"/>
-          <rect x="28" y="80" width="64" height="22" rx="4" fill="#FFF4E5"/>
-          <rect x="34" y="88" width="40" height="3" rx="1.5" fill="#FF8200"/>
-          <rect x="34" y="94" width="52" height="3" rx="1.5" fill="#FF8200" opacity=".5"/>
-        </svg>
+      <div class="sv-stage" id="svStage">
+        <button class="sv-fullscreen" id="svFullscreen" title="전체화면 (F)">⛶</button>
+        <button class="sv-nav-prev" id="svPrev" title="이전 (←)">‹</button>
+        <button class="sv-nav-next" id="svNext" title="다음 (→)">›</button>
+        <img id="svImg" src="" alt="" />
+        <div class="sv-counter" id="svCounter">로딩…</div>
       </div>
-    </section>` : "";
+      <div class="sv-thumbs" id="svThumbs"></div>
+    </section>`;
 
   const shareHtml = `
     <section class="share-card">
@@ -401,7 +436,6 @@ function render(m, data){
         <div class="share-actions">
           <button class="btn btn-orange" id="openShareKitMember">📢 공유 키트 열기</button>
           <button class="btn btn-primary" id="copyLink">🔗 링크 복사</button>
-          <button class="btn btn-outline" id="copyTemplate">💬 추천 메시지 복사</button>
         </div>
       </div>
     </section>`;
@@ -420,12 +454,12 @@ function render(m, data){
             ${m.industry ? `<span class="pill">${m.industry}</span>` : ""}
           </div>
           <div class="profile-cta">
-            ${a.presentation ? `<a class="btn btn-orange" href="${a.presentation}" download>📑 상세 PPT 다운로드</a>` : ""}
+            ${a.presentation ? `<a class="btn btn-orange" href="${a.presentation}" download="${m.name}_상세PPT.pptx">📑 상세 PPT 다운로드</a>` : ""}
             ${m.phone ? `<a class="btn btn-primary" href="tel:${m.phone.replace(/[^0-9]/g,'')}">📞 ${m.phone}</a>` : ""}
             ${m.email ? `<a class="btn btn-ghost" style="color:#fff;background:rgba(255,255,255,.1)" href="mailto:${m.email}">✉️ ${m.email}</a>` : ""}
           </div>
         </div>
-        ${a.digitalCard ? `<div class="hero-card-stack"><figure class="hero-card" data-zoom="${a.digitalCard}" data-caption="${m.name} 대표 · 디지털 명함"><img src="${a.digitalCard}" alt="${m.name} 대표 디지털 명함" /><span class="hero-card-shine"></span></figure></div>` : ""}
+        ${a.digitalCard ? `<div class="hero-card-stack"><figure class="hero-card" data-zoom="${a.digitalCard}" data-caption="${m.name} 대표 · 디지털 명함" data-download="${a.digitalCard}"><img src="${a.digitalCard}" alt="${m.name} 대표 디지털 명함" /></figure></div>` : ""}
       </div>
     </section>
 
@@ -469,19 +503,15 @@ function render(m, data){
       </div>
 
       ${showcaseHtml}
-      ${pptHtml}
+      ${slideViewerHtml}
       ${shareHtml}
       ${pagerHtml}
     </div>
   `;
 
-  // Wire up share card buttons
+  // Wire share card
   const url = location.href;
   $("#copyLink")?.addEventListener("click", ()=>copy(url, "링크가 복사되었습니다"));
-  $("#copyTemplate")?.addEventListener("click", ()=>{
-    const tpl = `[BNI 서초 메이저 챕터 추천]\n${m.company} · ${m.title || "대표"} ${m.name}\n${m.tagline || ""}\n\n${m.subTagline || ""}\n\n전문분야: ${(m.expertise||[]).join(", ")}\n연락: ${m.phone || ""}\n\n자세히 보기 → ${url}`;
-    copy(tpl, "추천 메시지가 복사되었습니다");
-  });
   $("#openShareKitMember")?.addEventListener("click", ()=>{
     if(!window.ShareKit) return;
     const chapter = location.origin + location.pathname.replace(/[^/]*$/,"");
@@ -499,30 +529,43 @@ function quickStat(icon, label, value){
   return `<div class="quick-stat">${icons[icon]||""}<div><div class="label">${label}</div><div class="value">${value}</div></div></div>`;
 }
 
-function spotlight(kind, title, desc, src, cls){
+function spotlight(kind, title, desc, src, cls, downloadName){
   if(src){
     return `
-      <figure class="spotlight ${cls}" data-zoom="${src}" data-caption="${title}">
-        <div class="spotlight-art">
+      <figure class="spotlight ${cls}">
+        <div class="spotlight-art" data-zoom="${src}" data-caption="${title}" data-download="${src}">
           <span class="spotlight-tag">${title}</span>
           <span class="spotlight-zoom"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg></span>
-          <img src="${src}" alt="${title}" loading="lazy" />
+          <img src="${src}" alt="${title}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'spotlight-empty\\'><div class=\\'em-icon\\'>📭</div>이미지를 불러올 수 없습니다</div>'" />
         </div>
         <figcaption class="spotlight-body">
-          <h3 class="spotlight-title">${title}</h3>
-          <p class="spotlight-desc">${desc}</p>
+          <div class="spotlight-meta">
+            <h3 class="spotlight-title">${title}</h3>
+            <p class="spotlight-desc">${desc}</p>
+          </div>
+          <div class="spotlight-actions">
+            <a class="spot-btn spot-btn-primary" href="${src}" download="${downloadName||''}">⬇ 다운로드</a>
+            <button class="spot-btn spot-btn-outline" data-zoom="${src}" data-caption="${title}">🔍 크게 보기</button>
+          </div>
         </figcaption>
       </figure>`;
   }
   return `
-    <figure class="spotlight ${cls}" style="cursor:default">
-      <div class="spotlight-art spotlight-empty">
-        <div class="em-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 16l5-5 4 4 3-3 6 6"/></svg></div>
-        ${title}<br/><small style="font-weight:500;color:var(--ink-3);font-size:11px">곧 업데이트됩니다</small>
+    <figure class="spotlight ${cls}">
+      <div class="spotlight-art">
+        <div class="spotlight-empty">
+          <div class="em-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 16l5-5 4 4 3-3 6 6"/></svg></div>
+          ${title}<br/><small style="font-weight:500;color:var(--ink-3);font-size:11px">곧 업데이트됩니다</small>
+        </div>
       </div>
       <figcaption class="spotlight-body">
-        <h3 class="spotlight-title">${title}</h3>
-        <p class="spotlight-desc">${desc}</p>
+        <div class="spotlight-meta">
+          <h3 class="spotlight-title">${title}</h3>
+          <p class="spotlight-desc">${desc}</p>
+        </div>
+        <div class="spotlight-actions">
+          <span style="padding:7px 12px;border-radius:999px;background:var(--line-2);font-size:12px;font-weight:700;color:var(--ink-3)">준비중</span>
+        </div>
       </figcaption>
     </figure>`;
 }
@@ -555,13 +598,19 @@ function setupSchema(m){
 }
 
 function setupLightbox(){
-  const lb = $("#lightbox"), lbImg = $("#lightboxImg"), lbCap = $("#lightboxCaption");
+  const lb = $("#lightbox"), lbImg = $("#lightboxImg"), lbCap = $("#lightboxCaption"), lbActions = $("#lightboxActions");
   document.querySelectorAll("[data-zoom]").forEach(el=>{
     el.addEventListener("click", e=>{
+      // Don't trigger if clicking a download button inside
+      if(e.target.closest("[download]") && !e.target.matches("[data-zoom]")) return;
       e.preventDefault();
+      e.stopPropagation();
       lbImg.src = el.dataset.zoom;
       lbImg.alt = el.dataset.caption || "";
       lbCap.textContent = el.dataset.caption || "";
+      lbActions.innerHTML = el.dataset.download
+        ? `<a class="btn btn-orange" href="${el.dataset.download}" download>⬇ 다운로드</a>`
+        : "";
       lb.classList.add("open");
       document.body.style.overflow = "hidden";
     });
@@ -578,6 +627,108 @@ function setupQR(){
   QRCode.toCanvas(canvas, location.href, {margin:1,width:280,color:{dark:"#0E1F5C",light:"#FFFFFF"}}, ()=>{});
 }
 
+// ── PPT Slide Viewer ─────────────────────────────
+async function setupSlideViewer(m){
+  const stage = $("#svStage"), img = $("#svImg"), counter = $("#svCounter"),
+        prev = $("#svPrev"), next = $("#svNext"), thumbs = $("#svThumbs"),
+        fullBtn = $("#svFullscreen"), viewer = $("#slideViewer");
+  if(!viewer) return;
+
+  // Auto-detect slides: try slides/slide-01.png ... up to 99
+  const base = `assets/members/${m.id}/slides/slide-`;
+  const ext = ".png";
+  const slides = [];
+  for(let i = 1; i <= 99; i++){
+    const num = String(i).padStart(2, "0");
+    const url = `${base}${num}${ext}`;
+    const ok = await imgExists(url);
+    if(!ok) break;
+    slides.push(url);
+  }
+
+  if(slides.length === 0){
+    stage.innerHTML = `
+      <div class="sv-empty">
+        <h3>슬라이드 이미지가 아직 없습니다</h3>
+        <p>PPT에서 "다른 이름으로 저장" → "PNG"로 슬라이드를 추출해 <code>assets/members/${m.id}/slides/</code> 폴더에 넣으면 자동 활성화됩니다.</p>
+        ${m.assets?.presentation ? `<a class="btn btn-orange" style="margin-top:14px" href="${m.assets.presentation}" download>📑 PPT 다운로드</a>` : ""}
+      </div>`;
+    thumbs.style.display = "none";
+    return;
+  }
+
+  let idx = 0;
+  const total = slides.length;
+
+  function go(i){
+    idx = Math.max(0, Math.min(total - 1, i));
+    img.classList.add("loading");
+    img.src = slides[idx];
+    img.onload = ()=>img.classList.remove("loading");
+    counter.textContent = `${idx + 1} / ${total}`;
+    prev.disabled = idx === 0;
+    next.disabled = idx === total - 1;
+    document.querySelectorAll(".sv-thumb").forEach((t, i2)=>{
+      t.classList.toggle("active", i2 === idx);
+      if(i2 === idx) t.scrollIntoView({behavior:"smooth", block:"nearest", inline:"center"});
+    });
+  }
+
+  // Render thumbs
+  thumbs.innerHTML = slides.map((s, i) =>
+    `<button class="sv-thumb" data-i="${i}"><span class="sv-thumb-num">${i+1}</span><img src="${s}" alt="슬라이드 ${i+1}" loading="lazy" /></button>`
+  ).join("");
+  thumbs.querySelectorAll(".sv-thumb").forEach(t =>
+    t.addEventListener("click", () => go(+t.dataset.i))
+  );
+
+  prev.addEventListener("click", ()=>go(idx - 1));
+  next.addEventListener("click", ()=>go(idx + 1));
+
+  // Keyboard navigation
+  document.addEventListener("keydown", e=>{
+    if(document.querySelector(".lightbox.open")) return;
+    if(e.target.matches("input, textarea, select")) return;
+    if(e.key === "ArrowLeft"){ go(idx - 1); }
+    else if(e.key === "ArrowRight"){ go(idx + 1); }
+    else if(e.key === "Home"){ go(0); }
+    else if(e.key === "End"){ go(total - 1); }
+    else if((e.key === "f" || e.key === "F") && !e.metaKey && !e.ctrlKey){ toggleFullscreen(); }
+  });
+
+  // Click on slide image to advance
+  stage.addEventListener("click", e=>{
+    if(e.target.closest("button")) return;
+    if(e.target === img || e.target === stage){
+      const rect = stage.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      if(x < rect.width / 2) go(idx - 1); else go(idx + 1);
+    }
+  });
+
+  function toggleFullscreen(){ viewer.classList.toggle("fullscreen"); }
+  fullBtn.addEventListener("click", toggleFullscreen);
+
+  // Touch swipe
+  let touchStartX = 0;
+  stage.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; });
+  stage.addEventListener("touchend", e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if(Math.abs(dx) > 50){ go(idx + (dx < 0 ? 1 : -1)); }
+  });
+
+  go(0);
+}
+
+function imgExists(url){
+  return new Promise(resolve => {
+    const im = new Image();
+    im.onload = ()=>resolve(true);
+    im.onerror = ()=>resolve(false);
+    im.src = url;
+  });
+}
+
 async function copy(text, msg){
   try{ await navigator.clipboard.writeText(text); showToast(msg || "복사되었습니다"); }
   catch{ showToast("복사 실패. 직접 복사해주세요"); }
@@ -588,20 +739,15 @@ function showToast(msg){
   clearTimeout(showToast._t); showToast._t = setTimeout(()=>t.classList.remove("show"), 2000);
 }
 
-// Top bar buttons
 $("#printBtn").addEventListener("click", ()=>window.print());
 $("#shareBtn").addEventListener("click", async ()=>{
-  // Open Share Kit if available
   if(window.ShareKit && window._currentMember && window._currentData){
     const chapter = location.origin + location.pathname.replace(/[^/]*$/,"");
     ShareKit.open({ mode:"member", member:window._currentMember, data:window._currentData, url:location.href, chapterUrl:chapter });
     return;
   }
-  // Fallback: native share or copy
   const url = location.href;
-  if(navigator.share){
-    try{ await navigator.share({title: document.title, url}); return; }catch{}
-  }
+  if(navigator.share){ try{ await navigator.share({title: document.title, url}); return; }catch{} }
   copy(url, "링크가 복사되었습니다");
 });
 

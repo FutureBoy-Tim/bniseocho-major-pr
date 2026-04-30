@@ -22,15 +22,38 @@
 
 ```
 assets/members/{영문ID}/
-├── digital-card.png       ← 필수. BNI 오렌지 카드 형식 (세로 1280×2272 권장)
-├── card-front.png         ← 실물 명함 정면 (3500×2000 권장)
-├── card-back.png          ← 실물 명함 뒷면
-├── infographic.png        ← NotebookLM 등으로 만든 한 장 인포그래픽
+├── digital-card.png       ← 필수. BNI 서초 공통 오렌지 카드 (세로 9:16, 1280×2272 권장)
+├── card-front.png         ← 실물 명함 앞면 (가로 16:9, 3500×2000 권장)
+├── card-back.png          ← 실물 명함 뒷면 (가로 16:9, 3500×2000 권장)
+├── infographic.png        ← 한 장 인포그래픽 (정사각형 1:1, 1920×1920 권장)
 ├── presentation.pptx      ← 상세 PPT (10~20장)
+├── slides/                ← PPT 슬라이드를 PNG로 추출 (슬라이드 뷰어 자동 활성화)
+│   ├── slide-01.png       ← 첫 슬라이드 (1920×1080 권장)
+│   ├── slide-02.png
+│   └── ... (이후 순서대로)
 └── profile.jpg            ← (옵션) 정면 인물 사진
 ```
 
 > 파일명을 정확히 일치시키면 별도 코드 수정 없이 자동 노출됩니다.
+
+### 슬라이드 추출 방법 (Windows · PowerPoint 기준)
+
+**가장 간단한 방법:**
+1. PowerPoint에서 PPT 열기
+2. `파일` → `다른 이름으로 저장` → 파일 형식을 **`PNG (*.png)`** 선택
+3. "모든 슬라이드" 선택 → 폴더에 자동 저장됨
+4. 저장된 파일명을 `slide-01.png`, `slide-02.png`, … 형식으로 이름 변경
+5. `assets/members/{영문ID}/slides/` 폴더에 복사
+
+**자동화 (PowerShell 1줄):**
+```powershell
+$src = "presentation.pptx 경로"; $out = "slides 폴더 경로"; New-Item -ItemType Directory -Force $out | Out-Null
+$pp = New-Object -ComObject PowerPoint.Application; $pres = $pp.Presentations.Open($src, $true, $false, $false)
+for($i=1; $i -le $pres.Slides.Count; $i++){ $pres.Slides.Item($i).Export((Join-Path $out ("slide-{0:D2}.png" -f $i)), "PNG", 1920, 1080) }
+$pres.Close(); $pp.Quit()
+```
+
+> 슬라이드 폴더가 비어 있으면 뷰어 자리에 "PPT 다운로드" 버튼만 노출됩니다. 자료 점진적 업데이트 환영.
 
 ---
 
