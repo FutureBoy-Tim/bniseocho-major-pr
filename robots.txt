@@ -1,0 +1,13 @@
+# BNI 서초 메이저 챕터 PR 사이트 - 크롤러 가이드
+User-agent: *
+Allow: /
+
+# 사이트맵 위치
+Sitemap: https://futureboy-tim.github.io/bniseocho-major-pr/sitemap.xml
+
+# 한국 검색엔진 (네이버 Yeti, 다음 Daumoa)도 모두 허용
+User-agent: Yeti
+Allow: /
+
+User-agent: Daumoa
+Allow: /

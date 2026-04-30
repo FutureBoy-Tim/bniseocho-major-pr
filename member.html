@@ -18,6 +18,16 @@
 <meta property="og:locale" content="ko_KR" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lee-woochang/infographic.png" />
+
+<!-- 검색엔진 사이트 소유 확인 (index.html과 동일 코드 박기) -->
+<meta name="naver-site-verification" content="REPLACE_WITH_NAVER_CODE" />
+<meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_CODE" />
+
+<!-- canonical은 JS로 동적 설정 (?id=) -->
+<link rel="canonical" id="canonicalLink" href="https://futureboy-tim.github.io/bniseocho-major-pr/" />
+
+<!-- Person 구조화 데이터는 JS가 멤버 정보 로드 후 동적 생성 (script id="personSchema") -->
+<script type="application/ld+json" id="personSchema"></script>
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js" defer></script>
 <script src="assets/share-kit.js" defer></script>
@@ -377,6 +387,39 @@ function renderUpcoming(m){
 
 function render(m, data){
   document.title = `${m.name} 대표 · ${m.company} · BNI 서초 메이저`;
+
+  // canonical URL 동적 갱신 (?id=)
+  const canonical = document.getElementById("canonicalLink");
+  if (canonical) canonical.href = `https://futureboy-tim.github.io/bniseocho-major-pr/member.html?id=${m.id}`;
+
+  // JSON-LD Person 구조화 데이터 동적 생성 (구글이 인물·직책·전문분야 인식 → 검색 시 리치 결과)
+  const personSchema = document.getElementById("personSchema");
+  if (personSchema) {
+    const memberUrl = `https://futureboy-tim.github.io/bniseocho-major-pr/member.html?id=${m.id}`;
+    const imageUrl = m.assets?.infographic
+      ? new URL(m.assets.infographic, location.href).toString()
+      : "https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lee-woochang/infographic.png";
+    personSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": m.name,
+      "jobTitle": m.title || "대표",
+      "worksFor": { "@type": "Organization", "name": m.company || "" },
+      "description": m.tagline || "",
+      "url": memberUrl,
+      "image": imageUrl,
+      "telephone": m.phone || undefined,
+      "email": m.email || undefined,
+      "address": m.address || undefined,
+      "knowsAbout": m.expertise || [],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "BNI 서초 메이저 챕터",
+        "url": "https://futureboy-tim.github.io/bniseocho-major-pr/"
+      }
+    });
+  }
+
   const expertise = (m.expertise || []).map(x => `<li>${x}</li>`).join("");
   const referrals = (m.referralTargets || []).map(x => `<li>${x}</li>`).join("");
   const value = (m.valueProps || []).map(x => `<p>${x}</p>`).join("");

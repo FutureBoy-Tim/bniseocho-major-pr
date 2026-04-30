@@ -39,7 +39,7 @@
 2. **자산 복사**: Downloads/카톡 폴더에서 가장 최근 명함·인포그래픽·PPT 찾아 `assets/members/{id}/`에 표준 파일명으로 복사
 3. **JSON 업데이트**: 해당 멤버 객체의 `tagline`, `expertise`, `referralTargets`, `phone`, `email`, `address`, `assets.*` 채우기
 4. **피처드 교체**: 루트 `featuredId` 새 ID로 변경, 지난 주 멤버 `status`를 `"featured"` → `"archived"`로
-5. **lastUpdated** 오늘 날짜로 갱신
+5. **lastUpdated** 오늘 날짜로 갱신 + `sitemap.xml`의 `<lastmod>` 일괄 갱신
 6. **OG 이미지 메타 업데이트** (★중요 — 카톡 미리보기 라지 카드 표시):
    - `index.html`과 `member.html`에서 다음 4개 라인의 URL을 새 멤버 인포그래픽으로 교체:
      - `og:image` content
@@ -50,6 +50,20 @@
 7. **(선택) PPT 슬라이드 추출**: `assets/members/{id}/slides/slide-NN.png` 생성 (PowerPoint COM 자동화)
 8. **로컬 확인 안내**: http://localhost:8765/ 새로고침
 9. **카카오 캐시 갱신 안내**: push 후 https://developers.kakao.com/tool/clear/og 에서 URL 입력 → 캐시 삭제 (안 하면 옛 미리보기 그대로)
+
+## SEO·확산 시스템 (2026-04-30 도입)
+
+기술 SEO는 모두 박혀있음. 멤버 추가 시 수동 갱신 불필요한 항목:
+- ✅ Person 구조화 데이터: member.html이 JS로 동적 생성 (자동)
+- ✅ Organization·WebSite schema: index.html에 정적 (불변)
+
+수동 갱신 필요:
+- ⚠️ `sitemap.xml`의 `<lastmod>`: 매주 push 시 오늘 날짜로 일괄 교체
+- ⚠️ OG 이미지: 새 featured 멤버 인포그래픽 URL로 교체 (위 6번 참조)
+- ⚠️ 검색엔진 인증 코드 (`naver-site-verification`, `google-site-verification`):
+   초기엔 `REPLACE_WITH_*_CODE` 플레이스홀더. 운영자가 콘솔에서 코드 받으면 클로드한테 한 줄 명령으로 교체.
+
+확산 전략은 [SEO_AND_PROMOTION.md](SEO_AND_PROMOTION.md) 참조 — 비기술자용 단계별 가이드.
 
 운영자 추가 입력이 필요한 정보(JSON에 안 들어있으면 클로드가 물어봄):
 - 회사명·직함·업종·카테고리
