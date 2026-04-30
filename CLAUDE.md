@@ -40,8 +40,16 @@
 3. **JSON 업데이트**: 해당 멤버 객체의 `tagline`, `expertise`, `referralTargets`, `phone`, `email`, `address`, `assets.*` 채우기
 4. **피처드 교체**: 루트 `featuredId` 새 ID로 변경, 지난 주 멤버 `status`를 `"featured"` → `"archived"`로
 5. **lastUpdated** 오늘 날짜로 갱신
-6. **(선택) PPT 슬라이드 추출**: `assets/members/{id}/slides/slide-NN.png` 생성 (PowerPoint COM 자동화)
-7. **로컬 확인 안내**: http://localhost:8765/ 새로고침
+6. **OG 이미지 메타 업데이트** (★중요 — 카톡 미리보기 라지 카드 표시):
+   - `index.html`과 `member.html`에서 다음 4개 라인의 URL을 새 멤버 인포그래픽으로 교체:
+     - `og:image` content
+     - `og:image:secure_url` content
+     - `twitter:image` content
+     - `og:image:alt` content (멤버명·회사명 갱신)
+   - 카톡 봇은 JS 실행 안 하므로 정적 메타가 필수. 동적 OG는 페이지 표시용 보조.
+7. **(선택) PPT 슬라이드 추출**: `assets/members/{id}/slides/slide-NN.png` 생성 (PowerPoint COM 자동화)
+8. **로컬 확인 안내**: http://localhost:8765/ 새로고침
+9. **카카오 캐시 갱신 안내**: push 후 https://developers.kakao.com/tool/clear/og 에서 URL 입력 → 캐시 삭제 (안 하면 옛 미리보기 그대로)
 
 운영자 추가 입력이 필요한 정보(JSON에 안 들어있으면 클로드가 물어봄):
 - 회사명·직함·업종·카테고리
