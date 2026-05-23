@@ -2,8 +2,8 @@
   "chapter": "BNI 서초 메이저 챕터",
   "tagline": "서로의 사업을 추천하는 사람들",
   "subtitle": "Business Referral Organization · Givers Gain",
-  "lastUpdated": "2026-04-29",
-  "featuredId": "lee-woochang",
+  "lastUpdated": "2026-05-23",
+  "featuredId": "lim-jonghee",
   "members": [
     {
       "id": "lee-woochang",
@@ -37,7 +37,7 @@
       "brandColor": "#0E1F5C",
       "accentColor": "#FF8200",
       "publishedAt": "2026-04-29",
-      "status": "featured",
+      "status": "archived",
       "assets": {
         "digitalCard": "assets/members/lee-woochang/digital-card.png",
         "cardFront": "assets/members/lee-woochang/card-front.png",
@@ -51,7 +51,46 @@
     { "id": "lee-kyungho", "order": 4, "name": "이경호", "company": "하나은행 리빙트러스트센터", "category": "금융", "industry": "유언대용신탁", "status": "upcoming" },
     { "id": "hwang-won", "order": 5, "name": "황원", "company": "법무사사무소 한강", "category": "법률·법무", "industry": "법무서비스", "status": "upcoming" },
     { "id": "lee-namki", "order": 6, "name": "이남기", "company": "앤스컴퍼니", "category": "제조·유통", "industry": "전문가 화장품 제조유통", "status": "upcoming" },
-    { "id": "lim-jonghee", "order": 7, "name": "임종희", "company": "헤리치과의원", "category": "의료·헬스", "industry": "치과", "status": "upcoming" },
+    {
+      "id": "lim-jonghee",
+      "order": 7,
+      "name": "임종희",
+      "title": "대표원장",
+      "company": "헤리치과의원",
+      "companyEn": "HERI dental clinic",
+      "category": "의료·헬스",
+      "industry": "치과",
+      "tagline": "치과계의 파인다이닝",
+      "subTagline": "통합치의학과 전문의가 만드는 차별화된 치과 경험",
+      "phone": "010-4512-2097",
+      "email": "baram188@naver.com",
+      "address": "서울 강남구 강남대로 354, 혜천빌딩 4층",
+      "expertise": [
+        "임플란트",
+        "심미보철",
+        "충치치료"
+      ],
+      "referralTargets": [
+        "내 치아의 정확한 진단과 알맞은 치료를 원하시는 분",
+        "프라이빗한 치과진료를 원하시는 분",
+        "치과 공포가 심하신 분"
+      ],
+      "valueProps": [
+        "혁신적인 기술력과 환자 중심의 진정성으로, 세상에 없는 차별화된 치과 경험을 제공합니다.",
+        "통합치의학과 전문의(DDS·MSD)의 검증된 임상 역량으로 임플란트부터 심미보철까지 안심하고 맡기실 수 있습니다."
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200",
+      "publishedAt": "2026-05-23",
+      "status": "featured",
+      "assets": {
+        "digitalCard": "assets/members/lim-jonghee/digital-card.png",
+        "cardFront": "assets/members/lim-jonghee/card-front.png",
+        "cardBack": "assets/members/lim-jonghee/card-back.png",
+        "infographic": "",
+        "presentation": "assets/members/lim-jonghee/presentation.pptx"
+      }
+    },
     { "id": "kim-boram", "order": 8, "name": "김보람", "company": "TSC Group Korea", "category": "무역·유통", "industry": "미국 수출 유통", "status": "upcoming" },
     { "id": "lee-giju", "order": 9, "name": "이기주", "company": "비더 BE:THE", "category": "의료·헬스", "industry": "외국인 환자 유치 컨설팅", "status": "upcoming" },
     { "id": "yoo-chihoon", "order": 10, "name": "유치훈", "company": "점프라인", "category": "창업·컨설팅", "industry": "카페창업양도양수", "status": "upcoming" },
