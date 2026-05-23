@@ -117,7 +117,9 @@ bni-major-pr/
 ## 배포 (GitHub Pages)
 
 `.github/workflows/pages.yml` 작동 중. main 브랜치에 push하면 자동 배포.
-**현재 git remote 미연결** — 외부 공유하려면 GitHub 리포지토리 생성 + remote 추가 필요.
+- **Remote**: `origin` → https://github.com/FutureBoy-Tim/bniseocho-major-pr.git
+- **공개 URL**: https://futureboy-tim.github.io/bniseocho-major-pr/
+- **Actions 빌드 확인**: https://github.com/FutureBoy-Tim/bniseocho-major-pr/actions
 
 ## 메모리
 
