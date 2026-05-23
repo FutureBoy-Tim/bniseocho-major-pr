@@ -72,6 +72,28 @@
   .sk-preview-title{font-size:13px;font-weight:700;color:#0E1422;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .sk-preview-desc{font-size:12px;color:#6B7388;margin:2px 0 0;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .sk-preview-domain{font-size:11px;color:#9098AC;margin:4px 0 0;letter-spacing:.02em;text-transform:uppercase;font-weight:700}
+
+  .sk-search{position:relative;margin-bottom:18px}
+  .sk-search-input{width:100%;padding:11px 14px 11px 38px;border:1px solid #E5E8EF;border-radius:12px;font-size:14px;background:#fff;outline:none;transition:border-color .15s,box-shadow .15s;box-sizing:border-box}
+  .sk-search-input:focus{border-color:#0E1F5C;box-shadow:0 0 0 3px rgba(14,31,92,.08)}
+  .sk-search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:#9098AC;pointer-events:none;font-size:14px}
+  .sk-search-results{margin-top:8px;border:1px solid #E5E8EF;border-radius:12px;background:#fff;max-height:240px;overflow-y:auto;display:none}
+  .sk-search-results.open{display:block}
+  .sk-search-empty{padding:14px;text-align:center;color:#6B7388;font-size:13px}
+  .sk-search-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #F1F3F8;cursor:pointer;transition:background .12s}
+  .sk-search-item:last-child{border-bottom:none}
+  .sk-search-item:hover{background:#F8F9FC}
+  .sk-search-item-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .sk-search-item-dot.feat{background:#FF8200}
+  .sk-search-item-dot.arch{background:#10B981}
+  .sk-search-item-dot.up{background:#0E1F5C}
+  .sk-search-item-body{flex:1;min-width:0}
+  .sk-search-item-title{font-size:13px;font-weight:700;color:#0E1422;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sk-search-item-sub{font-size:11px;color:#6B7388;margin:2px 0 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sk-search-item-tag{font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;letter-spacing:.04em;flex-shrink:0}
+  .sk-search-item-tag.feat{background:#FFF4E5;color:#A95400}
+  .sk-search-item-tag.arch{background:#D1FAE5;color:#047857}
+  .sk-search-item-tag.up{background:#E0E7FF;color:#0E1F5C}
   `;
 
   function injectCSS(){
@@ -148,6 +170,14 @@
           ${ctx.modes.map(mo => `<button class="sk-tab ${mo.key===ctx.mode?'active':''}" data-mode="${mo.key}">${mo.label}</button>`).join("")}
         </div>` : ""}
 
+        ${ctx.data?.members?.length ? `
+        <span class="sk-section-label">다른 대표 찾기</span>
+        <div class="sk-search">
+          <span class="sk-search-icon">🔍</span>
+          <input class="sk-search-input" id="sk-search-input" type="text" placeholder="이름·회사·업종으로 검색 (예: 임종희, 치과, 헤리)" autocomplete="off" />
+          <div class="sk-search-results" id="sk-search-results"></div>
+        </div>` : ""}
+
         <span class="sk-section-label">공유 미리보기</span>
         <div class="sk-preview">
           <div class="sk-preview-img" style="${previewImg?`background-image:url('${previewImg}')`:''}"></div>
@@ -199,18 +229,42 @@
 
   function shareTo(kind, url, title){
     const u = encodeURIComponent(url), t = encodeURIComponent(title);
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if(kind === "link"){
+      navigator.clipboard.writeText(url).then(()=>toast("링크가 복사되었습니다")).catch(()=>toast("복사 실패 — 직접 선택해 복사하세요"));
+      return;
+    }
+
+    if(kind === "kakao"){
+      // 카카오 SDK 없이도 100% 동작하는 패턴: 링크+제목 복사 + 카톡 안내 (모바일은 앱 열기 시도)
+      const payload = `${title}\n${url}`;
+      navigator.clipboard.writeText(payload).then(()=>{
+        toast(isMobile ? "복사됨 — 카톡에 붙여넣기" : "복사됨 — 카톡 채팅창에 붙여넣어 공유하세요");
+        if(isMobile){
+          // 카카오톡 앱이 설치돼 있으면 열림. 없으면 무시됨.
+          setTimeout(()=>{ try{ location.href = "kakaotalk://"; }catch(_){} }, 250);
+        }
+      }).catch(()=>toast("복사 실패 — 직접 카톡으로 공유하세요"));
+      return;
+    }
+
     const map = {
-      kakao: `https://accounts.kakao.com/login?continue=${encodeURIComponent("https://sharer.kakao.com/talk/friends/picker/link?url="+url+"&text="+title)}`,
       mail: `mailto:?subject=${t}&body=${u}`,
-      li: `https://www.linkedin.com/sharing/share-offsite/?url=${u}`,
-      fb: `https://www.facebook.com/sharer/sharer.php?u=${u}`,
-      x: `https://twitter.com/intent/tweet?url=${u}&text=${t}`,
-      sms: `sms:?body=${t}%20${u}`
+      li:   `https://www.linkedin.com/sharing/share-offsite/?url=${u}`,
+      fb:   `https://www.facebook.com/sharer/sharer.php?u=${u}`,
+      x:    `https://twitter.com/intent/tweet?url=${u}&text=${t}`,
+      sms:  `sms:?body=${t}%20${u}`
     };
-    if(kind === "link"){ navigator.clipboard.writeText(url).then(()=>toast("링크가 복사되었습니다")); return; }
     const target = map[kind]; if(!target) return;
-    if(kind === "sms" || kind === "mail"){ location.href = target; return; }
-    window.open(target, "_blank", "width=620,height=720,noopener");
+
+    if(kind === "sms" || kind === "mail"){
+      location.href = target; return;
+    }
+    const w = window.open(target, "_blank", "width=620,height=720,noopener");
+    if(!w){ // 팝업 차단 시 같은 탭으로 이동 fallback
+      location.href = target;
+    }
   }
 
   function toast(msg){
@@ -306,6 +360,69 @@
       a.download = `bni-major-${safe}-qr.png`;
       a.click();
     });
+
+    // 멤버 검색
+    const searchInput = document.getElementById("sk-search-input");
+    const searchResults = document.getElementById("sk-search-results");
+    if(searchInput && searchResults){
+      const STATUS_INFO = { featured:{cls:"feat", label:"이번 주"}, archived:{cls:"arch", label:"소개 완료"}, upcoming:{cls:"up", label:"공개 예정"} };
+      const renderResults = (q) => {
+        const query = (q||"").trim().toLowerCase();
+        if(!query){ searchResults.classList.remove("open"); searchResults.innerHTML = ""; return; }
+        const all = _ctx.data?.members || [];
+        const matches = all.filter(m => {
+          const hay = `${m.name||""} ${m.company||""} ${m.industry||""} ${m.category||""} ${m.tagline||""}`.toLowerCase();
+          return hay.includes(query);
+        }).slice(0, 12);
+        if(!matches.length){
+          searchResults.innerHTML = `<div class="sk-search-empty">'${q}' 검색 결과 없음</div>`;
+        } else {
+          searchResults.innerHTML = matches.map(m => {
+            const si = STATUS_INFO[m.status] || STATUS_INFO.upcoming;
+            return `<div class="sk-search-item" data-member-id="${m.id}">
+              <span class="sk-search-item-dot ${si.cls}"></span>
+              <div class="sk-search-item-body">
+                <p class="sk-search-item-title">${m.name||"-"} · ${m.company||"-"}</p>
+                <p class="sk-search-item-sub">${m.industry||m.category||""}${m.tagline?` — ${m.tagline}`:""}</p>
+              </div>
+              <span class="sk-search-item-tag ${si.cls}">${si.label}</span>
+            </div>`;
+          }).join("");
+        }
+        searchResults.classList.add("open");
+      };
+      searchInput.addEventListener("input", e => renderResults(e.target.value));
+      searchInput.addEventListener("focus", e => { if(e.target.value) renderResults(e.target.value); });
+      // 결과 클릭 → 컨텍스트 전환
+      searchResults.addEventListener("click", e => {
+        const item = e.target.closest("[data-member-id]");
+        if(!item) return;
+        const id = item.getAttribute("data-member-id");
+        const m = (_ctx.data?.members || []).find(x => x.id === id);
+        if(!m) return;
+        if(m.status !== "featured" && m.status !== "archived"){
+          toast(`${m.name} 대표는 아직 공개 예정 — 자료 준비 후 공유 가능`);
+          return;
+        }
+        _ctx.member = m;
+        _ctx.mode = "member";
+        _ctx.url = location.origin + location.pathname.replace(/[^/]*$/,"") + "member.html?id=" + m.id;
+        if(!_ctx.modes.find(x => x.key === "member")){
+          _ctx.modes = [{key:"member", label:`${m.name} 대표 공유`}, {key:"chapter", label:"챕터 전체 공유"}];
+        } else {
+          _ctx.modes = _ctx.modes.map(x => x.key === "member" ? {key:"member", label:`${m.name} 대표 공유`} : x);
+        }
+        document.getElementById("sk-panel").innerHTML = buildHTML(_ctx);
+        wire();
+        drawQR(_ctx.url);
+        // 새로 그려진 패널을 위로 스크롤
+        document.getElementById("sk-panel").scrollTop = 0;
+      });
+      // 외부 클릭 시 결과 닫기
+      document.addEventListener("click", e => {
+        if(!e.target.closest(".sk-search")) searchResults.classList.remove("open");
+      });
+    }
   }
 
   function drawQR(url){
