@@ -65,6 +65,27 @@
 
 확산 전략은 [SEO_AND_PROMOTION.md](SEO_AND_PROMOTION.md) 참조 — 비기술자용 단계별 가이드.
 
+## 비즈니스 문의 폼 (Formspree)
+
+[index.html](index.html) 하단 Producer 섹션에 비즈니스 문의 폼 있음. 데이터는 Formspree로 수집.
+
+**초기 setup (1회, 사용자 액션)**:
+1. https://formspree.io/ 가입 (구글 계정 가능)
+2. New Form 생성 → 폼 이름 "BNI Major - AI 문의"
+3. 발급된 endpoint 복사 (예: `https://formspree.io/f/abcd1234`)
+4. 클로드에게: "Formspree URL은 https://formspree.io/f/abcd1234 야"
+5. 클로드가 [index.html](index.html)의 `REPLACE_WITH_FORMSPREE_ID` 부분 자동 교체 + push
+
+**운영**:
+- Formspree 대시보드에서 접수된 문의 확인 + 이메일 알림 자동 발송
+- 무료 플랜: 월 50건. 더 필요하면 유료 ($10/월부터 무제한)
+- 폼 필드: 성함·회사·연락처·이메일·문의 내용·개인정보 동의
+
+**커스터마이징 필요 시**:
+- 폼 필드 추가/삭제: `<input>` 추가 (name 속성만 정확히)
+- 자동 답장: Formspree 대시보드 → Form Settings → Autoresponse
+- 스팸 차단: 이미 honeypot (`_gotcha`) 적용됨
+
 운영자 추가 입력이 필요한 정보(JSON에 안 들어있으면 클로드가 물어봄):
 - 회사명·직함·업종·카테고리
 - 태그라인 / 서브태그라인 (명함 헤드라인에서 추출 가능)
