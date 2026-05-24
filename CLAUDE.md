@@ -51,19 +51,42 @@
 8. **로컬 확인 안내**: http://localhost:8765/ 새로고침
 9. **카카오 캐시 갱신 안내**: push 후 https://developers.kakao.com/tool/clear/og 에서 URL 입력 → 캐시 삭제 (안 하면 옛 미리보기 그대로)
 
-## SEO·확산 시스템 (2026-04-30 도입)
+## SEO·확산 시스템 (2026-04-30 도입, 2026-05-24 마무리)
 
-기술 SEO는 모두 박혀있음. 멤버 추가 시 수동 갱신 불필요한 항목:
-- ✅ Person 구조화 데이터: member.html이 JS로 동적 생성 (자동)
-- ✅ Organization·WebSite schema: index.html에 정적 (불변)
+### 박혀있는 SEO 시그널 (자동/정적)
+- ✅ `sitemap.xml` (41 URL: 메인 + intro + 39명)
+- ✅ `robots.txt` (네이버 Yeti, 다음 Daumoa 명시 허용)
+- ✅ JSON-LD Organization · WebSite · ItemList(39명) · Person(member 동적)
+- ✅ canonical URL (member.html은 ?id= 동적 갱신)
+- ✅ OG 메타 + Twitter Card (라지 카드용 width/height/alt 명시)
+- ✅ meta robots (index, follow, max-image-preview:large)
+- ✅ meta keywords + author + locale
+- ✅ GitHub 리포 description/topics (GitHub 자체 검색 노출)
 
-수동 갱신 필요:
-- ⚠️ `sitemap.xml`의 `<lastmod>`: 매주 push 시 오늘 날짜로 일괄 교체
-- ⚠️ OG 이미지: 새 featured 멤버 인포그래픽 URL로 교체 (위 6번 참조)
-- ⚠️ 검색엔진 인증 코드 (`naver-site-verification`, `google-site-verification`):
-   초기엔 `REPLACE_WITH_*_CODE` 플레이스홀더. 운영자가 콘솔에서 코드 받으면 클로드한테 한 줄 명령으로 교체.
+### 매주 멤버 변경 시 수동 갱신 (1줄 명령으로 처리)
+운영자: "이번 주 ㅇㅇ 대표 추가" → 클로드가 자동으로:
+1. `sitemap.xml` lastmod 오늘 날짜로 갱신
+2. JSON-LD ItemList 재생성 (members.json 기준)
+3. OG 메타 4개(og:image / og:image:secure_url / twitter:image / og:image:alt) 새 featured 멤버 인포그래픽으로 교체
+4. Organization logo도 새 featured 멤버 이미지로 교체
+5. `data/members.json`의 `lastUpdated` 오늘로 갱신
+6. push → GitHub Pages 자동 배포
+7. 카카오 캐시 갱신 안내: https://developers.kakao.com/tool/clear/og
 
-확산 전략은 [SEO_AND_PROMOTION.md](SEO_AND_PROMOTION.md) 참조 — 비기술자용 단계별 가이드.
+### 운영자 1회 작업 (검색엔진 등록)
+초기에 한 번만 하면 됨. SEO_AND_PROMOTION.md 1·2단계 참조.
+
+**네이버 서치어드바이저** (한국 검색 60%):
+1. https://searchadvisor.naver.com/ → 사이트 추가
+2. HTML 태그 방식 인증 → content 코드 복사
+3. 클로드에게: "네이버 인증 코드는 abc123 야"
+4. 클로드가 자동: index.html·member.html의 `REPLACE_WITH_NAVER_CODE` 교체 + push
+5. 네이버 콘솔에서 "확인" 클릭 + sitemap.xml 제출
+
+**구글 서치 콘솔** (글로벌 + 한국 30%):
+- 같은 방식. `REPLACE_WITH_GOOGLE_CODE` 자리.
+
+확산 전략 전체는 [SEO_AND_PROMOTION.md](SEO_AND_PROMOTION.md) 참조 — 비기술자용 단계별 가이드.
 
 ## 비즈니스 문의 폼 (Formspree)
 
