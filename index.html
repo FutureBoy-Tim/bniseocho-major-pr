@@ -176,31 +176,22 @@ img{max-width:100%;display:block}
   position:relative;
 }
 .ha-photo{
-  width:200px;height:200px;border-radius:50%;object-fit:cover;
-  border:3px solid rgba(255,255,255,.22);
-  box-shadow:0 18px 44px rgba(0,0,0,.32);
-  background:linear-gradient(135deg,#FF8200,#FF6A00);
+  width:auto;max-width:280px;max-height:380px;height:auto;
+  object-fit:contain;display:block;
+  filter:drop-shadow(0 18px 32px rgba(0,0,0,.4));
+  background:transparent;border:none;
 }
-.ha-text{color:#fff;line-height:1.5;width:100%;max-width:340px}
-.ha-name{font-size:22px;font-weight:700;color:#fff;letter-spacing:-.01em;margin-bottom:14px;text-align:center}
+.ha-text{color:#fff;line-height:1.5;text-align:center;max-width:380px}
+.ha-name{font-size:20px;font-weight:700;color:#fff;letter-spacing:-.01em;margin:0 0 8px}
 .ha-name strong{font-weight:900;color:#FFB066}
-.ha-bio{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px;text-align:left}
-.ha-bio li{
-  font-size:13.5px;color:#D5DBEC;line-height:1.5;
-  padding:8px 14px 8px 32px;border-radius:10px;
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);
-  position:relative;
+.ha-bio{
+  font-size:12.5px;line-height:1.7;color:#C9D0E5;
+  margin:0;font-weight:500;letter-spacing:.005em;
 }
-.ha-bio li::before{
-  content:"";position:absolute;left:14px;top:50%;transform:translateY(-50%);
-  width:6px;height:6px;border-radius:50%;background:var(--bni-orange);
-  box-shadow:0 0 0 3px rgba(255,130,0,.18);
-}
-.ha-bio li span{color:#A6B0CC;font-size:12px;display:block;margin-top:2px;line-height:1.4}
 
 @media (max-width:960px){
-  .hero-inner{grid-template-columns:1fr;gap:36px}
-  .ha-photo{width:160px;height:160px}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .ha-photo{max-width:220px;max-height:300px}
   .ha-text{max-width:100%}
 }
 
@@ -494,14 +485,7 @@ footer{
       <img class="ha-photo" src="assets/producer/profile.png" alt="미래소년 이형진 대표 프로필" />
       <div class="ha-text">
         <div class="ha-name">미래소년 <strong>이형진</strong></div>
-        <ul class="ha-bio">
-          <li>한국AI마케팅협회 회장</li>
-          <li>AI사용자협회 부회장</li>
-          <li>AI 토핑 플래너</li>
-          <li>25년 광고기획자</li>
-          <li>AI를 활용한 마케팅 컨설턴트</li>
-          <li>AI 강사 <span>(덴탈브레인, 한국산업약사회, 대한약사영양학회 등)</span></li>
-        </ul>
+        <p class="ha-bio">한국AI마케팅협회 회장 · AI사용자협회 부회장 · AI 토핑 플래너<br/>25년 광고기획자 · AI 마케팅 컨설턴트 · AI 강사 (덴탈브레인 외)</p>
       </div>
     </aside>
   </div>
