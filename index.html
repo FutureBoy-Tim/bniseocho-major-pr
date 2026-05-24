@@ -434,6 +434,16 @@ img{max-width:100%;display:block}
 .pr-input::placeholder{color:#8B93AD}
 .pr-input:focus{outline:none;border-color:var(--bni-orange);background:rgba(255,130,0,.05)}
 .pr-textarea{resize:vertical;min-height:96px;font-family:inherit;line-height:1.5}
+.pr-form-field{display:flex;flex-direction:column;gap:6px}
+.pr-form-label{font-size:12px;color:#C9D0E5;font-weight:600;letter-spacing:.02em;padding-left:2px}
+.pr-select{
+  appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23A8B0CC' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:14px;
+  padding-right:40px;cursor:pointer;
+}
+.pr-select option{background:#0E1F5C;color:#fff;padding:8px}
+.pr-select optgroup{background:#0E1F5C;color:#FFB066;font-weight:700;font-style:normal}
 .pr-consent{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#A8B0CC;line-height:1.5;cursor:pointer;user-select:none}
 .pr-consent input[type="checkbox"]{margin-top:3px;accent-color:var(--bni-orange);width:14px;height:14px;cursor:pointer;flex-shrink:0}
 .pr-form-submit{
@@ -655,8 +665,8 @@ footer{
       </div>
       <!-- 비즈니스 문의 폼 — Formspree action URL 받으면 form action만 교체. 자세한 가이드는 CLAUDE.md 참조 -->
       <form class="pr-form" id="inquiryForm" action="https://formspree.io/f/mojblrrw" method="POST">
-        <h4 class="pr-form-title">✉ 비즈니스에 AI 시스템 문의하기</h4>
-        <p class="pr-form-sub">고객 DB 자동화·콘텐츠 발송·AI 마케팅 시스템 구축을 검토 중이신가요? 간단히 남겨주시면 24시간 안에 회신드립니다.</p>
+        <h4 class="pr-form-title">✉ 비즈니스 문의하기</h4>
+        <p class="pr-form-sub">39인 챕터 전문가와의 매칭, AI 마케팅 시스템 도입, AI 강의·교육 의뢰 등 어떤 문의든 24시간 안에 회신드립니다.</p>
         <div class="pr-form-row">
           <input class="pr-input" type="text" name="name" placeholder="성함" required autocomplete="name" />
           <input class="pr-input" type="text" name="company" placeholder="회사·소속" autocomplete="organization" />
@@ -665,7 +675,18 @@ footer{
           <input class="pr-input" type="tel" name="phone" placeholder="연락처 (010-0000-0000)" autocomplete="tel" />
           <input class="pr-input" type="email" name="email" placeholder="이메일" required autocomplete="email" />
         </div>
-        <textarea class="pr-input pr-textarea" name="message" rows="4" placeholder="어떤 도움이 필요하신가요? (예: 고객 응대 자동화, 콘텐츠 발송 시스템, AI 강의 의뢰 등)" required></textarea>
+        <label class="pr-form-field">
+          <span class="pr-form-label">어느 대표님께 문의하시나요?</span>
+          <select class="pr-input pr-select" name="target" id="inquiryTarget" required>
+            <option value="">— 선택해주세요 —</option>
+            <option value="producer">미래소년 이형진 (운영자) — AI 마케팅·강의·페이지 제작</option>
+            <option value="chapter">특정 대표 없음 — 챕터 전체 문의</option>
+            <optgroup label="── 챕터 전문가 39인 ──" id="memberOptGroup">
+              <!-- members.json 로드 후 JS로 채워짐 -->
+            </optgroup>
+          </select>
+        </label>
+        <textarea class="pr-input pr-textarea" name="message" rows="4" placeholder="어떤 도움이 필요하신가요? (예: 고객 응대 자동화, 콘텐츠 발송 시스템, AI 강의 의뢰, 또는 위에서 선택한 대표님과 미팅 요청 등)" required></textarea>
         <label class="pr-consent">
           <input type="checkbox" name="consent" required />
           <span>개인정보(성함·연락처·이메일) 수집·이용에 동의합니다. (문의 회신 목적, 1년 보관)</span>
@@ -711,6 +732,20 @@ function renderAll(){
   renderFeatured();
   renderCats(cats);
   renderGrid();
+  populateInquiryTargets();
+}
+
+// 비즈니스 문의 폼의 대표님 선택 옵션을 39명으로 자동 채움
+function populateInquiryTargets(){
+  const group = document.getElementById("memberOptGroup");
+  if(!group || !data?.members) return;
+  // order 순으로 정렬, status가 featured인 분 맨 위 강조
+  const sorted = [...data.members].sort((a,b)=>(a.order||999)-(b.order||999));
+  group.innerHTML = sorted.map(m=>{
+    const label = `${m.name} 대표${m.company ? " · " + m.company : ""}${m.industry ? " (" + m.industry + ")" : ""}`;
+    const star = m.status === "featured" ? "⭐ " : "";
+    return `<option value="${m.id}">${star}${label}</option>`;
+  }).join("");
 }
 
 function renderFeatured(){
@@ -858,6 +893,17 @@ loadData().catch(err=>{
     btn.textContent = "전송 중…";
     status.textContent = "";
     status.className = "pr-form-status";
+    // 선택된 대표 정보를 메일 제목에 반영
+    const target = form.querySelector('[name="target"]')?.value || "";
+    let targetLabel = "기타";
+    if (target === "producer") targetLabel = "미래소년 이형진 (운영자)";
+    else if (target === "chapter") targetLabel = "챕터 전체";
+    else if (target && data?.members) {
+      const m = data.members.find(x => x.id === target);
+      if (m) targetLabel = `${m.name} 대표 (${m.company || "챕터"})`;
+    }
+    const subjectInput = form.querySelector('[name="_subject"]');
+    if (subjectInput) subjectInput.value = `[BNI 서초 메이저 문의] ${targetLabel}`;
     try {
       const res = await fetch(form.action, {
         method: "POST",
