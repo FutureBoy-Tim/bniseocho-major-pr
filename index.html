@@ -349,11 +349,12 @@ img{max-width:100%;display:block}
 .producer-head{position:relative;z-index:1}
 .pr-eyebrow{font-size:11px;color:#FFB066;font-weight:800;letter-spacing:.15em;text-transform:uppercase;display:block}
 .pr-photo{
-  width:140px;height:140px;border-radius:50%;object-fit:cover;
+  width:150px;height:150px;border-radius:50%;object-fit:cover;
+  object-position:50% 8%;
   margin:18px 0 20px;display:block;
-  border:3px solid rgba(255,255,255,.22);
-  box-shadow:0 14px 36px rgba(0,0,0,.32);
-  background:linear-gradient(135deg,#FF8200,#FF6A00);
+  border:3px solid rgba(255,130,0,.55);
+  box-shadow:0 14px 36px rgba(0,0,0,.45);
+  background:linear-gradient(135deg,#FF8200 0%,#FF9933 100%);
 }
 .pr-name{font-size:26px;font-weight:800;letter-spacing:-.02em;margin:0 0 14px;color:#fff}
 .pr-name span{color:#FFB066;margin:0 6px;font-weight:600}
@@ -389,11 +390,11 @@ img{max-width:100%;display:block}
 }
 .pr-closing span{display:block;margin-top:6px;font-size:13.5px;color:#FFB066;font-weight:600;letter-spacing:.02em}
 
-.pr-services{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0 24px}
-.pr-svc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px}
-.pr-svc-icon{font-size:18px;margin-bottom:6px;display:block;line-height:1}
-.pr-svc-name{font-size:13.5px;font-weight:800;letter-spacing:-.01em;color:#fff;margin:0 0 3px}
-.pr-svc-desc{font-size:11.5px;color:#A8B0CC;margin:0;line-height:1.45}
+.pr-services{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0 24px}
+.pr-svc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px;display:flex;flex-direction:column}
+.pr-svc-icon{font-size:18px;margin-bottom:8px;display:block;line-height:1}
+.pr-svc-name{font-size:13.5px;font-weight:800;letter-spacing:-.01em;color:#fff;margin:0 0 6px}
+.pr-svc-desc{font-size:11.5px;color:#A8B0CC;margin:0;line-height:1.55;flex:1}
 
 .pr-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
 .pr-cta a{display:inline-flex;align-items:center;gap:6px;padding:11px 20px;border-radius:999px;font-weight:800;font-size:13.5px;text-decoration:none;transition:all .15s}
@@ -588,7 +589,7 @@ footer{
   <article class="producer">
     <div class="producer-head">
       <span class="pr-eyebrow">Producer · 이 페이지를 만든 사람</span>
-      <img class="pr-photo" src="assets/producer/profile.png" alt="미래소년 이형진 대표 프로필" />
+      <img class="pr-photo" src="assets/producer/profile-bust.png" alt="미래소년 이형진 대표 프로필" />
       <h3 class="pr-name">이형진<span>·</span>미래소년</h3>
       <ul class="pr-bio">
         <li><span class="pr-bio-tag now">現</span>다은컴즈 마케팅 컴퍼니 대표</li>
@@ -620,23 +621,23 @@ footer{
       <div class="pr-services">
         <div class="pr-svc">
           <span class="pr-svc-icon">🎓</span>
-          <h4 class="pr-svc-name">AI 강의·워크숍</h4>
-          <p class="pr-svc-desc">한국AI마케팅협회 / 대기업·중소기업 사내 교육</p>
+          <h4 class="pr-svc-name">AI 강의·워크숍 (전문강사)</h4>
+          <p class="pr-svc-desc">한국 AI마케팅협회 / AI 사용자협회<br/>덴탈브레인 / 한국산업약사회 / 대한약사영양학회</p>
         </div>
         <div class="pr-svc">
           <span class="pr-svc-icon">⚙️</span>
-          <h4 class="pr-svc-name">AI 마케팅 자동화</h4>
-          <p class="pr-svc-desc">고객 DB 활용 콘텐츠 발송·운영 자동화 구축</p>
+          <h4 class="pr-svc-name">AI 마케팅</h4>
+          <p class="pr-svc-desc">비즈니스 분석·구조화<br/>업무 자동화 / 에이전트 설계<br/>AI 마케팅전략 컨설팅부터 운영 대행까지</p>
         </div>
         <div class="pr-svc">
           <span class="pr-svc-icon">🎪</span>
-          <h4 class="pr-svc-name">광고·이벤트 기획</h4>
-          <p class="pr-svc-desc">LG·해외 대기업 신제품 발표 10년+ · 옥외광고·PPL 대행</p>
+          <h4 class="pr-svc-name">광고·프로모션 기획·대행</h4>
+          <p class="pr-svc-desc">컨퍼런스·캠페인·전시·신제품발표회<br/>영업전략 수립 / 옥외광고 / PPL 대행</p>
         </div>
         <div class="pr-svc">
           <span class="pr-svc-icon">📚</span>
           <h4 class="pr-svc-name">AI 콘텐츠 제작</h4>
-          <p class="pr-svc-desc">전자책 3권 · 유튜브 채널 3개월에 구독자 1,000+ 2개</p>
+          <p class="pr-svc-desc">전자책 3권<br/>유튜브 채널 3개월에 구독자 1,000+ 2개</p>
         </div>
       </div>
       <!-- 비즈니스 문의 폼 — Formspree action URL 받으면 form action만 교체. 자세한 가이드는 CLAUDE.md 참조 -->
