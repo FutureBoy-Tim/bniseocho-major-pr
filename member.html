@@ -10,21 +10,21 @@
 <meta property="og:title" id="ogTitle" content="BNI 서초 메이저 챕터 · 검증된 전문가" />
 <meta property="og:description" id="ogDesc" content="매주 한 명, 39명의 검증된 전문가를 깊이 있게 소개합니다." />
 <!-- og:image — JS 동적 갱신은 봇이 인식 못 함. 매주 featured 멤버의 인포그래픽으로 정적 폴백 -->
-<meta property="og:image" id="ogImage" content="https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lim-jonghee/infographic.png" />
-<meta property="og:image:secure_url" content="https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lim-jonghee/infographic.png" />
+<meta property="og:image" id="ogImage" content="https://bniseocho.kr/assets/members/lim-jonghee/infographic.png" />
+<meta property="og:image:secure_url" content="https://bniseocho.kr/assets/members/lim-jonghee/infographic.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1254" />
 <meta property="og:image:height" content="1254" />
 <meta property="og:locale" content="ko_KR" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lim-jonghee/infographic.png" />
+<meta name="twitter:image" content="https://bniseocho.kr/assets/members/lim-jonghee/infographic.png" />
 
 <!-- 검색엔진 사이트 소유 확인 (index.html과 동일 코드 박기) -->
 <meta name="naver-site-verification" content="REPLACE_WITH_NAVER_CODE" />
 <meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_CODE" />
 
 <!-- canonical은 JS로 동적 설정 (?id=) -->
-<link rel="canonical" id="canonicalLink" href="https://futureboy-tim.github.io/bniseocho-major-pr/" />
+<link rel="canonical" id="canonicalLink" href="https://bniseocho.kr/" />
 
 <!-- Person 구조화 데이터는 JS가 멤버 정보 로드 후 동적 생성 (script id="personSchema") -->
 <script type="application/ld+json" id="personSchema"></script>
@@ -390,15 +390,15 @@ function render(m, data){
 
   // canonical URL 동적 갱신 (?id=)
   const canonical = document.getElementById("canonicalLink");
-  if (canonical) canonical.href = `https://futureboy-tim.github.io/bniseocho-major-pr/member.html?id=${m.id}`;
+  if (canonical) canonical.href = `https://bniseocho.kr/member.html?id=${m.id}`;
 
   // JSON-LD Person 구조화 데이터 동적 생성 (구글이 인물·직책·전문분야 인식 → 검색 시 리치 결과)
   const personSchema = document.getElementById("personSchema");
   if (personSchema) {
-    const memberUrl = `https://futureboy-tim.github.io/bniseocho-major-pr/member.html?id=${m.id}`;
+    const memberUrl = `https://bniseocho.kr/member.html?id=${m.id}`;
     const imageUrl = m.assets?.infographic
       ? new URL(m.assets.infographic, location.href).toString()
-      : "https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lim-jonghee/infographic.png";
+      : "https://bniseocho.kr/assets/members/lim-jonghee/infographic.png";
     personSchema.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
@@ -415,7 +415,7 @@ function render(m, data){
       "memberOf": {
         "@type": "Organization",
         "name": "BNI 서초 메이저 챕터",
-        "url": "https://futureboy-tim.github.io/bniseocho-major-pr/"
+        "url": "https://bniseocho.kr/"
       }
     });
   }

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # 사이트맵 위치
-Sitemap: https://futureboy-tim.github.io/bniseocho-major-pr/sitemap.xml
+Sitemap: https://bniseocho.kr/sitemap.xml
 
 # 한국 검색엔진 (네이버 Yeti, 다음 Daumoa)도 모두 허용
 User-agent: Yeti

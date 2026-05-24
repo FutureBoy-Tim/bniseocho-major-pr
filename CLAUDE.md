@@ -162,7 +162,7 @@ bni-major-pr/
 
 `.github/workflows/pages.yml` 작동 중. main 브랜치에 push하면 자동 배포.
 - **Remote**: `origin` → https://github.com/FutureBoy-Tim/bniseocho-major-pr.git
-- **공개 URL**: https://futureboy-tim.github.io/bniseocho-major-pr/
+- **공개 URL**: https://bniseocho.kr/
 - **Actions 빌드 확인**: https://github.com/FutureBoy-Tim/bniseocho-major-pr/actions
 
 ## 메모리

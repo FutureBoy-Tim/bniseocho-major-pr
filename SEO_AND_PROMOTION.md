@@ -30,7 +30,7 @@
 1. 상단 메뉴 **"웹마스터 도구"** 클릭
 2. 사이트 추가 입력란에 다음 입력:
    ```
-   https://futureboy-tim.github.io/bniseocho-major-pr/
+   https://bniseocho.kr/
    ```
 3. **추가** 버튼 클릭
 
@@ -70,7 +70,7 @@
 3. **속성 추가** → **URL 접두어** 선택
 4. 다음 URL 입력:
    ```
-   https://futureboy-tim.github.io/bniseocho-major-pr/
+   https://bniseocho.kr/
    ```
 5. **계속** 클릭
 
@@ -104,7 +104,7 @@
 1. [https://register.search.daum.net/](https://register.search.daum.net/) 접속
 2. **사이트 등록 신청** → URL 입력:
    ```
-   https://futureboy-tim.github.io/bniseocho-major-pr/
+   https://bniseocho.kr/
    ```
 3. 카테고리 선택 (예: "비즈니스 · 단체")
 4. 신청 → 며칠 후 등록 결과 메일 수신
@@ -187,7 +187,7 @@ GitHub 도메인(`futureboy-tim.github.io/bniseocho-major-pr/`)은 길고 기억
 1. [https://qr.naver.com/](https://qr.naver.com/) 또는 [https://www.qr-code-generator.com/](https://www.qr-code-generator.com/)
 2. URL 입력:
    ```
-   https://futureboy-tim.github.io/bniseocho-major-pr/
+   https://bniseocho.kr/
    ```
    (자체 도메인 연결 후에는 새 도메인 사용)
 3. 다운로드 → 명함 디자이너에게 전달
