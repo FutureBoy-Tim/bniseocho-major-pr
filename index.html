@@ -178,12 +178,12 @@ img{max-width:100%;display:block}
 /* 사진 뒤 백라이트 — 검은 정장 인물이 다크 배경에 묻히지 않게 */
 .hero-aside::before{
   content:"";position:absolute;
-  top:-20px;left:50%;transform:translateX(-50%);
-  width:min(420px, 90%);height:min(480px, 80%);
+  top:-80px;left:50%;transform:translateX(-50%);
+  width:min(720px, 130%);height:min(780px, 115%);
   background:
-    radial-gradient(ellipse 50% 60% at 50% 40%, rgba(255,170,80,.32) 0%, rgba(255,170,80,.12) 40%, transparent 70%),
-    radial-gradient(ellipse 70% 80% at 50% 50%, rgba(180,200,255,.18) 0%, transparent 65%);
-  filter:blur(8px);
+    radial-gradient(ellipse 55% 65% at 50% 40%, rgba(255,170,80,.38) 0%, rgba(255,170,80,.18) 35%, rgba(255,170,80,.06) 55%, transparent 75%),
+    radial-gradient(ellipse 80% 90% at 50% 50%, rgba(180,200,255,.22) 0%, rgba(180,200,255,.08) 45%, transparent 75%);
+  filter:blur(12px);
   pointer-events:none;z-index:0;
 }
 .ha-photo{
