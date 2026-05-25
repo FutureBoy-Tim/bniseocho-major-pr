@@ -2,7 +2,7 @@
   "chapter": "BNI 서초 메이저 챕터",
   "tagline": "서로의 사업을 추천하는 사람들",
   "subtitle": "Business Referral Organization · Givers Gain",
-  "lastUpdated": "2026-05-24",
+  "lastUpdated": "2026-05-26",
   "featuredId": "lim-jonghee",
   "members": [
     {
@@ -418,6 +418,45 @@
       "category": "F&B",
       "industry": "카페창업 전문가, 맞춤형 원두 컨설팅",
       "status": "upcoming"
+    },
+    {
+      "id": "lee-eunsoo",
+      "order": 40,
+      "name": "이은수",
+      "title": "대표",
+      "company": "주식회사 네오인프라",
+      "companyEn": "NEO INFRA",
+      "category": "마케팅·미디어",
+      "industry": "기업 브랜딩·미디어 전략",
+      "tagline": "기업과 사람의 성장 이야기를 기록·브랜딩하는 미디어 전략가",
+      "subTagline": "디지털 아카이브 생태계로 기업 가치를 검색자산으로 만드는 사람",
+      "phone": "010-5956-6001",
+      "email": "jacobholy67@gmail.com",
+      "address": "서울시 마포구 성암로 330, DMC 첨단산업센터 B동 808호",
+      "expertise": [
+        "인터넷신문 기반 브랜드 브랜딩",
+        "기업 인터뷰 및 기사 아카이브",
+        "SEO 검색노출 콘텐츠 전략",
+        "기업 성장 스토리텔링",
+        "전문가 네트워크 연결",
+        "기업·대표자·전문인 퍼스널 브랜딩"
+      ],
+      "referralTargets": [
+        "브랜드 신뢰 구축이 필요한 기업 대표",
+        "검색 노출이 필요한 전문직/사업가",
+        "인터뷰·기사 홍보가 필요한 기업",
+        "스토리텔링 브랜딩이 필요한 전문가"
+      ],
+      "valueProps": [
+        "기업과 사람의 스토리를 기사·콘텐츠·미디어로 구조화하여 검색자산, 브랜딩, 사업 연결까지 이어지는 디지털 아카이브 생태계를 구축합니다."
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200",
+      "publishedAt": "2026-05-26",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/lee-eunsoo/digital-card.png"
+      }
     }
   ]
 }
