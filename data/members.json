@@ -638,6 +638,19 @@
   },
   "invitations": [
     {
+      "volume": 48,
+      "date": "2026-05-27",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "이기주",
+        "title": "대표",
+        "company": "비더 BE:THE"
+      },
+      "presenterMemberId": "lee-giju",
+      "imageUrl": "assets/invitations/2026-05-27.jpg"
+    },
+    {
       "volume": 49,
       "date": "2026-06-03",
       "dayKorean": "수",

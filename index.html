@@ -1170,11 +1170,19 @@ function renderInvitation(){
   const upcoming = document.getElementById("inviteUpcoming");
   if(!card || !data?.invitations?.length) return;
 
-  // 오늘 날짜 기준 가장 가까운 미래 (혹은 당일) 초대장 선택
-  const today = new Date(); today.setHours(0,0,0,0);
+  // 전환 시점: 모임 당일 오전 09:00
+  // 예: 5/27 09:00 전까지는 5/27 초대장 표시, 09:00 이후부터 다음 주차(6/3)로 전환
+  const now = new Date();
   const sorted = [...data.invitations].sort((a,b)=>a.date.localeCompare(b.date));
-  const current = sorted.find(inv => new Date(inv.date) >= today) || sorted[sorted.length-1];
-  const futureOthers = sorted.filter(inv => inv.date !== current.date && new Date(inv.date) >= today).slice(0, 4);
+  const current = sorted.find(inv => {
+    const cutoff = new Date(`${inv.date}T09:00:00`);
+    return now < cutoff;
+  }) || sorted[sorted.length-1];
+  const futureOthers = sorted.filter(inv => {
+    if (inv.date === current.date) return false;
+    const cutoff = new Date(`${inv.date}T09:00:00`);
+    return now < cutoff;
+  }).slice(0, 4);
 
   const m = data.meeting || {};
   const presName = `${current.presenter.name} ${current.presenter.title}`;
