@@ -849,14 +849,30 @@ img{max-width:100%;display:block}
 .invite-upcoming-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
 .invite-upcoming-card{
   background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
-  display:flex;flex-direction:column;gap:0;transition:all .15s;cursor:pointer;
+  display:flex;flex-direction:column;gap:0;transition:all .15s;
 }
 .invite-upcoming-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:#D7DDE9}
-.invite-upcoming-img{width:100%;aspect-ratio:9/16;object-fit:cover;background:#0E1F5C;display:block}
-.invite-upcoming-body{padding:12px 14px}
+.invite-upcoming-imgwrap{position:relative;cursor:zoom-in;overflow:hidden}
+.invite-upcoming-img{width:100%;aspect-ratio:9/16;object-fit:cover;background:#0E1F5C;display:block;transition:transform .3s}
+.invite-upcoming-imgwrap:hover .invite-upcoming-img{transform:scale(1.04)}
+.invite-upcoming-zoom{
+  position:absolute;top:10px;right:10px;
+  width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;
+  display:grid;place-items:center;font-size:13px;
+  opacity:0;transition:opacity .15s;pointer-events:none;
+}
+.invite-upcoming-imgwrap:hover .invite-upcoming-zoom{opacity:1}
+.invite-upcoming-body{padding:12px 14px;display:flex;flex-direction:column;gap:4px}
 .invite-upcoming-date{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--bni-orange-deep,#A95400);text-transform:uppercase}
 .invite-upcoming-presenter{font-size:13.5px;font-weight:800;color:var(--ink);margin:4px 0 2px;letter-spacing:-.01em}
-.invite-upcoming-company{font-size:12px;color:var(--ink-3)}
+.invite-upcoming-company{font-size:12px;color:var(--ink-3);margin-bottom:8px}
+.invite-upcoming-dl{
+  display:inline-flex;align-items:center;justify-content:center;gap:5px;
+  padding:8px 10px;border-radius:8px;
+  background:var(--line-2);color:var(--ink);font-size:12px;font-weight:700;
+  text-decoration:none;transition:all .14s;margin-top:auto;
+}
+.invite-upcoming-dl:hover{background:var(--bni-orange);color:#fff;transform:translateY(-1px)}
 
 @media (max-width:880px){
   .invite-card{grid-template-columns:1fr}
@@ -870,13 +886,20 @@ img{max-width:100%;display:block}
   display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;
 }
 .invite-lightbox.open{display:flex}
-.invite-lightbox img{max-width:100%;max-height:90vh;border-radius:14px;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+.invite-lightbox .lb-stage{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;max-height:95vh}
+.invite-lightbox img{max-width:100%;max-height:82vh;border-radius:14px;box-shadow:0 24px 80px rgba(0,0,0,.6)}
 .invite-lightbox .lb-close{
   position:absolute;top:20px;right:24px;color:#fff;background:rgba(255,255,255,.15);
   width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:22px;border:none;cursor:pointer;
-  transition:background .15s;
+  transition:background .15s;z-index:2;
 }
 .invite-lightbox .lb-close:hover{background:rgba(255,255,255,.28)}
+.invite-lightbox .lb-dl{
+  display:inline-flex;align-items:center;gap:7px;padding:12px 22px;border-radius:999px;
+  background:#FF8200;color:#fff;font-weight:700;font-size:14px;text-decoration:none;
+  box-shadow:0 12px 28px rgba(255,130,0,.4);transition:all .15s;
+}
+.invite-lightbox .lb-dl:hover{background:#FF6A00;transform:translateY(-1px)}
 
 /* ── Footer ────────────────────────────── */
 footer{
@@ -1182,7 +1205,7 @@ function renderInvitation(){
     if (inv.date === current.date) return false;
     const cutoff = new Date(`${inv.date}T09:00:00`);
     return now < cutoff;
-  }).slice(0, 4);
+  });
 
   const m = data.meeting || {};
   const presName = `${current.presenter.name} ${current.presenter.title}`;
@@ -1221,19 +1244,11 @@ function renderInvitation(){
     </div>
   `;
 
-  // 라이트박스 (확대 보기)
+  // 라이트박스 (확대 보기 + 다운로드)
   const img = card.querySelector(".invite-image img");
+  const mainDlName = `BNI_Major_Vol${current.volume}_${current.date}.jpg`;
   img.addEventListener("click", ()=>{
-    let lb = document.querySelector(".invite-lightbox");
-    if(!lb){
-      lb = document.createElement("div");
-      lb.className = "invite-lightbox";
-      lb.innerHTML = `<button class="lb-close" aria-label="닫기">×</button><img alt="" />`;
-      document.body.appendChild(lb);
-      lb.addEventListener("click", (e)=>{ if(e.target === lb || e.target.classList.contains("lb-close")) lb.classList.remove("open"); });
-    }
-    lb.querySelector("img").src = img.src;
-    lb.classList.add("open");
+    openInviteLightbox(current.imageUrl, current.imageUrl, mainDlName);
   });
 
   // 공유 버튼
@@ -1250,27 +1265,54 @@ function renderInvitation(){
     navigator.clipboard.writeText(`https://bniseocho.kr/#invitation`).then(()=>toast("초대장 링크가 복사되었습니다."));
   });
 
-  // 다음 주차 미리보기
+  // 다음 주차 미리보기 (전체 표시 + 카드별 다운로드 버튼)
   upcoming.innerHTML = futureOthers.map(inv=>{
     const d = new Date(inv.date);
+    const dlName = `BNI_Major_Vol${inv.volume}_${inv.date}.jpg`;
     return `
-      <div class="invite-upcoming-card" data-href="${inv.imageUrl}">
-        <img class="invite-upcoming-img" src="${inv.imageUrl}" alt="Vol.${inv.volume} 초대장" />
+      <div class="invite-upcoming-card">
+        <div class="invite-upcoming-imgwrap" data-href="${inv.imageUrl}">
+          <img class="invite-upcoming-img" src="${inv.imageUrl}" alt="Vol.${inv.volume} 초대장" />
+          <span class="invite-upcoming-zoom" title="확대 보기">🔍</span>
+        </div>
         <div class="invite-upcoming-body">
           <div class="invite-upcoming-date">Vol.${inv.volume} · ${d.getMonth()+1}/${d.getDate()}(${inv.dayKorean})</div>
           <div class="invite-upcoming-presenter">${inv.presenter.name} ${inv.presenter.title}</div>
           <div class="invite-upcoming-company">${inv.presenter.company}</div>
+          <a class="invite-upcoming-dl" href="${inv.imageUrl}" download="${dlName}">📥 다운로드</a>
         </div>
       </div>
     `;
   }).join("");
-  // 미리보기 카드 클릭 → 라이트박스
-  upcoming.querySelectorAll(".invite-upcoming-card").forEach(c=>{
+  // 이미지 영역 클릭 → 라이트박스 (다운로드 링크는 별도)
+  upcoming.querySelectorAll(".invite-upcoming-imgwrap").forEach(c=>{
     c.addEventListener("click", ()=>{
-      let lb = document.querySelector(".invite-lightbox");
-      if(lb){ lb.querySelector("img").src = c.dataset.href; lb.classList.add("open"); }
+      openInviteLightbox(c.dataset.href, c.closest(".invite-upcoming-card").querySelector(".invite-upcoming-dl").href, c.closest(".invite-upcoming-card").querySelector(".invite-upcoming-dl").getAttribute("download"));
     });
   });
+}
+
+// 라이트박스 헬퍼 — 다운로드 버튼 포함
+function openInviteLightbox(imgUrl, dlUrl, dlName){
+  let lb = document.querySelector(".invite-lightbox");
+  if(!lb){
+    lb = document.createElement("div");
+    lb.className = "invite-lightbox";
+    lb.innerHTML = `
+      <button class="lb-close" aria-label="닫기">×</button>
+      <div class="lb-stage" onclick="event.stopPropagation()">
+        <img alt="" />
+        <a class="lb-dl" download>📥 이 초대장 다운로드</a>
+      </div>
+    `;
+    document.body.appendChild(lb);
+    lb.addEventListener("click", (e)=>{ if(e.target === lb || e.target.classList.contains("lb-close")) lb.classList.remove("open"); });
+  }
+  lb.querySelector("img").src = imgUrl;
+  const dl = lb.querySelector(".lb-dl");
+  dl.href = dlUrl || imgUrl;
+  if (dlName) dl.setAttribute("download", dlName);
+  lb.classList.add("open");
 }
 
 // 토스트 메시지 (간단)
