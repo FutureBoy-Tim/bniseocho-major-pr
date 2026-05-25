@@ -252,4 +252,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://bniseocho.kr/member.html?id=kim-sunggun</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bniseocho.kr/member.html?id=jang-hyoseok</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bniseocho.kr/member.html?id=nam-sangwoo</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bniseocho.kr/member.html?id=kim-suji</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

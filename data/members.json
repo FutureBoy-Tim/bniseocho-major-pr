@@ -457,6 +457,166 @@
       "assets": {
         "digitalCard": "assets/members/lee-eunsoo/digital-card.png"
       }
+    },
+    {
+      "id": "kim-sunggun",
+      "order": 41,
+      "name": "김성군",
+      "title": "대표",
+      "company": "골든프로",
+      "companyEn": "Golden Pro",
+      "category": "라이프스타일",
+      "industry": "맞춤형 골프레슨",
+      "tagline": "사업가·전문직을 위한 맞춤형 골프레슨",
+      "subTagline": "수원골프스튜디오 기반 1:1 프라이빗 골프레슨",
+      "phone": "010-2275-2020",
+      "email": "tjdzms92@gmail.com",
+      "address": "수원골프스튜디오",
+      "expertise": [
+        "CEO 골프레슨",
+        "방문 레슨",
+        "골프 브랜딩"
+      ],
+      "referralTargets": [
+        "골프 입문이나 실력 향상이 필요한 사업가·전문직 고객"
+      ],
+      "valueProps": [
+        "수원골프스튜디오를 기반으로 1:1 프라이빗 골프레슨 및 방문레슨을 진행합니다. 골프입문·스윙교정·실전라운드까지 개인별 맞춤 프로그램으로 체계적인 코칭을 제공합니다."
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200",
+      "publishedAt": "2026-05-26",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/kim-sunggun/digital-card.png"
+      }
+    },
+    {
+      "id": "jang-hyoseok",
+      "order": 42,
+      "name": "장효석",
+      "title": "대표",
+      "company": "이상한리뷰의앨리스",
+      "companyEn": "Alice in Wonder Review",
+      "category": "마케팅·미디어",
+      "industry": "퍼스널 브랜딩·미디어 전략",
+      "tagline": "대표의 숨겨진 가치를 발견해, 신뢰가 돈이 되는 구조를 만드는 미디어 전략가",
+      "subTagline": "사람의 가치 → 콘텐츠 → 신뢰 → 비즈니스 기회로 이어지는 구조 설계자",
+      "phone": "010-2068-9041",
+      "email": "peculiar4praise@gmail.com",
+      "address": "Seoul, South Korea",
+      "expertise": [
+        "퍼스널 브랜딩 전략",
+        "유튜브 기획·촬영·편집",
+        "CEO 및 전문가 브랜딩 콘텐츠 제작",
+        "인터뷰 기반 콘텐츠 디렉팅",
+        "비즈니스 스토리텔링",
+        "숏폼·SNS 콘텐츠 전략",
+        "글로벌 석학·비즈니스 리더 인터뷰",
+        "뇌과학·심리학 기반 자기변화 강연",
+        "Ultra Self(울트라셀프) 강연 및 세미나"
+      ],
+      "referralTargets": [
+        "자신의 전문성을 제대로 알리고 싶은 대표님",
+        "유튜브 및 SNS 브랜딩이 필요한 사업가",
+        "강의·책·사업을 콘텐츠화하고 싶은 전문가",
+        "신뢰 기반의 퍼스널 브랜딩이 필요한 CEO",
+        "인터뷰·스토리텔링 기반 영상이 필요한 기업",
+        "조직 문화·동기부여·자기변화 강연이 필요한 기업 및 단체",
+        "좋은 실력은 있는데 시장에 잘 안 알려진 숨은 고수"
+      ],
+      "valueProps": [
+        "세계적인 석학·자산가·비즈니스 리더들과의 인터뷰 및 직접적인 소통 경험을 바탕으로, 대표님만의 강점과 스토리를 발견하고 시장에서 통하는 퍼스널 브랜딩과 콘텐츠로 연결합니다.",
+        "유튜브 기획·촬영·편집부터 브랜드 방향성, 인터뷰 디렉팅, SNS 콘텐츠 전략까지 통합적으로 진행합니다."
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200",
+      "publishedAt": "2026-05-26",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/jang-hyoseok/digital-card.png"
+      }
+    },
+    {
+      "id": "nam-sangwoo",
+      "order": 43,
+      "name": "남상우",
+      "title": "행정사",
+      "company": "서리풀행정사 사무소",
+      "companyEn": "Seoriful Administrative Affairs Office",
+      "category": "법률·법무",
+      "industry": "행정사 (인허가·비자·법인설립)",
+      "tagline": "복잡한 인허가·비자·법인설립 절차를 주무관청 기준에 맞춰 준비하는 행정사",
+      "subTagline": "비영리법인·외국인비자·기업인허가·공장설립 전문",
+      "phone": "010-6800-1244",
+      "email": "saa@seoriful.com",
+      "address": "서울특별시 서초구 중앙대로 20길 33-19 2층",
+      "expertise": [
+        "비영리법인 설립 (사단법인·재단법인·협회·정관·창립총회)",
+        "외국인 비자 및 체류업무 (D-8·F-2·F-4·F-6·E-7 등)",
+        "기업 인허가 (화장품책임판매업·식품제조업·여행업 등)",
+        "외국인환자 유치기관 등록·평생교육시설 인허가",
+        "공장설립·직접생산확인·조달·MAS 등록",
+        "생활민원·사실증명 서류 (사실확인서·진술서·의견서)"
+      ],
+      "referralTargets": [
+        "사단법인·재단법인·협회 설립을 준비하는 단체 또는 대표자",
+        "외국인이 한국에서 법인을 설립하거나 D-8 투자비자를 준비하는 경우",
+        "외국인 직원 채용·비자 변경·체류기간 연장 문제가 있는 기업",
+        "병원·의원·의료기관 중 외국인환자 유치기관 등록을 준비하는 곳",
+        "공장등록·직접생산확인·조달등록·MAS 등록을 준비하는 제조업체",
+        "화장품·식품·여행업·평생교육시설·방문요양기관 인허가가 필요한 사업자",
+        "행정기관 제출용 사실확인서·의견서·진술서 작성이 필요한 분",
+        "세무사·노무사·변호사·법무사·회계사 등 고객의 행정 인허가 수요가 있는 전문가"
+      ],
+      "valueProps": [
+        "의뢰인의 사업 목적과 상황을 먼저 확인한 뒤, 주무관청의 심사 기준에 맞춰 필요한 서류와 절차를 정리하고, 접수 전 보완 가능성을 줄일 수 있도록 실무 중심으로 업무를 진행합니다.",
+        "사단법인·재단법인 설립, 외국인 투자비자, 기업 인허가, 외국인환자 유치업, 공장설립 및 직접생산확인 등 복잡한 행정 절차가 필요한 업무를 중점적으로 수행하고 있습니다."
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200",
+      "publishedAt": "2026-05-26",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/nam-sangwoo/digital-card.png"
+      }
+    },
+    {
+      "id": "kim-suji",
+      "order": 44,
+      "name": "김수지",
+      "title": "대표",
+      "company": "가온솔루션",
+      "companyEn": "Gaon Solution",
+      "category": "제조·유통",
+      "industry": "법인 특판·복지몰 상품",
+      "tagline": "법인 특판을 전문으로 하는 쇼호스트 경력의 상품 전문가",
+      "subTagline": "기업·공공기관 복지몰 상품과 백화점 단체복 특판",
+      "phone": "010-2856-7300",
+      "email": "ksj8347@naver.com",
+      "address": "서울시 구로구 고척동 174-6",
+      "expertise": [
+        "백화점 브랜드 단체복 전문 (신상품 할인가 납품 가능)",
+        "기업·공공기관 복지몰 상품 운영",
+        "법인 특판 시즌선물세트 기획 및 운영"
+      ],
+      "referralTargets": [
+        "기업 및 공공기관 총무·구매 담당자",
+        "노동조합(노조) 관계자",
+        "단체선물 및 행사 기획 담당자",
+        "복지몰 운영이 필요한 기업",
+        "복지몰에 납품 가능한 제조사"
+      ],
+      "valueProps": [
+        "기업 및 공공기관 맞춤형 복지몰 상품과 백화점 브랜드 단체복 등 기업 특판을 전문적으로 제안하고 운영합니다."
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200",
+      "publishedAt": "2026-05-26",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/kim-suji/digital-card.png"
+      }
     }
   ]
 }
