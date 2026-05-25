@@ -792,6 +792,92 @@ img{max-width:100%;display:block}
   .producer-section{margin-top:56px}
 }
 
+/* ── 초대장 섹션 ────────────────────────────── */
+.invite-section{padding-top:60px}
+.invite-card{
+  background:linear-gradient(135deg,#0B1849 0%,#1B3380 100%);
+  border-radius:var(--r-xl);box-shadow:var(--shadow-lg);overflow:hidden;
+  display:grid;grid-template-columns:1.1fr 1fr;gap:0;color:#fff;
+  position:relative;
+}
+.invite-card::before{
+  content:"";position:absolute;top:-100px;right:-100px;width:300px;height:300px;
+  border-radius:50%;background:radial-gradient(circle,rgba(255,130,0,.22),transparent 65%);
+  pointer-events:none;
+}
+.invite-image{position:relative;display:grid;place-items:center;padding:24px;background:rgba(0,0,0,.18)}
+.invite-image img{
+  max-width:100%;max-height:560px;border-radius:14px;
+  box-shadow:0 24px 60px rgba(0,0,0,.5);
+  cursor:zoom-in;transition:transform .3s cubic-bezier(.2,.8,.2,1);
+}
+.invite-image img:hover{transform:scale(1.02)}
+.invite-meta{padding:36px 36px 32px;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
+.invite-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+  padding:6px 12px;border-radius:999px;background:rgba(255,130,0,.18);
+  color:#FFB066;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid rgba(255,130,0,.3);
+}
+.invite-headline{font-size:clamp(22px,2.4vw,30px);font-weight:800;letter-spacing:-.02em;margin:6px 0 0;line-height:1.2}
+.invite-headline em{font-style:normal;color:#FFB066}
+.invite-info{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px;margin:8px 0 14px}
+.invite-info dt{color:#A8B0CC;font-weight:600}
+.invite-info dd{margin:0;color:#fff;font-weight:500}
+.invite-info dd strong{color:#FFB066;font-weight:700}
+.invite-fee-box{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;
+  padding:14px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+}
+.invite-fee-label{font-size:12px;color:#A8B0CC;letter-spacing:.04em}
+.invite-fee-value{font-size:14px;color:#fff;font-weight:700}
+.invite-fee-value small{display:block;font-size:11.5px;color:#A8B0CC;font-weight:500;margin-top:2px}
+.invite-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.invite-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:11px 18px;border-radius:999px;font-weight:700;font-size:13.5px;
+  text-decoration:none;transition:all .14s;cursor:pointer;border:none;font-family:inherit;
+}
+.invite-btn-orange{background:#FF8200;color:#fff;box-shadow:0 8px 20px rgba(255,130,0,.32)}
+.invite-btn-orange:hover{background:#FF6A00;transform:translateY(-1px)}
+.invite-btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.invite-btn-ghost:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4)}
+
+/* 다음 주차 초대장 미리보기 */
+.invite-upcoming{margin-top:48px}
+.invite-upcoming-h{font-size:16px;font-weight:700;color:var(--ink-2);margin:0 0 14px;letter-spacing:-.01em}
+.invite-upcoming-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.invite-upcoming-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  display:flex;flex-direction:column;gap:0;transition:all .15s;cursor:pointer;
+}
+.invite-upcoming-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:#D7DDE9}
+.invite-upcoming-img{width:100%;aspect-ratio:9/16;object-fit:cover;background:#0E1F5C;display:block}
+.invite-upcoming-body{padding:12px 14px}
+.invite-upcoming-date{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--bni-orange-deep,#A95400);text-transform:uppercase}
+.invite-upcoming-presenter{font-size:13.5px;font-weight:800;color:var(--ink);margin:4px 0 2px;letter-spacing:-.01em}
+.invite-upcoming-company{font-size:12px;color:var(--ink-3)}
+
+@media (max-width:880px){
+  .invite-card{grid-template-columns:1fr}
+  .invite-image{padding:20px}
+  .invite-meta{padding:28px 22px 24px}
+}
+
+/* 초대장 라이트박스 (확대 보기) */
+.invite-lightbox{
+  position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:100;
+  display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;
+}
+.invite-lightbox.open{display:flex}
+.invite-lightbox img{max-width:100%;max-height:90vh;border-radius:14px;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+.invite-lightbox .lb-close{
+  position:absolute;top:20px;right:24px;color:#fff;background:rgba(255,255,255,.15);
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:22px;border:none;cursor:pointer;
+  transition:background .15s;
+}
+.invite-lightbox .lb-close:hover{background:rgba(255,255,255,.28)}
+
 /* ── Footer ────────────────────────────── */
 footer{
   margin-top:80px;background:var(--bni-navy);color:#A6B0CC;
@@ -863,6 +949,24 @@ footer{
     <!-- populated by JS -->
   </article>
 </div>
+
+<!-- ── 이번 주 조찬모임 초대장 섹션 ────────────────────── -->
+<section class="section invite-section" id="invitation">
+  <div class="section-h">
+    <div>
+      <h2>이번 주 조찬모임 초대장</h2>
+      <div class="meta" style="margin-top:6px" id="inviteSubtitle">대표님의 비즈니스를 BNI 서초 메이저에 초대합니다.</div>
+    </div>
+  </div>
+  <div class="invite-card" id="inviteCard">
+    <!-- populated by JS -->
+  </div>
+  <!-- 예정된 다음 초대장들 -->
+  <div class="invite-upcoming">
+    <h3 class="invite-upcoming-h">다음 주차 초대장 미리보기</h3>
+    <div class="invite-upcoming-grid" id="inviteUpcoming"><!-- populated by JS --></div>
+  </div>
+</section>
 
 <section class="section" id="members">
   <div class="section-h">
@@ -1054,9 +1158,126 @@ function renderAll(){
   document.getElementById("updatedAt").textContent = "마지막 업데이트 · " + (data.lastUpdated || "");
 
   renderFeatured();
+  renderInvitation();
   renderCats(cats);
   renderGrid();
   populateInquiryTargets();
+}
+
+// ── 이번 주 조찬모임 초대장 렌더링 ────────────────────
+function renderInvitation(){
+  const card = document.getElementById("inviteCard");
+  const upcoming = document.getElementById("inviteUpcoming");
+  if(!card || !data?.invitations?.length) return;
+
+  // 오늘 날짜 기준 가장 가까운 미래 (혹은 당일) 초대장 선택
+  const today = new Date(); today.setHours(0,0,0,0);
+  const sorted = [...data.invitations].sort((a,b)=>a.date.localeCompare(b.date));
+  const current = sorted.find(inv => new Date(inv.date) >= today) || sorted[sorted.length-1];
+  const futureOthers = sorted.filter(inv => inv.date !== current.date && new Date(inv.date) >= today).slice(0, 4);
+
+  const m = data.meeting || {};
+  const presName = `${current.presenter.name} ${current.presenter.title}`;
+  const presCompany = current.presenter.company;
+  const dateObj = new Date(current.date);
+  const dateStr = `${dateObj.getMonth()+1}월 ${dateObj.getDate()}일 (${current.dayKorean})`;
+
+  card.innerHTML = `
+    <div class="invite-image">
+      <img src="${current.imageUrl}" alt="BNI 서초 메이저 Vol.${current.volume} 초대장" data-zoom="${current.imageUrl}" />
+    </div>
+    <div class="invite-meta">
+      <span class="invite-eyebrow">Vol.${current.volume} · ${current.date}</span>
+      <h3 class="invite-headline">${dateStr} 조찬모임에<br/>대표님의 비즈니스를 <em>초대합니다</em></h3>
+      <dl class="invite-info">
+        <dt>📅 일시</dt><dd>${dateStr} 오전 <strong>${current.time}</strong>~</dd>
+        <dt>📍 장소</dt><dd>${m.venue || ""}</dd>
+        <dt>🎤 연사</dt><dd><strong>${presCompany}</strong> · ${presName}</dd>
+        <dt>👔 안내</dt><dd>${m.dressCode || "비즈니스 복장"} · ${m.businessCards || "명함 50장 준비"}</dd>
+      </dl>
+      <div class="invite-fee-box">
+        <div>
+          <div class="invite-fee-label">참석비</div>
+          <div class="invite-fee-value">${m.feeKorean || "30,000원"}</div>
+        </div>
+        <div>
+          <div class="invite-fee-label">입금계좌</div>
+          <div class="invite-fee-value">${m.account?.bank || ""} ${m.account?.number || ""} <small>${m.account?.holder || ""}</small></div>
+        </div>
+      </div>
+      <div class="invite-actions">
+        <a class="invite-btn invite-btn-orange" href="${current.imageUrl}" download="BNI_Major_Vol${current.volume}_${current.date}.jpg">📥 초대장 다운로드</a>
+        <button class="invite-btn invite-btn-ghost" id="inviteShareBtn">📋 카톡으로 공유</button>
+        <button class="invite-btn invite-btn-ghost" id="inviteCopyBtn">🔗 링크 복사</button>
+      </div>
+    </div>
+  `;
+
+  // 라이트박스 (확대 보기)
+  const img = card.querySelector(".invite-image img");
+  img.addEventListener("click", ()=>{
+    let lb = document.querySelector(".invite-lightbox");
+    if(!lb){
+      lb = document.createElement("div");
+      lb.className = "invite-lightbox";
+      lb.innerHTML = `<button class="lb-close" aria-label="닫기">×</button><img alt="" />`;
+      document.body.appendChild(lb);
+      lb.addEventListener("click", (e)=>{ if(e.target === lb || e.target.classList.contains("lb-close")) lb.classList.remove("open"); });
+    }
+    lb.querySelector("img").src = img.src;
+    lb.classList.add("open");
+  });
+
+  // 공유 버튼
+  document.getElementById("inviteShareBtn")?.addEventListener("click", ()=>{
+    const text = `[BNI 서초 메이저 챕터 · 이번 주 조찬모임 초대]\n\n📅 ${dateStr} 오전 ${current.time}~\n📍 ${m.venue}\n🎤 연사: ${presCompany} · ${presName}\n💼 ${m.dressCode} · ${m.businessCards}\n💳 참석비 ${m.feeKorean}\n\n전체 멤버 소개와 초대장은:\nhttps://bniseocho.kr/`;
+    if(navigator.share){
+      navigator.share({title:`BNI 서초 메이저 Vol.${current.volume}`, text, url:"https://bniseocho.kr/"}).catch(()=>{});
+    } else {
+      navigator.clipboard.writeText(text).then(()=>toast("카톡용 메시지가 복사되었습니다. 채팅창에 붙여넣으세요!"));
+    }
+  });
+
+  document.getElementById("inviteCopyBtn")?.addEventListener("click", ()=>{
+    navigator.clipboard.writeText(`https://bniseocho.kr/#invitation`).then(()=>toast("초대장 링크가 복사되었습니다."));
+  });
+
+  // 다음 주차 미리보기
+  upcoming.innerHTML = futureOthers.map(inv=>{
+    const d = new Date(inv.date);
+    return `
+      <div class="invite-upcoming-card" data-href="${inv.imageUrl}">
+        <img class="invite-upcoming-img" src="${inv.imageUrl}" alt="Vol.${inv.volume} 초대장" />
+        <div class="invite-upcoming-body">
+          <div class="invite-upcoming-date">Vol.${inv.volume} · ${d.getMonth()+1}/${d.getDate()}(${inv.dayKorean})</div>
+          <div class="invite-upcoming-presenter">${inv.presenter.name} ${inv.presenter.title}</div>
+          <div class="invite-upcoming-company">${inv.presenter.company}</div>
+        </div>
+      </div>
+    `;
+  }).join("");
+  // 미리보기 카드 클릭 → 라이트박스
+  upcoming.querySelectorAll(".invite-upcoming-card").forEach(c=>{
+    c.addEventListener("click", ()=>{
+      let lb = document.querySelector(".invite-lightbox");
+      if(lb){ lb.querySelector("img").src = c.dataset.href; lb.classList.add("open"); }
+    });
+  });
+}
+
+// 토스트 메시지 (간단)
+function toast(msg){
+  let t = document.getElementById("__toast");
+  if(!t){
+    t = document.createElement("div");
+    t.id = "__toast";
+    t.style.cssText = "position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:rgba(14,31,92,.95);color:#fff;padding:12px 22px;border-radius:999px;font-size:14px;font-weight:600;z-index:200;box-shadow:0 12px 32px rgba(0,0,0,.3);opacity:0;transition:opacity .2s";
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.style.opacity = "1";
+  clearTimeout(t._tid);
+  t._tid = setTimeout(()=>{ t.style.opacity = "0"; }, 3000);
 }
 
 // 비즈니스 문의 폼의 대표님 선택 옵션을 39명으로 자동 채움

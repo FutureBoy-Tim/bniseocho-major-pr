@@ -88,6 +88,40 @@
 
 확산 전략 전체는 [SEO_AND_PROMOTION.md](SEO_AND_PROMOTION.md) 참조 — 비기술자용 단계별 가이드.
 
+## 조찬모임 초대장 시스템 (2026-05-26 도입)
+
+매주 한 분의 멤버가 프레젠테이션 연사로 서는 BNI 조찬모임 초대장을 사이트에서 노출.
+
+### 자동 동작
+- `data/members.json`의 `invitations` 배열에서 **오늘 날짜 기준 가장 가까운 미래/당일 초대장**을 자동 선택해 메인에 큰 카드로 표시
+- 그 외 미래 주차 초대장은 "다음 주차 초대장 미리보기"로 작게 노출
+- 다운로드(JPG) + 카톡 공유 + 링크 복사 버튼 자동 동작
+- 이미지 클릭 시 라이트박스로 확대
+
+### 운영자 액션 (주 1회·매주 수요일 이후)
+새 초대장 1장 추가하려면:
+1. 초대장 이미지를 `assets/invitations/YYYY-MM-DD.jpg` 표준 파일명으로 저장
+2. `data/members.json`의 `invitations` 배열에 객체 1개 추가:
+   ```json
+   {
+     "volume": 54,
+     "date": "2026-07-08",
+     "dayKorean": "수",
+     "time": "06:20",
+     "presenter": {"name": "○○○", "title": "대표", "company": "○○회사"},
+     "presenterMemberId": "yyy",
+     "imageUrl": "assets/invitations/2026-07-08.jpg"
+   }
+   ```
+3. push → 자동 배포
+
+운영자가 클로드한테:
+> "다음 주 초대장 받았어. {대표명} {회사명}, 7월 8일(수)"
+→ 클로드가 BNI 폴더/Downloads에서 자동으로 이미지 찾아 복사 + JSON 추가 + push
+
+### 공통 모임 정보 (`data/members.json` → `meeting` 키)
+- schedule, venue, dressCode, businessCards, fee, account, ed, growthAmbassador, director
+
 ## 비즈니스 문의 폼 (Formspree)
 
 [index.html](index.html) 하단 Producer 섹션에 비즈니스 문의 폼 있음. 데이터는 Formspree로 수집.

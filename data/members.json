@@ -618,5 +618,89 @@
         "digitalCard": "assets/members/kim-suji/digital-card.png"
       }
     }
+  ],
+  "meeting": {
+    "schedule": "매주 수요일 오전 06:20 ~",
+    "venue": "서울 서초구 서초대로40길 49 지하 2층 라이프 비즈니스 센터",
+    "venueShort": "라이프 비즈니스 센터 (서초)",
+    "dressCode": "비즈니스 복장",
+    "businessCards": "명함 50장 준비",
+    "fee": 30000,
+    "feeKorean": "30,000원",
+    "account": {
+      "bank": "카카오뱅크",
+      "number": "3333-3696-74507",
+      "holder": "이기행"
+    },
+    "ed": "홍성교",
+    "growthAmbassador": "이경찬 (스마트링크)",
+    "director": "김보연 (위드컬러)"
+  },
+  "invitations": [
+    {
+      "volume": 49,
+      "date": "2026-06-03",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "유치훈",
+        "title": "부장",
+        "company": "점포라인"
+      },
+      "presenterMemberId": "yoo-chihoon",
+      "imageUrl": "assets/invitations/2026-06-03.jpg"
+    },
+    {
+      "volume": 50,
+      "date": "2026-06-10",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "한종태",
+        "title": "대표",
+        "company": "㈜플로우링크"
+      },
+      "presenterMemberId": "han-jongtae",
+      "imageUrl": "assets/invitations/2026-06-10.jpg"
+    },
+    {
+      "volume": 51,
+      "date": "2026-06-17",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "채민철",
+        "title": "대표",
+        "company": "브리튼청담"
+      },
+      "presenterMemberId": "chae-mincheol",
+      "imageUrl": "assets/invitations/2026-06-17.jpg"
+    },
+    {
+      "volume": 52,
+      "date": "2026-06-24",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "김은송",
+        "title": "대표",
+        "company": "로야디"
+      },
+      "presenterMemberId": "kim-eunsong",
+      "imageUrl": "assets/invitations/2026-06-24.jpg"
+    },
+    {
+      "volume": 53,
+      "date": "2026-07-01",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "강우규",
+        "title": "대표",
+        "company": "㈜아이오토마스터"
+      },
+      "presenterMemberId": "kang-woogyu",
+      "imageUrl": "assets/invitations/2026-07-01.jpg"
+    }
   ]
 }
