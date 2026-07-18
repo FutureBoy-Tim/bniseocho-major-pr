@@ -621,32 +621,8 @@
       "accentColor": "#FF8200"
     },
     {
-      "id": "wang-joongho",
-      "order": 20,
-      "name": "왕중호",
-      "title": "대표",
-      "company": "에이원글로벌",
-      "companyEn": "A-One Global",
-      "category": "글로벌·무역",
-      "industry": "중화권 무역유통",
-      "tagline": "중화권 무역유통 전문가",
-      "phone": "010-9243-8877",
-      "email": "",
-      "address": "",
-      "expertise": [
-        "중화권 무역유통"
-      ],
-      "referralTargets": [],
-      "brandColor": "#1A1A1A",
-      "accentColor": "#FF8200",
-      "status": "upcoming",
-      "assets": {
-        "digitalCard": "assets/members/wang-joongho/digital-card.png"
-      }
-    },
-    {
       "id": "kim-sungjun",
-      "order": 21,
+      "order": 20,
       "name": "김성준",
       "company": "아티움 특허법률사무소",
       "category": "법률·특허",
@@ -677,7 +653,7 @@
     },
     {
       "id": "lee-hyungjin",
-      "order": 22,
+      "order": 21,
       "name": "이형진",
       "company": "한국 AI 마케팅 협회",
       "category": "AI 마케팅",
@@ -713,7 +689,7 @@
     },
     {
       "id": "seo-seungwan",
-      "order": 23,
+      "order": 22,
       "name": "서승완",
       "company": "(주)수완메디칼",
       "category": "의료·CSO",
@@ -744,7 +720,7 @@
     },
     {
       "id": "kim-sehan",
-      "order": 24,
+      "order": 23,
       "name": "김세한",
       "company": "하나증권 THE센터필드",
       "category": "금융",
@@ -753,7 +729,7 @@
     },
     {
       "id": "kim-jongmyung",
-      "order": 25,
+      "order": 24,
       "name": "김종명",
       "company": "KT 세이노",
       "category": "통신·IT",
@@ -784,7 +760,7 @@
     },
     {
       "id": "won-jihwan",
-      "order": 26,
+      "order": 25,
       "name": "원지환",
       "company": "로하디자인",
       "category": "디자인·공간",
@@ -793,7 +769,7 @@
     },
     {
       "id": "huh-sungwook",
-      "order": 27,
+      "order": 26,
       "name": "허성욱",
       "company": "케이디자인",
       "category": "인쇄·디자인",
@@ -823,7 +799,7 @@
     },
     {
       "id": "hyun-youngwoo",
-      "order": 28,
+      "order": 27,
       "name": "현영우",
       "company": "법무법인 주연",
       "category": "법률·법무",
@@ -832,7 +808,7 @@
     },
     {
       "id": "seo-yerim",
-      "order": 29,
+      "order": 28,
       "name": "서예림",
       "company": "성원 노동법률사무소",
       "category": "법률·법무",
@@ -841,7 +817,7 @@
     },
     {
       "id": "cho-heejung",
-      "order": 30,
+      "order": 29,
       "name": "조희정",
       "company": "클로버마케팅",
       "category": "글로벌 마케팅",
@@ -872,7 +848,7 @@
     },
     {
       "id": "jung-jinkwon",
-      "order": 31,
+      "order": 30,
       "name": "정진권",
       "company": "법무법인 소울 신사본점",
       "category": "법률·세무",
@@ -903,7 +879,7 @@
     },
     {
       "id": "kim-junghyun",
-      "order": 32,
+      "order": 31,
       "name": "김정현",
       "company": "원즈커피",
       "category": "식음·컨설팅",
@@ -935,7 +911,7 @@
     },
     {
       "id": "jang-hyoseok",
-      "order": 33,
+      "order": 32,
       "name": "장효석",
       "title": "대표",
       "company": "이상한리뷰의앨리스",
@@ -981,7 +957,7 @@
     },
     {
       "id": "kim-suji",
-      "order": 34,
+      "order": 33,
       "name": "김수지",
       "title": "대표",
       "company": "가온솔루션",
@@ -1018,7 +994,7 @@
     },
     {
       "id": "nam-sangwoo",
-      "order": 35,
+      "order": 34,
       "name": "남상우",
       "title": "행정사",
       "company": "서리풀행정사 사무소",
@@ -1062,7 +1038,7 @@
     },
     {
       "id": "lee-eunsoo",
-      "order": 36,
+      "order": 35,
       "name": "이은수",
       "title": "대표",
       "company": "주식회사 네오인프라",
@@ -1101,7 +1077,7 @@
     },
     {
       "id": "kim-sunggun",
-      "order": 37,
+      "order": 36,
       "name": "김성군",
       "title": "대표",
       "company": "골든프로",
@@ -1134,7 +1110,7 @@
     },
     {
       "id": "park-sangseol",
-      "order": 38,
+      "order": 37,
       "name": "박상설",
       "title": "대표",
       "company": "메이크원엔터테인먼트",
@@ -1165,7 +1141,7 @@
     },
     {
       "id": "lee-jaegwan",
-      "order": 39,
+      "order": 38,
       "name": "이재관",
       "title": "대표",
       "company": "무한대",
@@ -1195,7 +1171,7 @@
     },
     {
       "id": "ko-ho",
-      "order": 40,
+      "order": 39,
       "name": "고호",
       "title": "대표",
       "company": "애스크",
@@ -1224,7 +1200,7 @@
     },
     {
       "id": "choi-kyungae",
-      "order": 41,
+      "order": 40,
       "name": "최경애",
       "title": "대표",
       "company": "TY라이프",
@@ -1254,7 +1230,7 @@
     },
     {
       "id": "ki-youngae",
-      "order": 42,
+      "order": 41,
       "name": "기영애",
       "title": "대표",
       "company": "꽃스러움",
