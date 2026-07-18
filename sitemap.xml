@@ -121,13 +121,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bniseocho.kr/member.html?id=han-jonghee</loc>
+    <loc>https://bniseocho.kr/member.html?id=lee-gihaeng</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bniseocho.kr/member.html?id=lee-gihaeng</loc>
+    <loc>https://bniseocho.kr/member.html?id=wang-joongho</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -205,19 +205,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bniseocho.kr/member.html?id=lee-eunsoo</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bniseocho.kr/member.html?id=kim-sunggun</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bniseocho.kr/member.html?id=jang-hyoseok</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bniseocho.kr/member.html?id=kim-suji</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -229,7 +223,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bniseocho.kr/member.html?id=kim-suji</loc>
+    <loc>https://bniseocho.kr/member.html?id=lee-eunsoo</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bniseocho.kr/member.html?id=kim-sunggun</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -254,6 +254,12 @@
   </url>
   <url>
     <loc>https://bniseocho.kr/member.html?id=choi-kyungae</loc>
+    <lastmod>2026-07-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bniseocho.kr/member.html?id=ki-youngae</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

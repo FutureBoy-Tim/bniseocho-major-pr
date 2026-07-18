@@ -7,7 +7,7 @@
   "members": [
     {
       "id": "jung-wonok",
-      "order": 2,
+      "order": 1,
       "name": "정원옥",
       "company": "모티브 21",
       "category": "금융·보험",
@@ -36,7 +36,7 @@
     },
     {
       "id": "jung-jihye",
-      "order": 3,
+      "order": 2,
       "name": "정지혜",
       "company": "밸류 마크 보험",
       "category": "금융·보험",
@@ -73,7 +73,7 @@
     },
     {
       "id": "lee-kyungho",
-      "order": 4,
+      "order": 3,
       "name": "이경호",
       "company": "하나은행 리빙트러스트센터",
       "category": "세무·신탁",
@@ -103,7 +103,7 @@
     },
     {
       "id": "hwang-won",
-      "order": 5,
+      "order": 4,
       "name": "황원",
       "company": "한강법무사",
       "category": "법률",
@@ -136,7 +136,7 @@
     },
     {
       "id": "lee-namki",
-      "order": 6,
+      "order": 5,
       "name": "이남기",
       "company": "앤스컴퍼니",
       "category": "화장품·뷰티",
@@ -166,7 +166,7 @@
     },
     {
       "id": "lim-jonghee",
-      "order": 7,
+      "order": 6,
       "name": "임종희",
       "title": "대표원장",
       "company": "헤리치과의원",
@@ -206,7 +206,7 @@
     },
     {
       "id": "kim-boram",
-      "order": 8,
+      "order": 7,
       "name": "김보람",
       "company": "TSC 인터내셔날",
       "category": "글로벌·유통",
@@ -236,7 +236,7 @@
     },
     {
       "id": "lee-giju",
-      "order": 9,
+      "order": 8,
       "name": "이기주",
       "company": "비더",
       "category": "의료·글로벌",
@@ -268,7 +268,7 @@
     },
     {
       "id": "yoo-chihoon",
-      "order": 10,
+      "order": 9,
       "name": "유치훈",
       "company": "점포라인",
       "category": "창업·중개",
@@ -301,7 +301,7 @@
     },
     {
       "id": "han-jongtae",
-      "order": 12,
+      "order": 10,
       "name": "한종태",
       "company": "(주) 플로우링크",
       "category": "인플루언서 마케팅",
@@ -333,7 +333,7 @@
     },
     {
       "id": "chae-mincheol",
-      "order": 13,
+      "order": 11,
       "name": "채민철",
       "company": "브리튼 청담",
       "category": "패션·비스포크",
@@ -363,7 +363,7 @@
     },
     {
       "id": "kim-eunsong",
-      "order": 15,
+      "order": 12,
       "name": "김은송",
       "company": "로야디",
       "category": "F&B·선물",
@@ -394,7 +394,7 @@
     },
     {
       "id": "kang-woogyu",
-      "order": 16,
+      "order": 13,
       "name": "강우규",
       "company": "(주)아이오토스",
       "category": "자동차",
@@ -422,7 +422,7 @@
     },
     {
       "id": "kim-jongyoon",
-      "order": 17,
+      "order": 14,
       "name": "김종윤",
       "company": "와이즈컨설팅",
       "category": "금융·컨설팅",
@@ -454,7 +454,7 @@
     },
     {
       "id": "park-soochul",
-      "order": 18,
+      "order": 15,
       "name": "박수철",
       "company": "에이온",
       "category": "웹·디자인",
@@ -488,7 +488,7 @@
     },
     {
       "id": "kim-minyoung",
-      "order": 19,
+      "order": 16,
       "name": "김민영",
       "company": "메디컬웨이",
       "category": "의료 마케팅",
@@ -524,7 +524,7 @@
     },
     {
       "id": "park-sunyoung",
-      "order": 20,
+      "order": 17,
       "name": "박신영",
       "company": "레르타",
       "category": "패션·주얼리",
@@ -559,7 +559,7 @@
     },
     {
       "id": "jung-younggul",
-      "order": 21,
+      "order": 18,
       "name": "정영걸",
       "company": "(주)애니픽",
       "category": "펫·바이오",
@@ -590,17 +590,8 @@
       "accentColor": "#FF8200"
     },
     {
-      "id": "han-jonghee",
-      "order": 23,
-      "name": "한종희",
-      "company": "더퍼스트웨딩",
-      "category": "라이프스타일",
-      "industry": "웨딩컨설팅",
-      "status": "upcoming"
-    },
-    {
       "id": "lee-gihaeng",
-      "order": 24,
+      "order": 19,
       "name": "이기행",
       "company": "다유온",
       "category": "경영지원",
@@ -630,8 +621,32 @@
       "accentColor": "#FF8200"
     },
     {
+      "id": "wang-joongho",
+      "order": 20,
+      "name": "왕중호",
+      "title": "대표",
+      "company": "에이원글로벌",
+      "companyEn": "A-One Global",
+      "category": "글로벌·무역",
+      "industry": "중화권 무역유통",
+      "tagline": "중화권 무역유통 전문가",
+      "phone": "010-9243-8877",
+      "email": "",
+      "address": "",
+      "expertise": [
+        "중화권 무역유통"
+      ],
+      "referralTargets": [],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/wang-joongho/digital-card.png"
+      }
+    },
+    {
       "id": "kim-sungjun",
-      "order": 26,
+      "order": 21,
       "name": "김성준",
       "company": "아티움 특허법률사무소",
       "category": "법률·특허",
@@ -662,7 +677,7 @@
     },
     {
       "id": "lee-hyungjin",
-      "order": 27,
+      "order": 22,
       "name": "이형진",
       "company": "한국 AI 마케팅 협회",
       "category": "AI 마케팅",
@@ -698,7 +713,7 @@
     },
     {
       "id": "seo-seungwan",
-      "order": 28,
+      "order": 23,
       "name": "서승완",
       "company": "(주)수완메디칼",
       "category": "의료·CSO",
@@ -729,7 +744,7 @@
     },
     {
       "id": "kim-sehan",
-      "order": 29,
+      "order": 24,
       "name": "김세한",
       "company": "하나증권 THE센터필드",
       "category": "금융",
@@ -738,7 +753,7 @@
     },
     {
       "id": "kim-jongmyung",
-      "order": 30,
+      "order": 25,
       "name": "김종명",
       "company": "KT 세이노",
       "category": "통신·IT",
@@ -769,7 +784,7 @@
     },
     {
       "id": "won-jihwan",
-      "order": 32,
+      "order": 26,
       "name": "원지환",
       "company": "로하디자인",
       "category": "디자인·공간",
@@ -778,7 +793,7 @@
     },
     {
       "id": "huh-sungwook",
-      "order": 33,
+      "order": 27,
       "name": "허성욱",
       "company": "케이디자인",
       "category": "인쇄·디자인",
@@ -808,7 +823,7 @@
     },
     {
       "id": "hyun-youngwoo",
-      "order": 34,
+      "order": 28,
       "name": "현영우",
       "company": "법무법인 주연",
       "category": "법률·법무",
@@ -817,7 +832,7 @@
     },
     {
       "id": "seo-yerim",
-      "order": 36,
+      "order": 29,
       "name": "서예림",
       "company": "성원 노동법률사무소",
       "category": "법률·법무",
@@ -826,7 +841,7 @@
     },
     {
       "id": "cho-heejung",
-      "order": 37,
+      "order": 30,
       "name": "조희정",
       "company": "클로버마케팅",
       "category": "글로벌 마케팅",
@@ -857,7 +872,7 @@
     },
     {
       "id": "jung-jinkwon",
-      "order": 38,
+      "order": 31,
       "name": "정진권",
       "company": "법무법인 소울 신사본점",
       "category": "법률·세무",
@@ -888,7 +903,7 @@
     },
     {
       "id": "kim-junghyun",
-      "order": 39,
+      "order": 32,
       "name": "김정현",
       "company": "원즈커피",
       "category": "식음·컨설팅",
@@ -919,80 +934,8 @@
       "accentColor": "#FF8200"
     },
     {
-      "id": "lee-eunsoo",
-      "order": 40,
-      "name": "이은수",
-      "title": "대표",
-      "company": "주식회사 네오인프라",
-      "companyEn": "NEO INFRA",
-      "category": "마케팅·미디어",
-      "industry": "기업 브랜딩·미디어 전략",
-      "tagline": "기업과 사람의 성장 이야기를 기록·브랜딩하는 미디어 전략가",
-      "subTagline": "디지털 아카이브 생태계로 기업 가치를 검색자산으로 만드는 사람",
-      "phone": "010-5956-6001",
-      "email": "jacobholy67@gmail.com",
-      "address": "서울시 마포구 성암로 330, DMC 첨단산업센터 B동 808호",
-      "expertise": [
-        "인터넷신문 기반 브랜드 브랜딩",
-        "기업 인터뷰 및 기사 아카이브",
-        "SEO 검색노출 콘텐츠 전략",
-        "기업 성장 스토리텔링",
-        "전문가 네트워크 연결",
-        "기업·대표자·전문인 퍼스널 브랜딩"
-      ],
-      "referralTargets": [
-        "브랜드 신뢰 구축이 필요한 기업 대표",
-        "검색 노출이 필요한 전문직/사업가",
-        "인터뷰·기사 홍보가 필요한 기업",
-        "스토리텔링 브랜딩이 필요한 전문가"
-      ],
-      "valueProps": [
-        "기업과 사람의 스토리를 기사·콘텐츠·미디어로 구조화하여 검색자산, 브랜딩, 사업 연결까지 이어지는 디지털 아카이브 생태계를 구축합니다."
-      ],
-      "brandColor": "#0E1F5C",
-      "accentColor": "#FF8200",
-      "publishedAt": "2026-05-26",
-      "status": "upcoming",
-      "assets": {
-        "digitalCard": "assets/members/lee-eunsoo/digital-card.png"
-      }
-    },
-    {
-      "id": "kim-sunggun",
-      "order": 41,
-      "name": "김성군",
-      "title": "대표",
-      "company": "골든프로",
-      "companyEn": "Golden Pro",
-      "category": "라이프스타일",
-      "industry": "맞춤형 골프레슨",
-      "tagline": "사업가·전문직을 위한 맞춤형 골프레슨",
-      "subTagline": "수원골프스튜디오 기반 1:1 프라이빗 골프레슨",
-      "phone": "010-2275-2020",
-      "email": "tjdzms92@gmail.com",
-      "address": "수원골프스튜디오",
-      "expertise": [
-        "CEO 골프레슨",
-        "방문 레슨",
-        "골프 브랜딩"
-      ],
-      "referralTargets": [
-        "골프 입문이나 실력 향상이 필요한 사업가·전문직 고객"
-      ],
-      "valueProps": [
-        "수원골프스튜디오를 기반으로 1:1 프라이빗 골프레슨 및 방문레슨을 진행합니다. 골프입문·스윙교정·실전라운드까지 개인별 맞춤 프로그램으로 체계적인 코칭을 제공합니다."
-      ],
-      "brandColor": "#0E1F5C",
-      "accentColor": "#FF8200",
-      "publishedAt": "2026-05-26",
-      "status": "upcoming",
-      "assets": {
-        "digitalCard": "assets/members/kim-sunggun/digital-card.png"
-      }
-    },
-    {
       "id": "jang-hyoseok",
-      "order": 42,
+      "order": 33,
       "name": "장효석",
       "title": "대표",
       "company": "이상한리뷰의앨리스",
@@ -1037,8 +980,45 @@
       }
     },
     {
+      "id": "kim-suji",
+      "order": 34,
+      "name": "김수지",
+      "title": "대표",
+      "company": "가온솔루션",
+      "companyEn": "Gaon Solution",
+      "category": "제조·유통",
+      "industry": "법인 특판·복지몰 상품",
+      "tagline": "법인 특판을 전문으로 하는 쇼호스트 경력의 상품 전문가",
+      "subTagline": "기업·공공기관 복지몰 상품과 백화점 단체복 특판",
+      "phone": "010-2856-7300",
+      "email": "ksj8347@naver.com",
+      "address": "서울시 구로구 고척동 174-6",
+      "expertise": [
+        "백화점 브랜드 단체복 전문 (신상품 할인가 납품 가능)",
+        "기업·공공기관 복지몰 상품 운영",
+        "법인 특판 시즌선물세트 기획 및 운영"
+      ],
+      "referralTargets": [
+        "기업 및 공공기관 총무·구매 담당자",
+        "노동조합(노조) 관계자",
+        "단체선물 및 행사 기획 담당자",
+        "복지몰 운영이 필요한 기업",
+        "복지몰에 납품 가능한 제조사"
+      ],
+      "valueProps": [
+        "기업 및 공공기관 맞춤형 복지몰 상품과 백화점 브랜드 단체복 등 기업 특판을 전문적으로 제안하고 운영합니다."
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200",
+      "publishedAt": "2026-05-26",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/kim-suji/digital-card.png"
+      }
+    },
+    {
       "id": "nam-sangwoo",
-      "order": 43,
+      "order": 35,
       "name": "남상우",
       "title": "행정사",
       "company": "서리풀행정사 사무소",
@@ -1081,45 +1061,80 @@
       }
     },
     {
-      "id": "kim-suji",
-      "order": 44,
-      "name": "김수지",
+      "id": "lee-eunsoo",
+      "order": 36,
+      "name": "이은수",
       "title": "대표",
-      "company": "가온솔루션",
-      "companyEn": "Gaon Solution",
-      "category": "제조·유통",
-      "industry": "법인 특판·복지몰 상품",
-      "tagline": "법인 특판을 전문으로 하는 쇼호스트 경력의 상품 전문가",
-      "subTagline": "기업·공공기관 복지몰 상품과 백화점 단체복 특판",
-      "phone": "010-2856-7300",
-      "email": "ksj8347@naver.com",
-      "address": "서울시 구로구 고척동 174-6",
+      "company": "주식회사 네오인프라",
+      "companyEn": "NEO INFRA",
+      "category": "마케팅·미디어",
+      "industry": "기업 브랜딩·미디어 전략",
+      "tagline": "기업과 사람의 성장 이야기를 기록·브랜딩하는 미디어 전략가",
+      "subTagline": "디지털 아카이브 생태계로 기업 가치를 검색자산으로 만드는 사람",
+      "phone": "010-5956-6001",
+      "email": "jacobholy67@gmail.com",
+      "address": "서울시 마포구 성암로 330, DMC 첨단산업센터 B동 808호",
       "expertise": [
-        "백화점 브랜드 단체복 전문 (신상품 할인가 납품 가능)",
-        "기업·공공기관 복지몰 상품 운영",
-        "법인 특판 시즌선물세트 기획 및 운영"
+        "인터넷신문 기반 브랜드 브랜딩",
+        "기업 인터뷰 및 기사 아카이브",
+        "SEO 검색노출 콘텐츠 전략",
+        "기업 성장 스토리텔링",
+        "전문가 네트워크 연결",
+        "기업·대표자·전문인 퍼스널 브랜딩"
       ],
       "referralTargets": [
-        "기업 및 공공기관 총무·구매 담당자",
-        "노동조합(노조) 관계자",
-        "단체선물 및 행사 기획 담당자",
-        "복지몰 운영이 필요한 기업",
-        "복지몰에 납품 가능한 제조사"
+        "브랜드 신뢰 구축이 필요한 기업 대표",
+        "검색 노출이 필요한 전문직/사업가",
+        "인터뷰·기사 홍보가 필요한 기업",
+        "스토리텔링 브랜딩이 필요한 전문가"
       ],
       "valueProps": [
-        "기업 및 공공기관 맞춤형 복지몰 상품과 백화점 브랜드 단체복 등 기업 특판을 전문적으로 제안하고 운영합니다."
+        "기업과 사람의 스토리를 기사·콘텐츠·미디어로 구조화하여 검색자산, 브랜딩, 사업 연결까지 이어지는 디지털 아카이브 생태계를 구축합니다."
       ],
       "brandColor": "#0E1F5C",
       "accentColor": "#FF8200",
       "publishedAt": "2026-05-26",
       "status": "upcoming",
       "assets": {
-        "digitalCard": "assets/members/kim-suji/digital-card.png"
+        "digitalCard": "assets/members/lee-eunsoo/digital-card.png"
+      }
+    },
+    {
+      "id": "kim-sunggun",
+      "order": 37,
+      "name": "김성군",
+      "title": "대표",
+      "company": "골든프로",
+      "companyEn": "Golden Pro",
+      "category": "라이프스타일",
+      "industry": "맞춤형 골프레슨",
+      "tagline": "사업가·전문직을 위한 맞춤형 골프레슨",
+      "subTagline": "수원골프스튜디오 기반 1:1 프라이빗 골프레슨",
+      "phone": "010-2275-2020",
+      "email": "tjdzms92@gmail.com",
+      "address": "수원골프스튜디오",
+      "expertise": [
+        "CEO 골프레슨",
+        "방문 레슨",
+        "골프 브랜딩"
+      ],
+      "referralTargets": [
+        "골프 입문이나 실력 향상이 필요한 사업가·전문직 고객"
+      ],
+      "valueProps": [
+        "수원골프스튜디오를 기반으로 1:1 프라이빗 골프레슨 및 방문레슨을 진행합니다. 골프입문·스윙교정·실전라운드까지 개인별 맞춤 프로그램으로 체계적인 코칭을 제공합니다."
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200",
+      "publishedAt": "2026-05-26",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/kim-sunggun/digital-card.png"
       }
     },
     {
       "id": "park-sangseol",
-      "order": 45,
+      "order": 38,
       "name": "박상설",
       "title": "대표",
       "company": "메이크원엔터테인먼트",
@@ -1150,7 +1165,7 @@
     },
     {
       "id": "lee-jaegwan",
-      "order": 46,
+      "order": 39,
       "name": "이재관",
       "title": "대표",
       "company": "무한대",
@@ -1180,7 +1195,7 @@
     },
     {
       "id": "ko-ho",
-      "order": 47,
+      "order": 40,
       "name": "고호",
       "title": "대표",
       "company": "애스크",
@@ -1209,7 +1224,7 @@
     },
     {
       "id": "choi-kyungae",
-      "order": 48,
+      "order": 41,
       "name": "최경애",
       "title": "대표",
       "company": "TY라이프",
@@ -1235,6 +1250,31 @@
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/choi-kyungae/digital-card.png"
+      }
+    },
+    {
+      "id": "ki-youngae",
+      "order": 42,
+      "name": "기영애",
+      "title": "대표",
+      "company": "꽃스러움",
+      "companyEn": "Kkotsureoum",
+      "category": "라이프·꽃",
+      "industry": "플로리스트",
+      "tagline": "감성을 담아내는 플로리스트",
+      "phone": "010-2434-1995",
+      "email": "",
+      "address": "",
+      "expertise": [
+        "플로리스트",
+        "꽃 디자인"
+      ],
+      "referralTargets": [],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/ki-youngae/digital-card.png"
       }
     }
   ],
