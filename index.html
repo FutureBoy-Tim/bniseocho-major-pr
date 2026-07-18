@@ -539,6 +539,65 @@ img{max-width:100%;display:block}
   display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;
   border:1px solid rgba(14,31,92,.05);
 }
+
+/* ── Featured Marquee (디지털 명함 자동 롤링) ────────────────── */
+.feat-marquee{
+  background:linear-gradient(135deg,#0B1849 0%,#1B3380 60%,#27408F 100%);
+  border-radius:var(--r-xl);box-shadow:var(--shadow-lg);
+  border:1px solid rgba(14,31,92,.08);
+  overflow:hidden;position:relative;padding:28px 0 32px;
+}
+.feat-marquee::before,
+.feat-marquee::after{
+  content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;
+}
+.feat-marquee::before{left:0;background:linear-gradient(90deg,#0B1849,rgba(11,24,73,0))}
+.feat-marquee::after{right:0;background:linear-gradient(-90deg,#0B1849,rgba(11,24,73,0))}
+.feat-marquee-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  padding:0 32px 20px;color:#fff;
+}
+.feat-marquee-head h3{margin:0;font-size:clamp(18px,1.8vw,22px);font-weight:800;letter-spacing:-.01em}
+.feat-marquee-head p{margin:0;color:rgba(255,255,255,.72);font-size:13px}
+.feat-marquee-viewport{overflow:hidden;position:relative}
+.feat-track{
+  display:flex;gap:22px;padding:8px 0;
+  animation:featScroll 60s linear infinite;
+  will-change:transform;
+  width:max-content;
+}
+.feat-marquee:hover .feat-track{animation-play-state:paused}
+@keyframes featScroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@media (prefers-reduced-motion:reduce){
+  .feat-track{animation:none;transform:translateX(0)}
+}
+.feat-card{
+  flex:0 0 auto;width:240px;
+  background:#fff;border-radius:16px;overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.28), 0 6px 16px rgba(0,0,0,.14);
+  text-decoration:none;color:inherit;
+  transform:translateY(0);transition:transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s;
+  display:flex;flex-direction:column;
+}
+.feat-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 30px 60px rgba(0,0,0,.36), 0 8px 20px rgba(0,0,0,.2);
+}
+.feat-card-img{
+  width:100%;aspect-ratio:9/16;background:#F4F1E9;
+  display:block;object-fit:cover;
+}
+.feat-card-info{padding:12px 14px 14px}
+.feat-card-name{font-size:14px;font-weight:800;color:var(--ink-1);margin:0}
+.feat-card-company{font-size:12px;color:var(--ink-3);margin:2px 0 0}
+.feat-card-industry{font-size:11px;color:var(--bni-orange-deep);margin:6px 0 0;font-weight:600}
+@media (max-width:640px){
+  .feat-marquee-head{padding:0 20px 16px}
+  .feat-card{width:200px}
+}
 .featured-meta{padding:36px 36px 32px;display:flex;flex-direction:column}
 .feature-tag{
   align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
@@ -968,9 +1027,15 @@ footer{
 </section>
 
 <div class="featured-wrap" id="featured">
-  <article class="featured" id="featuredCard">
-    <!-- populated by JS -->
-  </article>
+  <section class="feat-marquee" id="featMarquee" aria-label="검증된 전문가 디지털 명함">
+    <div class="feat-marquee-head">
+      <h3>검증된 전문가 <span class="js-total">48</span>인</h3>
+      <p>디지털 명함을 클릭하면 상세 페이지로 이동합니다 · 호버하면 정지</p>
+    </div>
+    <div class="feat-marquee-viewport">
+      <div class="feat-track" id="featTrack"><!-- populated by JS --></div>
+    </div>
+  </section>
 </div>
 
 <!-- ── 이번 주 조찬모임 초대장 섹션 ────────────────────── -->
@@ -1345,13 +1410,12 @@ function populateInquiryTargets(){
 }
 
 function renderFeatured(){
+  // 공유 섹션·OG 이미지는 featuredId 기반 유지 (SEO·카톡 라지 카드)
   const m = data.members.find(x => x.id === data.featuredId) || data.members[0];
-  // Update OG image dynamically with featured member's digital card
   if(m.assets?.digitalCard){
     const ogImg = document.getElementById("ogImage");
     if(ogImg) ogImg.setAttribute("content", new URL(m.assets.digitalCard, location.href).toString());
   }
-  // Update share section with featured member info
   const ftTitle = document.getElementById("featuredShareTitle");
   const ftDesc = document.getElementById("featuredShareDesc");
   const ftLink = document.getElementById("featuredShareLink");
@@ -1359,31 +1423,32 @@ function renderFeatured(){
   if(ftDesc) ftDesc.textContent = (m.tagline || "") + (m.subTagline ? " — " + m.subTagline : "");
   if(ftLink) ftLink.href = `member.html?id=${m.id}`;
 
-  const el = document.getElementById("featuredCard");
-  const expertiseChips = (m.expertise||[]).map(x=>`<span class="chip">${x}</span>`).join("");
-  const referralChips = (m.referralTargets||[]).map(x=>`<span class="chip">${x}</span>`).join("");
-  el.innerHTML = `
-    <div class="featured-meta">
-      <span class="feature-tag">FEATURED · ${data.lastUpdated}</span>
-      <div class="featured-name">${m.company} · ${m.title || "대표"} ${m.name}</div>
-      <h3 class="featured-headline">${m.tagline || ""}</h3>
-      <p class="featured-sub">${m.subTagline || ""}</p>
-      <dl class="featured-info">
-        <dt>전문분야</dt><dd>${(m.expertise||[]).join(" · ") || "-"}</dd>
-        <dt>이런 분께 추천</dt><dd>${(m.referralTargets||[]).join(" · ") || "-"}</dd>
-        <dt>연락처</dt><dd>${m.phone || "-"}</dd>
-      </dl>
-      ${expertiseChips ? `<div class="chips">${expertiseChips}</div>` : ""}
-      <div class="featured-cta">
-        <a class="btn btn-primary" href="member.html?id=${m.id}">상세 페이지 보기 →</a>
-        <a class="btn btn-ghost" href="${m.assets?.presentation || '#'}" download>PPT 다운로드</a>
+  // 좌우 롤링 마퀴: 디지털 명함이 있는 대표를 카드로 흘려보냄
+  const track = document.getElementById("featTrack");
+  if(!track) return;
+  const eligible = data.members.filter(x => x.assets?.digitalCard);
+  // 피처드 대표를 맨 앞에 두고 나머지는 order 순
+  const sorted = [
+    ...eligible.filter(x => x.id === data.featuredId),
+    ...eligible.filter(x => x.id !== data.featuredId).sort((a,b)=>(a.order||999)-(b.order||999))
+  ];
+  const cardHTML = (m) => `
+    <a class="feat-card" href="member.html?id=${m.id}" title="${m.name} 대표 · ${m.company||''}">
+      <img class="feat-card-img" src="${m.assets.digitalCard}" alt="${m.name} 대표 디지털 명함" loading="lazy" />
+      <div class="feat-card-info">
+        <p class="feat-card-name">${m.name} ${m.title || '대표'}</p>
+        <p class="feat-card-company">${m.company || ''}</p>
+        ${m.industry ? `<p class="feat-card-industry">${m.industry}</p>` : ''}
       </div>
-    </div>
-    <div class="featured-art">
-      <span class="featured-art-tag">디지털 명함</span>
-      <a href="member.html?id=${m.id}"><img src="${m.assets?.digitalCard || ''}" alt="${m.name} 디지털 명함" onerror="this.style.opacity=.3" /></a>
-    </div>
+    </a>
   `;
+  // 무한 롤링을 위해 두 벌 이어붙임 (transform -50% 로 정확히 첫 세트 끝까지 이동)
+  const oneSet = sorted.map(cardHTML).join("");
+  track.innerHTML = oneSet + oneSet;
+
+  // 카드 수에 따라 스피드 조절 (카드 하나당 약 2초 흐르도록)
+  const dur = Math.max(30, sorted.length * 2);
+  track.style.animationDuration = dur + "s";
 }
 
 function renderCats(cats){
