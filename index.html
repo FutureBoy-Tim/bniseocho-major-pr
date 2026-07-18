@@ -673,19 +673,6 @@ img{max-width:100%;display:block}
   background:linear-gradient(135deg,#1B3380,#0E1F5C);
   display:flex;align-items:flex-end;padding:16px;
 }
-.card-top.featured-bg{background:linear-gradient(135deg,#FF8200,#FF6A00)}
-.card-top.archived-bg{background:linear-gradient(135deg,#10B981,#047857)}
-.card-top.upcoming-bg{background:linear-gradient(135deg,#1B3380,#0E1F5C)}
-.card-status{
-  position:absolute;top:12px;right:12px;
-  padding:4px 10px;border-radius:999px;
-  background:rgba(255,255,255,.18);color:#fff;
-  font-size:11px;font-weight:700;letter-spacing:.04em;
-  backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2);
-}
-.card-status.feat{background:#fff;color:#A95400}
-.card-status.arch{background:#fff;color:#047857}
-.card-status.up{background:#fff;color:#0E1F5C}
 .card-order{
   position:absolute;left:14px;top:12px;
   font-size:11px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.04em;
@@ -1228,8 +1215,6 @@ footer{
 </footer>
 
 <script>
-const STATUS_LABEL = { featured:"이번 주", upcoming:"공개 예정", archived:"이전 피처드" };
-
 let data = null;
 
 async function loadData(){
@@ -1477,16 +1462,10 @@ function renderGrid(){
   document.getElementById("resultCount").textContent = `${filtered.length}명`;
   const grid = document.getElementById("grid");
   grid.innerHTML = filtered.map(m=>{
-    const isFeat = m.status==="featured";
-    const isArch = m.status==="archived";
-    const stCls = isFeat ? "card-status feat" : isArch ? "card-status arch" : "card-status up";
-    const topCls = isFeat ? "card-top featured-bg" : isArch ? "card-top archived-bg" : "card-top upcoming-bg";
-    const status = STATUS_LABEL[m.status] || "공개 예정";
     return `
       <a class="card" href="member.html?id=${m.id}">
-        <div class="${topCls}">
+        <div class="card-top">
           <span class="card-order">No. ${String(m.order).padStart(2,"0")}</span>
-          <span class="${stCls}">${status}</span>
         </div>
         <div class="card-body">
           <h3 class="card-name">${m.name}</h3>
