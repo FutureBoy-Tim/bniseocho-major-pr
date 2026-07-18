@@ -2,7 +2,7 @@
   "chapter": "BNI 서초 메이저 챕터",
   "tagline": "서로의 사업을 추천하는 사람들",
   "subtitle": "Business Referral Organization · Givers Gain",
-  "lastUpdated": "2026-05-31",
+  "lastUpdated": "2026-07-18",
   "featuredId": "lim-jonghee",
   "members": [
     {
@@ -1428,6 +1428,19 @@
       },
       "presenterMemberId": "kang-woogyu",
       "imageUrl": "assets/invitations/2026-07-01.jpg"
+    },
+    {
+      "volume": 54,
+      "date": "2026-07-22",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "김종윤",
+        "title": "대표",
+        "company": "와이즈컨설팅"
+      },
+      "presenterMemberId": "kim-jongyoon",
+      "imageUrl": "assets/invitations/2026-07-22.jpg"
     }
   ]
 }
