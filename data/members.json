@@ -419,13 +419,32 @@
       "id": "kim-jongmyung",
       "order": 30,
       "name": "김종명",
-      "company": "KT",
-      "category": "IT·통신",
-      "industry": "통신/인터넷",
+      "company": "KT 세이노",
+      "category": "통신·IT",
+      "industry": "통신·IT (KT 대리점)",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kim-jongmyung/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "KT SANO",
+      "tagline": "KT관련 모든 상품, 신속·정확·신뢰로 보답하는 통신전문가",
+      "subTagline": "휴대폰변경·인터넷가입, 효율적인 요금설계 해드립니다",
+      "phone": "010-8242-0101",
+      "email": "teamgrand1@naver.com",
+      "address": "서울시 은평구 진관3로 21, 은평뉴타운엘크루 1층",
+      "expertise": [
+        "휴대폰과 인터넷 결합으로 합리적인 통신비 설계",
+        "법인 특판 휴대폰·인터넷 개설",
+        "매장/사업장 통신 인프라 컨설팅"
+      ],
+      "referralTargets": [
+        "법인 특판으로 휴대폰 개설 예정이신 분",
+        "요식업을 준비 중이신 분",
+        "통신비 최적화가 필요한 사업자"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "han-sanghyuk",
@@ -449,13 +468,31 @@
       "id": "huh-sungwook",
       "order": 33,
       "name": "허성욱",
-      "company": "리버티K",
-      "category": "제조·유통",
-      "industry": "판촉물",
+      "company": "케이디자인",
+      "category": "인쇄·디자인",
+      "industry": "인쇄·제본 전문",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/huh-sungwook/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "K-Design",
+      "tagline": "고객의 얼굴을 인쇄합니다. 인쇄 전문가",
+      "subTagline": "상담·디자인·인쇄·납품까지 최적의 인쇄 솔루션을 직접 진행",
+      "phone": "010-5216-8091",
+      "email": "liberty_k@naver.com",
+      "address": "",
+      "expertise": [
+        "디지털 인쇄",
+        "실사 인쇄",
+        "제본·제책"
+      ],
+      "referralTargets": [
+        "학원 인쇄 담당자",
+        "기업 인쇄 담당자"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "hyun-youngwoo",
@@ -489,36 +526,94 @@
       "order": 37,
       "name": "조희정",
       "company": "클로버마케팅",
-      "category": "마케팅·미디어",
+      "category": "글로벌 마케팅",
       "industry": "해외 인플루언서 마케팅",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/cho-heejung/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "K-Love Marketing",
+      "tagline": "한국 브랜드의 글로벌 성장을 돕는 해외 인플루언서 마케팅 전문가",
+      "subTagline": "K-브랜드의 글로벌 성장을 위한 해외 인플루언서 마케팅",
+      "phone": "010-9163-1987",
+      "email": "joan@klovemarketing.co.kr",
+      "address": "서울 강남구 선릉로 704, 10층",
+      "expertise": [
+        "해외 인플루언서 SNS 콘텐츠 시딩 & 숏폼 바이럴 마케팅",
+        "북미·동남아시아·일본 인플루언서 네트워크",
+        "K-브랜드 글로벌 진출 전략"
+      ],
+      "referralTargets": [
+        "해외 진출했거나 준비 중인 소비재 브랜드",
+        "해외 오픈마켓(아마존·쇼피 등) 입점 브랜드사",
+        "글로벌 시장 확장이 필요한 K-브랜드"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "jung-jinkwon",
       "order": 38,
       "name": "정진권",
-      "company": "법무법인 소울",
-      "category": "법률·법무",
-      "industry": "상속·증여 전문 변호사",
+      "company": "법무법인 소울 신사본점",
+      "category": "법률·세무",
+      "industry": "상속 전문 법률",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/jung-jinkwon/digital-card.png"
-      }
+      },
+      "title": "파트너변호사",
+      "companyEn": "Soul Law Firm",
+      "tagline": "상속·자산분쟁을 해결하는 상속 전문 변호사",
+      "subTagline": "부동산·법인지분·해외자산 등 가족 간 자산분쟁. 정당한 상속분을 지키고 확보하는 결과를 만듭니다",
+      "phone": "010-5388-1911",
+      "email": "jkjeong@soullaw.co.kr",
+      "address": "서울 서초구 강남대로 623, 10층",
+      "expertise": [
+        "상속분쟁 (상속재산분할·유류분·상속결격)",
+        "공유부동산·법인지분·해외자산 포함된 상속 사건",
+        "상속형사리스크 (문서위조·횡령 등) 분석"
+      ],
+      "referralTargets": [
+        "동순위 상속인 간 의사소통이 어려운 분 (해외이민·대습상속·조카·양자·이복형제·재혼·사실혼·미성년 상속인)",
+        "상속재산 구성이 복잡한 분 (해외이민 가족·다국적 자산·법인지분)",
+        "가족 간 자산분쟁 해결이 필요한 분"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "kim-junghyun",
       "order": 39,
       "name": "김정현",
       "company": "원즈커피",
-      "category": "F&B",
-      "industry": "카페창업 전문가, 맞춤형 원두 컨설팅",
+      "category": "식음·컨설팅",
+      "industry": "커피 원두 납품·카페 컨설팅",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kim-junghyun/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "One's Coffee",
+      "tagline": "학창시절부터 16년, 커피 전문가를 교육해온 실전형 바리스타",
+      "subTagline": "최연소 국가대표 바리스타. 매장의 매출과 구조를 바꾸는 커피를 제공",
+      "phone": "010-3030-0598",
+      "email": "okwkd123@naver.com",
+      "address": "서울시 광진구 구의동 232-67 1층",
+      "expertise": [
+        "원두 납품 (매장 맞춤 컨설팅)",
+        "커피 교육 (바리스타·창업·매출 구조 교육)",
+        "카페 컨설팅 (매출 상승 구조 설계)",
+        "머신 세팅·카페 운영 컨설팅"
+      ],
+      "referralTargets": [
+        "개인 카페 운영자 및 창업 예정자",
+        "집 또는 매장에서 원두를 찾는 고객",
+        "매출 개선이 필요한 카페 대표"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "lee-eunsoo",
