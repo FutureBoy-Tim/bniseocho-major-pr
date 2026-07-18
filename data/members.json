@@ -229,60 +229,161 @@
       "order": 15,
       "name": "김은송",
       "company": "로야디",
-      "category": "F&B",
-      "industry": "수제 쌀디저트",
+      "category": "F&B·선물",
+      "industry": "쌀 디저트 답례품",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kim-eunsong/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "ROYAD",
+      "tagline": "쌀 디저트 답례품",
+      "subTagline": "전국 유일의 레시피로 '건강과 품격'을 동시에 담은 프리미엄 쌀디저트 <찰떡브라우니>",
+      "phone": "010-4585-0801",
+      "email": "royad0403@naver.com",
+      "address": "서울시 서초구 반포대로21길 57, 1층",
+      "expertise": [
+        "기업행사 답례품",
+        "결혼 답례품",
+        "명절 선물세트"
+      ],
+      "referralTargets": [
+        "10인 이상 직원을 둔 대표님",
+        "거래처 선물을 고민하는 대표님",
+        "회사 내 행사(간식) 담당자"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "kang-woogyu",
       "order": 16,
       "name": "강우규",
-      "company": "㈜아이오토마스터",
-      "category": "무역·유통",
-      "industry": "중고차 딜러",
+      "company": "(주)아이오토스",
+      "category": "자동차",
+      "industry": "자동차 판매·구매",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kang-woogyu/digital-card.png"
-      }
+      },
+      "title": "실장",
+      "companyEn": "IOTOS",
+      "tagline": "신뢰할 수 있는 딜러",
+      "subTagline": "23년의 경험으로 신뢰를 기준으로 판매/구매를 진행",
+      "phone": "010-7134-5432",
+      "email": "wgk903@gmail.com",
+      "address": "서울특별시 강서구 양천로 390, 2층 225호 (등촌동, 강서오토플렉스 자동차매매센터)",
+      "expertise": [
+        "차량 구매·판매 상담 및 처리",
+        "23년 경력 딜러 컨설팅"
+      ],
+      "referralTargets": [
+        "신뢰할 수 있는 자동차 구매·매각을 원하는 분"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "kim-jongyoon",
       "order": 17,
       "name": "김종윤",
       "company": "와이즈컨설팅",
-      "category": "창업·컨설팅",
-      "industry": "정책자금 조달 및 법인 컨설팅",
+      "category": "금융·컨설팅",
+      "industry": "정책자금·사업자 컨설팅",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kim-jongyoon/digital-card.png"
-      }
+      },
+      "title": "지점장",
+      "companyEn": "Wise Consulting",
+      "tagline": "자금이 막히면 길을 여는 정책자금 및 사업자 컨설팅 전문가",
+      "subTagline": "수수료보다 결과로 기억되는 컨설팅",
+      "phone": "010-2691-9141",
+      "email": "kjy90412@naver.com",
+      "address": "경기도 성남시 분당구 판교역로 109 C동R106호 / 서울시 서초구 강남대로 27(양재동, at센터) 1504호",
+      "expertise": [
+        "개인·법인사업자 정책자금 맞춤컨설팅",
+        "정부 무상지원금·저리대출 통합설계",
+        "사업단계별 자금전략수립 및 실행관리",
+        "법인설립 및 운영컨설팅",
+        "기업 성장전략 수립"
+      ],
+      "referralTargets": [
+        "정책자금 지원을 필요로 하는 소상공인·개인사업자·법인사업자",
+        "사업확장을 계획 중인 개인/법인 대표"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "park-soochul",
       "order": 18,
       "name": "박수철",
       "company": "에이온",
-      "category": "마케팅·미디어",
-      "industry": "홈페이지제작",
+      "category": "웹·디자인",
+      "industry": "웹사이트·쇼핑몰 제작",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/park-soochul/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "EYON",
+      "tagline": "웹사이트를 넘어 브랜드의 가치를 설계합니다",
+      "subTagline": "웹사이트와 쇼핑몰을 기획부터 디자인, 개발까지 원스톱으로 제작하는 디지털 크리에이티브 에이전시",
+      "phone": "010-6250-7783",
+      "email": "team@eyon.co.kr",
+      "address": "경기 화성시 동탄대로 677-2 효성ICT타워 1014호",
+      "expertise": [
+        "웹사이트 제작",
+        "쇼핑몰 개발",
+        "웹사이트 유지보수 (기존 웹사이트 수정)",
+        "웹사이트·쇼핑몰 운영대행",
+        "온라인 마케팅 (온라인광고, 콘텐츠 발행)",
+        "상세페이지·랜딩페이지 디자인"
+      ],
+      "referralTargets": [
+        "웹사이트·쇼핑몰 제작이 필요한 업체",
+        "기존 웹사이트의 유지보수가 필요한 업체",
+        "웹사이트·쇼핑몰 운영대행이 필요하신 분"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "kim-minyoung",
       "order": 19,
       "name": "김민영",
       "company": "메디컬웨이",
-      "category": "마케팅·미디어",
+      "category": "의료 마케팅",
       "industry": "병원 브랜드 마케팅",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kim-minyoung/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "Medical Way",
+      "tagline": "유명한 병원을 만드는 병원브랜드 마케팅 전문가",
+      "subTagline": "병원의 의술이 빛나도록 길을 열어드리는 파트너",
+      "phone": "010-3428-3205",
+      "email": "ceo@way-maker.co.kr",
+      "address": "서울 서초구 신반포로45길 55 ICM빌딩 4층",
+      "expertise": [
+        "시그니처 치료 컨텐츠 개발",
+        "닥터브랜딩",
+        "홈페이지 제작",
+        "마케팅 전략설계 및 실행",
+        "환자경험 개선",
+        "매출개선 컨설팅"
+      ],
+      "referralTargets": [
+        "병원 브랜드를 구축하고 싶은 병원장님",
+        "마케팅에 고민이신 병원 관계자분",
+        "홈페이지 상담문의 전환이 필요하신 분",
+        "병원서비스 설계 및 개선이 필요하신 분",
+        "병원 매출 성장이 필요하신 병원장님"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "park-sunyoung",
@@ -324,12 +425,32 @@
       "order": 21,
       "name": "정영걸",
       "company": "(주)애니픽",
-      "category": "제조·유통",
-      "industry": "반려동물 제품 제조",
+      "category": "펫·바이오",
+      "industry": "반려동물 면역케어 제조·유통",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/jung-younggul/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "Anipick",
+      "tagline": "노령동물을 위한 면역케어 제품 제조 및 유통",
+      "subTagline": "중증질환·노령동물 치료 중 영양·면역케어 관리 제품. 수의사가 직접 개발·생산",
+      "phone": "010-8962-7475",
+      "email": "anipick100@gmail.com",
+      "address": "충청남도 예산군 삽교읍 산단3길 226, CTP바이오센터 310호",
+      "expertise": [
+        "반려동물 바이오 헬스케어",
+        "동물면역제·영양제 제조 및 OEM 생산",
+        "검증된 천연원료 사용 제품 생산"
+      ],
+      "referralTargets": [
+        "반려동물 면역 보조제 등 제품 수출회사",
+        "반려동물 제품 유통업체",
+        "반려동물 관련 인플루언서",
+        "반려동물 보험·상조회사"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "yoon-wooseok",
@@ -354,12 +475,31 @@
       "order": 24,
       "name": "이기행",
       "company": "다유온",
-      "category": "창업·컨설팅",
-      "industry": "백오피스 아웃소싱",
+      "category": "경영지원",
+      "industry": "인사·총무·재무 경영지원",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/lee-gihaeng/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "Dayuon",
+      "tagline": "사람, 조직, 재무를 책임지는 경영지원 파트너",
+      "subTagline": "다유온은 문제를 진단하는 데 그치지 않습니다. 해답을 설계하고, 결과로 증명합니다",
+      "phone": "010-3633-6568",
+      "email": "geeh.workbox@gmail.com",
+      "address": "서울 강남구 강남대로114길 18, 4층",
+      "expertise": [
+        "인사관리",
+        "총무지원",
+        "재무설계"
+      ],
+      "referralTargets": [
+        "경영지원 부담을 내려놓고 싶은 대표님",
+        "직원 인사·회계업무 부담이 큰 대표님",
+        "전문성에만 집중하고 싶은 대표님"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "wang-joongho",
@@ -374,37 +514,99 @@
       "id": "kim-sungjun",
       "order": 26,
       "name": "김성준",
-      "company": "아티움특허법률사무소",
-      "category": "법률·법무",
-      "industry": "변리사",
+      "company": "아티움 특허법률사무소",
+      "category": "법률·특허",
+      "industry": "지식재산권 (특허·상표·디자인)",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kim-sungjun/digital-card.png"
-      }
+      },
+      "title": "대표변리사",
+      "companyEn": "Artium IP",
+      "tagline": "기업의 성장과 동행하는 지식 재산권 전문가",
+      "subTagline": "특허는 전략이고, 상표는 브랜딩입니다. 대표님의 아이디어가 권리가 되도록 가장 효율적인 지식재산 전략을 제안",
+      "phone": "010-7154-0406",
+      "email": "artiumip@artiumip.com",
+      "address": "서울 강남구 역삼동 649-8, 6층 아티움특허법률사무소",
+      "expertise": [
+        "화장품·조성물·뷰티·BM 특허권",
+        "상표·디자인",
+        "지식재산권 분쟁",
+        "기업인증제도"
+      ],
+      "referralTargets": [
+        "사업 성장 단계에서 특허·상표가 필요한 사업가",
+        "새로운 사업을 계획하고 계신 분"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "lee-hyungjin",
       "order": 27,
       "name": "이형진",
-      "company": "한국AI마케팅협회",
-      "category": "마케팅·미디어",
-      "industry": "AI토핑플래너",
+      "company": "한국 AI 마케팅 협회",
+      "category": "AI 마케팅",
+      "industry": "AI 마케팅 컨설팅·교육",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/lee-hyungjin/digital-card.png"
-      }
+      },
+      "title": "부회장",
+      "companyEn": "Korea AI Marketing Association",
+      "tagline": "AI로 마케팅의 구조를 설계하고, 교육과 컨설팅, 실행까지 동행하는 AI 마케팅 컨설턴트 미래소년",
+      "subTagline": "중소기업·1인 기업·전문가 브랜드를 위해, 생성형 AI와 노코드 도구를 활용해 적은 인력으로도 돌아가는 마케팅 시스템을 만듭니다",
+      "phone": "010-3261-4342",
+      "email": "adjinpr@naver.com",
+      "address": "서울시 광진구 자양동 605-2 더 팰리스 302호",
+      "expertise": [
+        "AI 기반 마케팅 전략 수립 (퍼널 설계·고객 여정 분석)",
+        "SNS·유튜브 콘텐츠 기획 및 제작 시스템 구축",
+        "ChatGPT·생성형 AI 활용 교육 (직군·업종 맞춤 커리큘럼)",
+        "마케팅 자동화 구축 (노코드 툴·CRM·메시지 자동 발송 시나리오)",
+        "퍼스널 브랜딩·전문가 브랜딩 스토리텔링 컨설팅",
+        "온라인 강의·워크숍·세미나 기획 및 교육용 콘텐츠 제작"
+      ],
+      "referralTargets": [
+        "마케팅팀이 없거나 1인 기업·소상공인으로 마케팅 시스템이 필요한 대표님",
+        "AI를 써보고 싶지만 어디서부터 시작해야 할지 막막한 사업자·전문가",
+        "기존 마케팅 대행 결과가 아쉬운 교육기관·학원·병원·약국·프랜차이즈 본사",
+        "사내교육·세미나에서 'AI 마케팅·업무 생산성' 강의가 필요한 기업·단체",
+        "유튜브·인스타·블로그를 본격적으로 키우고 싶은 강사·컨설턴트·크리에이터"
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200"
     },
     {
       "id": "seo-seungwan",
       "order": 28,
       "name": "서승완",
-      "company": "수완메디컬",
-      "category": "의료·헬스",
-      "industry": "병원 개원 컨설팅",
+      "company": "(주)수완메디칼",
+      "category": "의료·CSO",
+      "industry": "의약품 유통 마진 최적화",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/seo-seungwan/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "Suwan Medical",
+      "tagline": "법률·세무 시스템 기반, 의약품 유통 마진 최적화 파트너",
+      "subTagline": "법무법인 주연의 공식 파트너사. 투명하고 안전한 정산 시스템으로 10명 이상 억대 연봉 파트너를 배출한 메디컬 비즈니스 전문 기업",
+      "phone": "010-4241-3345",
+      "email": "ssw8561@naver.com",
+      "address": "서울 서초구 중앙로 255, 5층 법무법인 주연",
+      "expertise": [
+        "주사제 및 의약품 유통 마진 최적화 쉐어 시스템",
+        "법률·세무 가이드라인 기반의 안전한 파트너십(CSO) 설계",
+        "병원 개원 컨설팅 및 경영 리스크 관리"
+      ],
+      "referralTargets": [
+        "내과·정형외과·비뇨기과 등 주사제·약 처방량이 많은 원장님",
+        "개원을 앞두고 안정적인 수익 구조 세팅을 원하는 예비 원장님",
+        "법적 리스크 없는 투명한 마진 쉐어를 원하는 메디컬 파트너"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "kim-sehan",
