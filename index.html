@@ -1431,8 +1431,8 @@ function renderFeatured(){
   const oneSet = sorted.map(cardHTML).join("");
   track.innerHTML = oneSet + oneSet;
 
-  // 카드 수에 따라 스피드 조절 (카드 하나당 약 2초 흐르도록)
-  const dur = Math.max(30, sorted.length * 2);
+  // 카드 수에 따라 스피드 조절 (카드 하나당 약 3.5초 흐르도록 — 여유롭게)
+  const dur = Math.max(45, sorted.length * 3.5);
   track.style.animationDuration = dur + "s";
 }
 

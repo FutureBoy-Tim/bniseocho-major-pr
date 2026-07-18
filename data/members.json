@@ -6,47 +6,6 @@
   "featuredId": "lim-jonghee",
   "members": [
     {
-      "id": "lee-woochang",
-      "order": 1,
-      "name": "이우창",
-      "title": "대표이사",
-      "company": "(주)더파운트",
-      "companyEn": "The FOUNT",
-      "category": "재무·세무",
-      "industry": "병원 절세 컨설팅",
-      "tagline": "세금은 줄이고, 자산은 지키는 병원의 재무 닥터",
-      "subTagline": "병원 원장님의 '남는 돈'을 만드는 구조 설계자",
-      "phone": "010-2944-4286",
-      "email": "mablue7856@nate.com",
-      "address": "서울 성동구 성수일로10 서울숲ITCT 1608호",
-      "expertise": [
-        "병원 맞춤형 절세 컨설팅",
-        "과오납 세금 및 심평원 환급 컨설팅",
-        "재무·투자 컨설팅"
-      ],
-      "referralTargets": [
-        "병원 원장, 네트워크 운영자",
-        "의료 전문 변호사 · 노무사",
-        "의료기기 · 의약품 영업사원",
-        "세무사 · 회계사"
-      ],
-      "valueProps": [
-        "병원 운영 특성을 정확히 이해한 전문가들이 최적의 절세·경영 전략을 설계합니다.",
-        "의료진의 재무적 고민을 해결하고, 병원의 브랜드 가치를 높이는 파트너가 되겠습니다."
-      ],
-      "brandColor": "#0E1F5C",
-      "accentColor": "#FF8200",
-      "publishedAt": "2026-04-29",
-      "status": "archived",
-      "assets": {
-        "digitalCard": "assets/members/lee-woochang/digital-card.png",
-        "cardFront": "assets/members/lee-woochang/card-front.png",
-        "cardBack": "assets/members/lee-woochang/card-back.png",
-        "infographic": "assets/members/lee-woochang/infographic.png",
-        "presentation": "assets/members/lee-woochang/presentation.pptx"
-      }
-    },
-    {
       "id": "jung-wonok",
       "order": 2,
       "name": "정원옥",
@@ -341,15 +300,6 @@
       "accentColor": "#FF8200"
     },
     {
-      "id": "jung-yeontae",
-      "order": 11,
-      "name": "정연태",
-      "company": "(주)프리프롭테크",
-      "category": "부동산",
-      "industry": "부동산 컨설팅",
-      "status": "upcoming"
-    },
-    {
       "id": "han-jongtae",
       "order": 12,
       "name": "한종태",
@@ -410,15 +360,6 @@
       ],
       "brandColor": "#1A1A1A",
       "accentColor": "#FF8200"
-    },
-    {
-      "id": "kim-heekyung",
-      "order": 14,
-      "name": "김희경",
-      "company": "이지아로마",
-      "category": "라이프스타일",
-      "industry": "아로마 비즈니스",
-      "status": "upcoming"
     },
     {
       "id": "kim-eunsong",
@@ -649,15 +590,6 @@
       "accentColor": "#FF8200"
     },
     {
-      "id": "yoon-wooseok",
-      "order": 22,
-      "name": "윤우석",
-      "company": "(주)인피니티케어",
-      "category": "의료·헬스",
-      "industry": "법인검진예약 및 복지서비스",
-      "status": "upcoming"
-    },
-    {
       "id": "han-jonghee",
       "order": 23,
       "name": "한종희",
@@ -696,15 +628,6 @@
       ],
       "brandColor": "#1A1A1A",
       "accentColor": "#FF8200"
-    },
-    {
-      "id": "wang-joongho",
-      "order": 25,
-      "name": "왕중호",
-      "company": "에이원글로벌",
-      "category": "무역·유통",
-      "industry": "중화권 무역유통",
-      "status": "upcoming"
     },
     {
       "id": "kim-sungjun",
@@ -845,15 +768,6 @@
       "accentColor": "#FF8200"
     },
     {
-      "id": "han-sanghyuk",
-      "order": 31,
-      "name": "한상혁",
-      "company": "㈜영원패브릭",
-      "category": "제조·유통",
-      "industry": "의류용 섬유 기획 및 생산",
-      "status": "upcoming"
-    },
-    {
       "id": "won-jihwan",
       "order": 32,
       "name": "원지환",
@@ -899,15 +813,6 @@
       "company": "법무법인 주연",
       "category": "법률·법무",
       "industry": "기업파산 전문 변호사",
-      "status": "upcoming"
-    },
-    {
-      "id": "kim-yujung",
-      "order": 35,
-      "name": "김유정",
-      "company": "쥬벤스성형외과",
-      "category": "의료·헬스",
-      "industry": "성형외과",
       "status": "upcoming"
     },
     {
