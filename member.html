@@ -8,7 +8,7 @@
 <meta property="og:type" content="profile" />
 <meta property="og:site_name" content="BNI 서초 메이저 챕터" />
 <meta property="og:title" id="ogTitle" content="BNI 서초 메이저 챕터 · 검증된 전문가" />
-<meta property="og:description" id="ogDesc" content="매주 한 명, 39명의 검증된 전문가를 깊이 있게 소개합니다." />
+<meta property="og:description" id="ogDesc" content="매주 한 명, 48명의 검증된 전문가를 깊이 있게 소개합니다." />
 <!-- og:image — JS 동적 갱신은 봇이 인식 못 함. 매주 featured 멤버의 인포그래픽으로 정적 폴백 -->
 <meta property="og:image" id="ogImage" content="https://bniseocho.kr/assets/members/lim-jonghee/infographic.png" />
 <meta property="og:image:secure_url" content="https://bniseocho.kr/assets/members/lim-jonghee/infographic.png" />
@@ -351,7 +351,9 @@ async function load(){
   $("#updatedAt").textContent = "마지막 업데이트 · " + (data.lastUpdated || "");
   const m = data.members.find(x => x.id === memberId);
   if(!m){ renderNotFound(); return; }
-  if(!m.tagline && m.status === "upcoming"){ renderUpcoming(m); return; }
+  // 모든 대표 페이지가 열림 — tagline·자산 없어도 정상 render (부분 정보라도 보이게)
+  // renderUpcoming은 진짜로 아무것도 없는 신규 등록 초기 상태에서만 호출되도록 변경
+  if(!m.tagline && !m.name){ renderUpcoming(m); return; }
   window._currentMember = m;
   window._currentData = data;
   render(m, data);

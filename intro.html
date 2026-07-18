@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>BNI 서초 메이저 챕터 · 챕터 소개</title>
-<meta name="description" content="BNI 서초 메이저 챕터는 39명의 대표가 매주 모여 서로의 사업을 추천하는 비즈니스 네트워킹 모임입니다." />
+<meta name="description" content="BNI 서초 메이저 챕터는 48명의 대표가 매주 모여 서로의 사업을 추천하는 비즈니스 네트워킹 모임입니다." />
 <meta property="og:title" content="BNI 서초 메이저 챕터 · 챕터 소개" />
-<meta property="og:description" content="39명의 대표 · 매주 한 명 깊이 소개 · 정확한 리퍼럴이 일어나는 모임" />
+<meta property="og:description" content="48명의 대표 · 매주 한 명 깊이 소개 · 정확한 리퍼럴이 일어나는 모임" />
 <meta property="og:type" content="website" />
 <meta property="og:image" id="ogImage" content="" />
 <meta property="og:site_name" content="BNI 서초 메이저 챕터" />
@@ -160,7 +160,7 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow"><span class="dot"></span>BNI Major · Seocho Chapter</div>
-    <h1>전문가 39명이<br/>서로의 사업을 <em>추천</em>합니다.</h1>
+    <h1>전문가 <span class="js-total">48</span>명이<br/>서로의 사업을 <em>추천</em>합니다.</h1>
     <p>BNI 서초 메이저 챕터는 한국에서 가장 규모 있는 BNI 챕터 중 하나입니다. 매주 모여 서로의 비즈니스를 정확히 이해하고, 진짜 도움이 되는 리퍼럴을 만들어냅니다.</p>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num"><em id="stat39">39</em>명</div><div class="lab">전문가 멤버</div></div>
@@ -250,7 +250,7 @@ footer{margin-top:80px;background:var(--bni-navy);color:#A6B0CC}
       <div class="share-section-actions">
         <button class="btn btn-orange" id="openShareKitFooter">📢 공유 키트 열기</button>
         <button class="btn btn-primary" id="copyChapterLink">🔗 링크 복사</button>
-        <a class="btn btn-outline" href="./">39명 전체 보기 →</a>
+        <a class="btn btn-outline" href="./"><span class="js-total">48</span>명 전체 보기 →</a>
       </div>
     </div>
     <div class="share-qr-card">
@@ -286,6 +286,7 @@ async function load(){
 
   // Stats
   $("#stat39").textContent = DATA.members.length;
+  document.querySelectorAll(".js-total").forEach(el => { el.textContent = DATA.members.length; });
   const cats = [...new Set(DATA.members.map(m=>m.category).filter(Boolean))];
   $("#statCats").textContent = cats.length;
 
