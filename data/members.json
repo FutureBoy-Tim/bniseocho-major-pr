@@ -50,61 +50,160 @@
       "id": "jung-wonok",
       "order": 2,
       "name": "정원옥",
-      "company": "모티브21",
-      "category": "금융",
-      "industry": "해외저축연금보험",
+      "company": "모티브 21",
+      "category": "금융·보험",
+      "industry": "해외저축연금·자산증식",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/jung-wonok/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "Motive 21",
+      "tagline": "해외저축연금으로 고객의 자산증식을 돕는 금융전문가",
+      "subTagline": "원금보존, 연 6-7% 배당, 복리투자가 되는 안전한 재테크 방법",
+      "phone": "010-9868-4045",
+      "email": "jwo1228@naver.com",
+      "address": "서울시 강남구 역삼동 736-1 (3F)",
+      "expertise": [
+        "해외유배당연금보험",
+        "월 100만원 저축으로 은퇴준비하기",
+        "달러 자산 포트폴리오 구축"
+      ],
+      "referralTargets": [
+        "월 100만원 저축이 가능한 분"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "jung-jihye",
       "order": 3,
       "name": "정지혜",
-      "company": "와이즈앤밸류",
-      "category": "금융",
-      "industry": "국내보험",
+      "company": "밸류 마크 보험",
+      "category": "금융·보험",
+      "industry": "생명·손해보험",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/jung-jihye/digital-card.png"
-      }
+      },
+      "title": "마케팅상무",
+      "companyEn": "Value Mark Insurance (와이즈앤밸류)",
+      "tagline": "조립설계로 보상의 꽃을 피우다",
+      "subTagline": "11년 경력 생명보험·손해보험 우수 인증 설계사. 상위 0.2% 연도대상 연속 6회 달성",
+      "phone": "010-7445-2919",
+      "email": "stop1830@naver.com",
+      "address": "경기도 성남시 분당구 판교역로 109, SK허브 c동 106호 와이즈앤밸류",
+      "expertise": [
+        "딜사이트 경제TV 비급살롱 전문가 패널 정기출연",
+        "11년 경력 생명보험·손해보험 우수 인증 설계사",
+        "약관마스터자격증",
+        "전) 인카금융서비스 명예이사",
+        "상위 0.2% 연도대상 연속 6회 달성",
+        "억대 연봉 설계사 교육·코칭 전문"
+      ],
+      "referralTargets": [
+        "개인보험 보장분석·맞춤 컨설팅",
+        "건강 검진 전 보험 점검",
+        "상속·증여 전문보험",
+        "건물·공장·사업장 화재보험",
+        "개인 연금·퇴직연금",
+        "5년·7년·10년 저축"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "lee-kyungho",
       "order": 4,
       "name": "이경호",
       "company": "하나은행 리빙트러스트센터",
-      "category": "금융",
-      "industry": "유언대용신탁",
+      "category": "세무·신탁",
+      "industry": "상속·증여 신탁",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/lee-kyungho/digital-card.png"
-      }
+      },
+      "title": "세무사",
+      "companyEn": "Hana Bank Living Trust Center",
+      "tagline": "상속·증여의 ALL-IN-ONE",
+      "subTagline": "재산을 안전하게 대물림 하고 싶으신 분, 상속세·증여세 절세가 필요하신 분",
+      "phone": "010-8008-1393",
+      "email": "htax@taxtory.co.kr",
+      "address": "서울 중구 을지로 35",
+      "expertise": [
+        "유언대용신탁",
+        "상속세·증여세"
+      ],
+      "referralTargets": [
+        "상속 분쟁이 걱정되시는 분",
+        "절세 때문에 자녀에게 증여했지만 재산관리가 걱정되시는 분",
+        "상속·증여세 고민이신 분"
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200"
     },
     {
       "id": "hwang-won",
       "order": 5,
       "name": "황원",
-      "company": "법무사사무소 한강",
-      "category": "법률·법무",
-      "industry": "법무서비스",
+      "company": "한강법무사",
+      "category": "법률",
+      "industry": "채권추심·등기·회생",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/hwang-won/digital-card.png"
-      }
+      },
+      "title": "법무사",
+      "companyEn": "Hangang Law Office",
+      "tagline": "법은 복잡하지만 해결은 간단할 수 있습니다",
+      "subTagline": "빌려준 돈, 물품대금 등 못 받으신 분",
+      "phone": "010-7232-9118",
+      "email": "hw072316@naver.com",
+      "address": "서울 서초구 서초중앙로20길 40, 302호",
+      "expertise": [
+        "지급명령",
+        "채권압류 추심·명도",
+        "등기업무 (법인·부동산)",
+        "개인회생·파산"
+      ],
+      "referralTargets": [
+        "받아야 될 돈을 못 받고 있는 분",
+        "판결을 받았음에도 집행을 못하는 분",
+        "법인설립·변경·부동산 등기가 필요한 분",
+        "회생·파산이 필요한 분"
+      ],
+      "brandColor": "#0E1F5C",
+      "accentColor": "#FF8200"
     },
     {
       "id": "lee-namki",
       "order": 6,
       "name": "이남기",
       "company": "앤스컴퍼니",
-      "category": "제조·유통",
-      "industry": "전문가 화장품 제조유통",
+      "category": "화장품·뷰티",
+      "industry": "에스테틱 전문가 화장품 제조·유통",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/lee-namki/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "N's Company",
+      "tagline": "에스테틱 전문가 화장품을 제조·유통하는 화장품 전문가",
+      "subTagline": "대한민국 최초 남성 에스테티션. 화장품 경력 20년의 노하우를 바탕으로 에스테틱 전문가 화장품 제공",
+      "phone": "010-7139-2569",
+      "email": "nscompany123@naver.com",
+      "address": "서울시 서초구 동광로 15-1 2층",
+      "expertise": [
+        "전문가 화장품 유통",
+        "에스테틱 운영 컨설팅"
+      ],
+      "referralTargets": [
+        "에스테틱 운영 및 경영자",
+        "화장품·뷰티 분야 인플루언서",
+        "화장품 해외 수출 파트너"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "lim-jonghee",
@@ -150,37 +249,96 @@
       "id": "kim-boram",
       "order": 8,
       "name": "김보람",
-      "company": "TSC Group Korea",
-      "category": "무역·유통",
-      "industry": "미국 수출 유통",
+      "company": "TSC 인터내셔날",
+      "category": "글로벌·유통",
+      "industry": "K뷰티·이미용 제품 미국 수출",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kim-boram/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "TSC International",
+      "tagline": "이미용 제품 미국 수출 및 유통",
+      "subTagline": "K뷰티는 지속적으로 확장될 것입니다. 전세계 바이어와 거래처에 한국의 유망한 이미용 브랜드 제품을 소개",
+      "phone": "010-9633-0385",
+      "email": "b.kim@tscgroupintl.com",
+      "address": "강남구 강남대로 628, 비율라빌딩 2층",
+      "expertise": [
+        "더마 화장품",
+        "전문가용 이미용 제품"
+      ],
+      "referralTargets": [
+        "새로운 비즈니스 모델로 이미용 제품을 수출하고 싶은 대표",
+        "중국 거래처로 이미용 제품을 수출하고 싶은 대표",
+        "이미용 제품들로 지속적인 수익구조를 가지고 싶은 인플루언서"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "lee-giju",
       "order": 9,
       "name": "이기주",
-      "company": "비더 BE:THE",
-      "category": "의료·헬스",
-      "industry": "외국인 환자 유치 컨설팅",
+      "company": "비더",
+      "category": "의료·글로벌",
+      "industry": "외국인 환자유치·의료관광",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/lee-giju/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "BE:THE",
+      "tagline": "외국인 환자유치 전문기업",
+      "subTagline": "외국인 환자유치 든든한 파트너",
+      "phone": "010-3378-3898",
+      "email": "bethe.jjj@gmail.com",
+      "address": "서울시 강남구 강남대로 381 두산베어스텔 1408호",
+      "expertise": [
+        "외국인 환자유치",
+        "외국인 인플루언서 마케팅",
+        "해외 의료상담회 기획"
+      ],
+      "referralTargets": [
+        "외국인 환자유치를 희망하는 병·의원",
+        "해외 의료 상담회를 희망하는 병·의원",
+        "외국인 환자유치 마케팅을 희망하는 병·의원",
+        "한국에서 의료 서비스를 받고 싶은 외국인"
+      ],
+      "brandColor": "#5EEAD4",
+      "accentColor": "#FF8200"
     },
     {
       "id": "yoo-chihoon",
       "order": 10,
       "name": "유치훈",
-      "company": "점프라인",
-      "category": "창업·컨설팅",
-      "industry": "카페창업양도양수",
+      "company": "점포라인",
+      "category": "창업·중개",
+      "industry": "카페 양도양수·상권 컨설팅",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/yoo-chihoon/digital-card.png"
-      }
+      },
+      "title": "부장",
+      "companyEn": "Jumpo Line",
+      "tagline": "카페 양도양수로 성공창업을 연결하는 전문가",
+      "subTagline": "카페 권리금과 양도양수를 전문으로, 예비 창업자가 만족할 수 있는 거래를 성사",
+      "phone": "010-7665-9538",
+      "email": "xkzlt12@gmail.com",
+      "address": "서울특별시 서초구 강남대로 617 대양빌딩 6·7층",
+      "expertise": [
+        "카페 양도양수 컨설팅",
+        "프랜차이즈 카페 전문 거래",
+        "카페 상권 분석 및 입지 전략",
+        "예비 창업자를 위한 맞춤형 상담",
+        "카페 폐업·정리 및 권리금 회수 컨설팅"
+      ],
+      "referralTargets": [
+        "카페 창업을 준비 중인 예비 사장님",
+        "카페를 정리하고 싶은 점주님",
+        "프랜차이즈 카페를 하고 싶은 예비 사장님"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "jung-yeontae",
@@ -195,25 +353,63 @@
       "id": "han-jongtae",
       "order": 12,
       "name": "한종태",
-      "company": "㈜플로우링크",
-      "category": "마케팅·미디어",
-      "industry": "인플루언서 마케팅",
+      "company": "(주) 플로우링크",
+      "category": "인플루언서 마케팅",
+      "industry": "유튜버·인플루언서 마케팅·공동구매",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/han-jongtae/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "FlowLink",
+      "tagline": "유튜버·인플루언서 마케팅 및 공동구매 전문기업",
+      "subTagline": "인플루언서를 통한 매출 및 마케팅 성과를 만들어드립니다",
+      "phone": "010-7942-7737",
+      "email": "jthan@flowlink.co.kr",
+      "address": "서울특별시 서초구 사임당로 26, 신영빌딩 8층 802호",
+      "expertise": [
+        "연예인 및 메가 유튜브 채널 PPL 마케팅 & 커머스 운영",
+        "국내 최대 유튜브 서비스 플랫폼 운영",
+        "5만명 이상의 유튜버·인플루언서 데이터 보유",
+        "저렴한 유튜버 영상제작을 통한 바이럴 및 광고 소재 활용"
+      ],
+      "referralTargets": [
+        "중견기업 브랜드 마케팅 결정권자",
+        "온라인 중심 브랜드 대표",
+        "새로운 마케팅이 필요한 대표님"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "chae-mincheol",
       "order": 13,
       "name": "채민철",
-      "company": "브리튼청담",
-      "category": "라이프스타일",
-      "industry": "비스포크 수트 테일러샵 운영",
+      "company": "브리튼 청담",
+      "category": "패션·비스포크",
+      "industry": "클래식 수트·예복",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/chae-mincheol/digital-card.png"
-      }
+      },
+      "title": "대표",
+      "companyEn": "Briton Chungdam",
+      "tagline": "브리튼 수트를 입으면 완벽에 도달할 수 있습니다",
+      "subTagline": "비즈니스를 하는 성공한 대표들의 복장과 결혼하는 신랑의 완벽한 모습을 만듭니다",
+      "phone": "010-9372-4710",
+      "email": "77010712@naver.com",
+      "address": "서울특별시 청담동 55-16 1층 브리튼청담",
+      "expertise": [
+        "클래식 수트",
+        "예복",
+        "드레스 셔츠 등"
+      ],
+      "referralTargets": [
+        "수트가 필요한 모든 사람",
+        "결혼을 앞둔 신랑"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200"
     },
     {
       "id": "kim-heekyung",
