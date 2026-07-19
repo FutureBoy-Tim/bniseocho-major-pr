@@ -43,7 +43,8 @@
       "industry": "생명·손해보험",
       "status": "upcoming",
       "assets": {
-        "digitalCard": "assets/members/jung-jihye/digital-card.png"
+        "digitalCard": "assets/members/jung-jihye/digital-card.png",
+        "infographic": "assets/members/jung-jihye/infographic.png"
       },
       "title": "마케팅상무",
       "companyEn": "Value Mark Insurance (와이즈앤밸류)",
@@ -276,7 +277,8 @@
       "industry": "카페 양도양수·상권 컨설팅",
       "status": "upcoming",
       "assets": {
-        "digitalCard": "assets/members/yoo-chihoon/digital-card.png"
+        "digitalCard": "assets/members/yoo-chihoon/digital-card.png",
+        "infographic": "assets/members/yoo-chihoon/infographic.png"
       },
       "title": "부장",
       "companyEn": "Jumpo Line",
@@ -496,7 +498,8 @@
       "industry": "병원 브랜드 마케팅",
       "status": "upcoming",
       "assets": {
-        "digitalCard": "assets/members/kim-minyoung/digital-card.png"
+        "digitalCard": "assets/members/kim-minyoung/digital-card.png",
+        "infographic": "assets/members/kim-minyoung/infographic.png"
       },
       "title": "대표",
       "companyEn": "Medical Way",
