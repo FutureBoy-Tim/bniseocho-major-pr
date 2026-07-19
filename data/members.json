@@ -2,7 +2,7 @@
   "chapter": "BNI 서초 메이저 챕터",
   "tagline": "서로의 사업을 추천하는 사람들",
   "subtitle": "Business Referral Organization · Givers Gain",
-  "lastUpdated": "2026-07-18",
+  "lastUpdated": "2026-07-19",
   "featuredId": "lim-jonghee",
   "members": [
     {
@@ -213,7 +213,8 @@
       "industry": "K뷰티·이미용 제품 미국 수출",
       "status": "upcoming",
       "assets": {
-        "digitalCard": "assets/members/kim-boram/digital-card.png"
+        "digitalCard": "assets/members/kim-boram/digital-card.png",
+        "infographic": "assets/members/kim-boram/infographic.png"
       },
       "title": "대표",
       "companyEn": "TSC International",
