@@ -1239,23 +1239,31 @@
       "title": "대표",
       "company": "꽃스러움",
       "companyEn": "Kkotsureoum",
-      "category": "라이프·꽃",
-      "industry": "플로리스트",
-      "tagline": "감성을 담아내는 플로리스트",
+      "category": "교육·플라워",
+      "industry": "플로리스트 교육·꽃상품",
+      "tagline": "꽃을 배우면 직업이 되는 플라워 교육브랜드",
       "phone": "010-2434-1995",
-      "email": "",
-      "address": "",
+      "email": "g24342995@gmail.com",
+      "address": "서울시 동대문구 장한로 24, 1층 꽃스러움",
       "expertise": [
-        "플로리스트",
-        "꽃 디자인"
+        "플라워 교육",
+        "꽃상품 제작·유통",
+        "기업·학교 출강",
+        "독일 플로리스트 교육 기반 커리큘럼"
       ],
-      "referralTargets": [],
+      "referralTargets": [
+        "개업 화분이 필요한 분",
+        "기업 꽃 선물을 준비하는 담당자",
+        "기업·학교 출강이 필요한 곳",
+        "꽃을 배우고 싶은 분"
+      ],
       "brandColor": "#1A1A1A",
       "accentColor": "#FF8200",
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/ki-youngae/digital-card.png"
-      }
+      },
+      "subTagline": "독일 플로리스트 교육을 기반으로 꽃상품과 전문교육을 통해 새로운 직업과 가치를 만들어갑니다"
     }
   ],
   "meeting": {
