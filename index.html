@@ -537,9 +537,9 @@ img{max-width:100%;display:block}
   content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(ellipse at 50% 100%, rgba(255,170,80,.08), transparent 60%);
 }
-/* 소리 켜기/끄기 버튼 */
+/* 소리 켜기/끄기 버튼 — 우측 상단 (하단 컨트롤바와 겹치지 않게) */
 .ha-tv-sound{
-  position:absolute;right:8px;bottom:8px;z-index:5;
+  position:absolute;right:8px;top:8px;z-index:5;
   width:34px;height:34px;border-radius:50%;
   background:rgba(0,0,0,.6);color:#fff;
   border:1px solid rgba(255,255,255,.28);
@@ -551,7 +551,7 @@ img{max-width:100%;display:block}
 .ha-tv-sound:hover{background:rgba(255,170,80,.85);color:#111;transform:scale(1.08)}
 .ha-tv-sound:focus{outline:2px solid #FFB066;outline-offset:2px}
 @media (max-width:640px){
-  .ha-tv-sound{width:30px;height:30px;font-size:13px;right:6px;bottom:6px}
+  .ha-tv-sound{width:30px;height:30px;font-size:13px;right:6px;top:6px}
 }
 
 .ha-text{position:relative;z-index:1;color:#fff;line-height:1.5;text-align:center;max-width:820px;margin-top:2px}
@@ -1045,6 +1045,9 @@ footer{
         <div class="ha-tv-screen" id="haTvScreen">
           <!-- 매주 피처드 대표 영상: 파일 있으면 자동 재생, 없으면 placeholder -->
           <video id="haFeatureVideo" autoplay loop muted playsinline
+                 controls controlsList="nodownload noremoteplayback"
+                 disablePictureInPicture
+                 preload="metadata"
                  poster="assets/featured-video/poster.jpg"
                  onerror="this.style.display='none'; this.nextElementSibling?.style.setProperty('display','flex');">
             <source src="assets/featured-video/current.mp4?v=20260720" type="video/mp4" />
