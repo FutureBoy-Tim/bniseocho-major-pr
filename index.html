@@ -494,31 +494,51 @@ img{max-width:100%;display:block}
 .hero-stat .num{font-size:32px;font-weight:800;letter-spacing:-.02em}
 .hero-stat .lab{font-size:12px;color:#A6B0CC;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 
-/* ── Hero 우측: 운영자 가벼운 소개 ────────────────────────────── */
+/* ── Hero 우측: 운영자 소개 · TV 씬 (매주 대표 영상 재생) ─────── */
 .hero-aside{
-  display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;
   position:relative;
 }
-/* 사진 뒤 백라이트 — 검은 정장 인물이 다크 배경에 묻히지 않게 */
-.hero-aside::before{
-  content:"";position:absolute;
-  top:-80px;left:50%;transform:translateX(-50%);
-  width:min(720px, 130%);height:min(780px, 115%);
-  background:
-    radial-gradient(ellipse 55% 65% at 50% 40%, rgba(255,170,80,.38) 0%, rgba(255,170,80,.18) 35%, rgba(255,170,80,.06) 55%, transparent 75%),
-    radial-gradient(ellipse 80% 90% at 50% 50%, rgba(180,200,255,.22) 0%, rgba(180,200,255,.08) 45%, transparent 75%);
-  filter:blur(12px);
-  pointer-events:none;z-index:0;
+.ha-tv-scene{
+  position:relative;width:100%;max-width:520px;aspect-ratio:1672/941;
+  border-radius:14px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.5), 0 0 30px rgba(255,170,80,.08);
 }
-.ha-photo{
-  position:relative;z-index:1;
-  width:auto;max-width:280px;max-height:380px;height:auto;
-  object-fit:contain;display:block;
-  filter:drop-shadow(0 18px 32px rgba(0,0,0,.55)) drop-shadow(0 0 24px rgba(255,170,80,.15));
-  background:transparent;border:none;
+.ha-tv-scene img.ha-scene-bg{
+  position:absolute;inset:0;width:100%;height:100%;display:block;
+  object-fit:cover;object-position:center;
 }
-.ha-text{position:relative;z-index:1}
-.ha-text{color:#fff;line-height:1.5;text-align:center;max-width:380px}
+/* TV 화면 영역 — 원본 이미지 대비 좌표(%) 오버레이 */
+.ha-tv-screen{
+  position:absolute;
+  left:5.6%;top:13.5%;width:64.5%;height:68.5%;
+  background:#0a0d18;overflow:hidden;
+  box-shadow:inset 0 0 30px rgba(0,0,0,.6);
+}
+.ha-tv-screen video,
+.ha-tv-screen img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;display:block;background:#0a0d18;
+}
+.ha-tv-placeholder{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:8px;
+  color:#8892B0;font-weight:600;letter-spacing:.02em;
+  background:linear-gradient(135deg,#12162A 0%,#0a0d18 100%);
+}
+.ha-tv-placeholder .play-ic{
+  width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,170,80,.18);color:#FFB066;font-size:18px;
+}
+.ha-tv-placeholder small{color:#5a6280;font-size:11px;font-weight:500}
+/* 은은한 스크린 글로우 */
+.ha-tv-screen::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 100%, rgba(255,170,80,.08), transparent 60%);
+}
+
+.ha-text{position:relative;z-index:1;color:#fff;line-height:1.5;text-align:center;max-width:520px}
 .ha-name{font-size:20px;font-weight:700;color:#fff;letter-spacing:-.01em;margin:0 0 8px}
 .ha-name strong{font-weight:900;color:#FFB066}
 .ha-bio{
@@ -528,7 +548,7 @@ img{max-width:100%;display:block}
 
 @media (max-width:960px){
   .hero-inner{grid-template-columns:1fr;gap:32px}
-  .ha-photo{max-width:220px;max-height:300px}
+  .ha-tv-scene{max-width:440px}
   .ha-text{max-width:100%}
 }
 
@@ -1004,7 +1024,22 @@ footer{
       </div>
     </div>
     <aside class="hero-aside">
-      <img class="ha-photo" src="assets/producer/profile.png?v=20260524b" alt="미래소년 이형진 대표 프로필" />
+      <div class="ha-tv-scene" id="haTvScene">
+        <img class="ha-scene-bg" src="assets/producer/hero-tv-scene.png?v=20260720" alt="미래소년 이형진 대표가 매주 피처드 대표를 소개하는 씬" />
+        <div class="ha-tv-screen" id="haTvScreen">
+          <!-- 매주 피처드 대표 영상: 파일 있으면 자동 재생, 없으면 placeholder -->
+          <video id="haFeatureVideo" autoplay loop muted playsinline
+                 poster="assets/featured-video/poster.jpg"
+                 onerror="this.style.display='none'; this.nextElementSibling?.style.setProperty('display','flex');">
+            <source src="assets/featured-video/current.mp4?v=20260720" type="video/mp4" />
+          </video>
+          <div class="ha-tv-placeholder" style="display:none">
+            <span class="play-ic">▶</span>
+            이번 주 대표 영상
+            <small>곧 업데이트됩니다</small>
+          </div>
+        </div>
+      </div>
       <div class="ha-text">
         <div class="ha-name">미래소년 <strong>이형진</strong></div>
         <p class="ha-bio">한국AI마케팅협회 회장 · AI 토핑 플래너<br/>25년 광고기획자 · AI 마케팅 컨설턴트</p>
@@ -1222,6 +1257,31 @@ async function loadData(){
   data = await res.json();
   renderAll();
 }
+
+// ── Hero TV 씬: 피처드 영상 로드 실패 시 placeholder 표시 ─────────
+(function initHeroTv(){
+  const v = document.getElementById("haFeatureVideo");
+  const scr = document.getElementById("haTvScreen");
+  if(!v || !scr) return;
+  const showPlaceholder = () => {
+    v.style.display = "none";
+    const ph = scr.querySelector(".ha-tv-placeholder");
+    if(ph) ph.style.display = "flex";
+  };
+  // <source> 로드 실패 시
+  const src = v.querySelector("source");
+  if(src) src.addEventListener("error", showPlaceholder);
+  // video 자체 로드 실패 시
+  v.addEventListener("error", showPlaceholder);
+  // 무비 데이터가 없을 때 (파일 자체가 없는 경우 대응)
+  v.addEventListener("stalled", () => {
+    if(v.readyState === 0) showPlaceholder();
+  });
+  // 3초 후에도 재생 시작 못하면 placeholder
+  setTimeout(() => {
+    if(v.readyState === 0) showPlaceholder();
+  }, 3000);
+})();
 
 function renderAll(){
   document.getElementById("statTotal").textContent = data.members.length;
