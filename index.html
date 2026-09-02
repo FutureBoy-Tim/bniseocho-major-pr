@@ -943,8 +943,9 @@ img{max-width:100%;display:block}
 }
 .invite-upcoming-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:#D7DDE9}
 .invite-upcoming-imgwrap{position:relative;cursor:zoom-in;overflow:hidden}
-/* 카드 이미지: 그 주 주인공 대표(오른쪽 인물) 위주로 크롭. 다운로드는 원본 그대로. */
-.invite-upcoming-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:85% center;background:#0B1520;display:block;transition:transform .3s}
+/* 카드 이미지: 그 주 주인공 대표(오른쪽 하단 인물) 위주로 크롭. 다운로드는 원본 그대로.
+   초대장 원본 960x1835 세로형 = 앞면 상단·뒷면 중간·인물 사진은 하단(세로 75~95%) 우측에 위치. */
+.invite-upcoming-img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:85% 88%;background:#0B1520;display:block;transition:transform .3s}
 .invite-upcoming-imgwrap:hover .invite-upcoming-img{transform:scale(1.04)}
 .invite-upcoming-zoom{
   position:absolute;top:10px;right:10px;
