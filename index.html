@@ -704,23 +704,25 @@ img{max-width:100%;display:block}
   display:flex;flex-direction:column;
 }
 .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#D7DDE9}
+/* 카드 상단: 회색 그라디언트 밴드(얇게) + No. 배지만. 텍스트 잡히지 않도록 이미지 배경 제거. */
 .card-top{
-  position:relative;height:170px;
-  background:linear-gradient(135deg,#1B3380,#0E1F5C);
-  display:flex;align-items:flex-end;padding:16px;
+  position:relative;height:56px;
+  background:linear-gradient(135deg,#B8BFCC,#8890A3);
+  display:flex;align-items:center;padding:0 16px;
   overflow:hidden;
-}
-/* 명함 배경이 있는 카드: 살짝 어두운 오버레이로 No. 라벨 가독성 확보 */
-.card-top.card-top-photo{background-color:#F4F1E9}
-.card-top.card-top-photo::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%);
 }
 .card-order{
   position:absolute;left:14px;top:12px;z-index:2;
-  font-size:11px;font-weight:700;color:rgba(255,255,255,.9);letter-spacing:.04em;
-  text-shadow:0 1px 3px rgba(0,0,0,.4);
+  font-size:11px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:.04em;
+  text-shadow:0 1px 3px rgba(0,0,0,.35);
 }
+/* 카드 본문 최상단 명함(또는 위클리) 이미지: 명함 전체를 crop 없이 잘 보이게 */
+.card-photo{
+  width:100%;aspect-ratio:5/3;object-fit:cover;object-position:center 25%;
+  background:#F4EEE1;display:block;border-radius:8px;margin:-8px 0 14px;
+  transition:transform .3s;
+}
+.card:hover .card-photo{transform:scale(1.02)}
 .card-body{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1}
 .card-name{font-size:18px;font-weight:800;letter-spacing:-.01em;margin:0}
 .card-role{font-size:13px;color:var(--ink-3);margin:4px 0 10px}
@@ -1594,25 +1596,25 @@ function renderGrid(){
   document.getElementById("resultCount").textContent = `${filtered.length}명`;
   const grid = document.getElementById("grid");
   grid.innerHTML = filtered.map(m=>{
-    // 카드 상단 배경: 위클리 이미지 > 디지털 명함 순 (없으면 그라디언트)
+    // 카드 본문 최상단 이미지: 위클리 > 디지털 명함 순. 상단 회색 밴드엔 배경 안 넣음(광고 카피 텍스트가 잡히지 않게).
     const weekly = m.assets?.weekly;
     const dc = m.assets?.digitalCard;
     const bg = weekly || dc;
-    // 얼굴 좌표가 지정돼 있으면 그 값 우선, 없으면 이미지 타입별 기본값
-    // - 위클리(정사각형·얼굴 상단 중앙): "center 18%"
-    // - 디지털 명함(세로형·인물 우측 상단): "72% 22%"
+    // 얼굴/명함 좌표: 지정값 > 타입 기본값
+    // - 위클리(정사각형·얼굴 상단): "center 20%"
+    // - 디지털 명함(세로형·회사~인물 부분): "center 30%"
     const faceCenter = m.assets?.faceCenter?.[weekly ? 'weekly' : 'digitalCard'];
-    const bgPos = faceCenter || (weekly ? "center 18%" : "72% 22%");
-    const topStyle = bg
-      ? `background-image:url('${bg}');background-size:cover;background-position:${bgPos};`
+    const photoPos = faceCenter || (weekly ? "center 20%" : "center 30%");
+    const photoImg = bg
+      ? `<img class="card-photo" src="${bg}" alt="${m.name} ${m.company || ''} 소개" loading="lazy" style="object-position:${photoPos}" />`
       : "";
-    const topCls = bg ? "card-top card-top-photo" : "card-top";
     return `
       <a class="card" href="member.html?id=${m.id}">
-        <div class="${topCls}" style="${topStyle}">
+        <div class="card-top">
           <span class="card-order">No. ${String(m.order).padStart(2,"0")}</span>
         </div>
         <div class="card-body">
+          ${photoImg}
           <h3 class="card-name">${m.name}</h3>
           <div class="card-role">${m.title || "대표"}${m.category ? " · " + m.category : ""}</div>
           <div class="card-company">${m.company || ""}</div>
