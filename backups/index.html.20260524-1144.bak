@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BNI 서초 메이저 챕터 · 검증된 전문가 39인</title>
+<meta name="description" content="사업의 성공과 성장을 원하는 대표님께. BNI 서초 메이저 챕터의 검증된 전문가 39인을 매주 한 분씩 깊이 있게 소개합니다." />
+<meta property="og:title" content="BNI 서초 메이저 챕터 · 검증된 전문가 39인" />
+<meta property="og:description" content="성장이 필요한 순간, 만나야 할 검증된 전문가 39인을 매주 한 분씩 공개합니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://futureboy-tim.github.io/bniseocho-major-pr/" />
+<!-- og:image — 카카오/페이스북 봇은 JS 실행 안 함. 매주 featured 변경 시 이 경로도 같이 업데이트 (CLAUDE.md 워크플로우 참조) -->
+<meta property="og:image" id="ogImage" content="https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lim-jonghee/infographic.png" />
+<meta property="og:image:secure_url" content="https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lim-jonghee/infographic.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1254" />
+<meta property="og:image:height" content="1254" />
+<meta property="og:image:alt" content="임종희 대표원장 · 헤리치과의원 · 보이지 않는 진심, 헤리치과의 의료 철학 인포그래픽" />
+<meta property="og:site_name" content="BNI 서초 메이저 챕터" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="BNI 서초 메이저 챕터 · 검증된 전문가 39인" />
+<meta name="twitter:description" content="성장이 필요한 순간, 만나야 할 검증된 전문가 39인을 매주 한 분씩 공개합니다." />
+<meta name="twitter:image" content="https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lim-jonghee/infographic.png" />
+
+<!-- 검색엔진 사이트 소유 확인 메타 (사용자가 각 콘솔에서 발급받은 코드로 교체) -->
+<!-- 네이버 서치어드바이저: https://searchadvisor.naver.com/console/board → HTML 태그 발급 → content="..." 부분만 아래에 붙여넣기 -->
+<meta name="naver-site-verification" content="REPLACE_WITH_NAVER_CODE" />
+<!-- 구글 서치 콘솔: https://search.google.com/search-console → 속성 추가 → HTML 태그 → content="..." 부분만 아래에 붙여넣기 -->
+<meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_CODE" />
+
+<!-- canonical URL — 중복 방지 -->
+<link rel="canonical" href="https://futureboy-tim.github.io/bniseocho-major-pr/" />
+
+<!-- 구조화 데이터 (JSON-LD) — 검색엔진이 이 사이트가 단체·인물 정보임을 인식하도록 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "BNI 서초 메이저 챕터",
+  "alternateName": "BNI Seocho Major Chapter",
+  "url": "https://futureboy-tim.github.io/bniseocho-major-pr/",
+  "logo": "https://futureboy-tim.github.io/bniseocho-major-pr/assets/members/lee-woochang/digital-card.png",
+  "description": "사업의 성공과 성장을 원하는 대표님께. BNI 서초 메이저 챕터의 검증된 전문가 39인을 매주 한 분씩 깊이 있게 소개합니다.",
+  "memberOf": {
+    "@type": "Organization",
+    "name": "BNI Korea",
+    "url": "https://bnikorea.kr/"
+  },
+  "knowsAbout": ["비즈니스 리퍼럴", "전문가 네트워크", "사업 추천", "B2B 협업"],
+  "areaServed": {
+    "@type": "Place",
+    "name": "서울 서초구"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "BNI 서초 메이저 챕터",
+  "url": "https://futureboy-tim.github.io/bniseocho-major-pr/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://futureboy-tim.github.io/bniseocho-major-pr/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js" defer></script>
+<script src="assets/share-kit.js" defer></script>
+<style>
+:root{
+  --bni-orange:#FF8200;
+  --bni-orange-soft:#FFB763;
+  --bni-orange-bg:#FFF4E5;
+  --bni-navy:#0E1F5C;
+  --bni-navy-2:#1B3380;
+  --ink:#0E1422;
+  --ink-2:#3A435A;
+  --ink-3:#6B7388;
+  --line:#E5E8EF;
+  --line-2:#F1F3F8;
+  --bg:#FAFBFD;
+  --white:#FFFFFF;
+  --shadow-sm:0 1px 2px rgba(14,31,92,.04), 0 4px 12px rgba(14,31,92,.04);
+  --shadow-md:0 6px 24px rgba(14,31,92,.08), 0 1px 4px rgba(14,31,92,.06);
+  --shadow-lg:0 24px 60px rgba(14,31,92,.18);
+  --r-sm:8px;--r-md:14px;--r-lg:22px;--r-xl:28px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue",Arial,"Noto Sans KR",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ── Top bar ────────────────────────────── */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:1240px;margin:0 auto;padding:14px 24px;
+  display:flex;align-items:center;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.01em}
+.brand-mark{
+  width:30px;height:30px;border-radius:8px;
+  background:linear-gradient(135deg,var(--bni-orange),#FF6A00);
+  display:grid;place-items:center;color:#fff;font-size:13px;font-weight:900;
+  box-shadow:0 4px 12px rgba(255,130,0,.35);
+}
+.brand-text{font-size:15px}
+.brand-text small{display:block;font-size:11px;font-weight:600;color:var(--ink-3)}
+.topbar-spacer{flex:1}
+.topbar-actions{display:flex;gap:8px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:9px 14px;border-radius:999px;
+  font-weight:600;font-size:13px;letter-spacing:-.01em;
+  transition:transform .12s ease, box-shadow .12s ease, background .15s;
+}
+.btn-ghost{color:var(--ink-2)}
+.btn-ghost:hover{background:var(--line-2);color:var(--ink)}
+.btn-primary{background:var(--bni-navy);color:#fff}
+.btn-primary:hover{background:var(--bni-navy-2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(14,31,92,.25)}
+.btn-orange{background:var(--bni-orange);color:#fff}
+.btn-orange:hover{background:#FF6A00;transform:translateY(-1px);box-shadow:0 6px 18px rgba(255,130,0,.32)}
+
+/* ── Hero ────────────────────────────── */
+.hero{position:relative;overflow:hidden;background:var(--bni-navy);color:#fff}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(255,130,0,.35), transparent 60%),
+    radial-gradient(700px 500px at -10% 110%, rgba(255,130,0,.18), transparent 60%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1240px;margin:0 auto;padding:80px 24px 64px;position:relative;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 12px;border-radius:999px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+  font-size:12px;font-weight:600;letter-spacing:.02em;
+}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--bni-orange);box-shadow:0 0 0 4px rgba(255,130,0,.25)}
+.hero h1{
+  margin:18px 0 14px;font-size:clamp(34px,5.4vw,58px);line-height:1.05;letter-spacing:-.025em;font-weight:800;
+}
+.hero h1 em{font-style:normal;color:var(--bni-orange)}
+.hero p{font-size:clamp(15px,1.4vw,18px);color:#D5DBEC;max-width:640px;margin:0 0 26px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:18px}
+.hero-stat .num{font-size:32px;font-weight:800;letter-spacing:-.02em}
+.hero-stat .lab{font-size:12px;color:#A6B0CC;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+
+/* ── Hero 운영자 시그니처 스트립 ────────────────────────────── */
+.hero-producer{
+  margin-top:30px;display:inline-flex;align-items:center;gap:14px;
+  padding:10px 18px 10px 12px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);border-radius:999px;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  text-decoration:none;transition:background .15s,border-color .15s;
+}
+.hero-producer:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25)}
+.hp-avatar{
+  width:38px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,#FF8200,#FF6A00);
+  display:grid;place-items:center;color:#fff;font-weight:900;font-size:13px;
+  flex-shrink:0;letter-spacing:-.02em;
+}
+.hp-text{font-size:13px;color:#fff;line-height:1.4}
+.hp-eyebrow{display:block;font-size:9.5px;color:#FFB066;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
+.hp-line strong{color:#fff;font-weight:800}
+.hp-line em{color:#FFB066;font-style:normal;font-weight:700}
+
+/* ── Producer 섹션 (Featured 아래) ────────────────────────────── */
+.producer-section{max-width:1240px;margin:64px auto 0;padding:0 24px}
+.producer{
+  background:linear-gradient(135deg,#0B1849 0%,#1B3380 50%,#0E1F5C 100%);
+  border-radius:var(--r-xl);box-shadow:var(--shadow-lg);color:#fff;
+  padding:48px;display:grid;grid-template-columns:minmax(220px,1fr) 1.6fr;gap:48px;
+  position:relative;overflow:hidden;
+}
+.producer::before{
+  content:"";position:absolute;top:-120px;right:-120px;width:340px;height:340px;
+  border-radius:50%;background:radial-gradient(circle,rgba(255,130,0,.18) 0%,transparent 70%);
+  pointer-events:none;
+}
+.producer-head{position:relative;z-index:1}
+.pr-eyebrow{font-size:11px;color:#FFB066;font-weight:800;letter-spacing:.15em;text-transform:uppercase;display:block}
+.pr-avatar{
+  width:120px;height:120px;border-radius:50%;
+  background:linear-gradient(135deg,#FF8200,#FF6A00);
+  display:grid;place-items:center;color:#fff;font-weight:900;font-size:48px;
+  margin:18px 0 20px;box-shadow:0 14px 36px rgba(255,130,0,.32);letter-spacing:-.02em;
+  overflow:hidden;
+}
+.pr-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hp-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.pr-name{font-size:26px;font-weight:800;letter-spacing:-.02em;margin:0 0 4px;color:#fff}
+.pr-name span{color:#FFB066;margin:0 6px;font-weight:600}
+.pr-role{font-size:14px;color:#D5DBEC;margin:0 0 14px;line-height:1.55}
+.pr-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.pr-tag{font-size:11px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:4px 10px;border-radius:999px;color:#D5DBEC;font-weight:600}
+
+.producer-body{position:relative;z-index:1}
+.pr-quote{
+  font-size:clamp(19px,1.9vw,24px);font-weight:700;line-height:1.45;letter-spacing:-.02em;
+  margin:0 0 18px;color:#fff;
+}
+.pr-quote em{font-style:normal;color:#FFB066}
+.pr-text{font-size:15px;line-height:1.7;color:#D5DBEC;margin:0 0 14px}
+.pr-text strong{color:#FFB066;font-weight:700}
+
+.pr-services{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0 24px}
+.pr-svc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px}
+.pr-svc-icon{font-size:18px;margin-bottom:6px;display:block;line-height:1}
+.pr-svc-name{font-size:13.5px;font-weight:800;letter-spacing:-.01em;color:#fff;margin:0 0 3px}
+.pr-svc-desc{font-size:11.5px;color:#A8B0CC;margin:0;line-height:1.45}
+
+.pr-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.pr-cta a{display:inline-flex;align-items:center;gap:6px;padding:11px 20px;border-radius:999px;font-weight:800;font-size:13.5px;text-decoration:none;transition:all .15s}
+.pr-cta .pr-btn-orange{background:#FF8200;color:#fff}
+.pr-cta .pr-btn-orange:hover{background:#FF6A00}
+.pr-cta .pr-btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);font-weight:700}
+.pr-cta .pr-btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5)}
+
+@media (max-width:880px){
+  .producer{grid-template-columns:1fr;padding:32px 24px;gap:28px}
+  .pr-services{grid-template-columns:1fr}
+  .producer-section{margin-top:48px}
+}
+
+/* ── Featured (이번 주의 대표) ────────────────────────────── */
+.featured-wrap{max-width:1240px;margin:-44px auto 0;padding:0 24px;position:relative;z-index:2}
+.featured{
+  background:#fff;border-radius:var(--r-xl);box-shadow:var(--shadow-lg);
+  display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden;
+  border:1px solid rgba(14,31,92,.05);
+}
+.featured-meta{padding:36px 36px 32px;display:flex;flex-direction:column}
+.feature-tag{
+  align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+  padding:6px 12px;border-radius:999px;background:var(--bni-orange-bg);color:#A95400;
+  font-size:12px;font-weight:700;letter-spacing:.02em;margin-bottom:18px;
+}
+.feature-tag::before{content:"★";font-size:11px}
+.featured-name{font-size:14px;color:var(--ink-3);font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+.featured-headline{margin:6px 0 8px;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.02em;font-weight:800}
+.featured-headline em{font-style:normal;color:var(--bni-orange)}
+.featured-sub{font-size:15px;color:var(--ink-2);margin:0 0 18px}
+.featured-info{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:14px;margin:6px 0 22px}
+.featured-info dt{color:var(--ink-3);font-weight:600}
+.featured-info dd{margin:0;color:var(--ink-2)}
+.featured-cta{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.chip{padding:5px 10px;border-radius:999px;background:var(--line-2);color:var(--ink-2);font-size:12px;font-weight:600}
+.featured-art{
+  position:relative;background:linear-gradient(135deg,#0B1849 0%,#1B3380 60%,#27408F 100%);
+  display:grid;place-items:center;padding:24px;min-height:380px;
+}
+.featured-art img{
+  width:100%;max-width:420px;border-radius:18px;
+  box-shadow:0 30px 80px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.2);
+  transform:rotate(-2deg);transition:transform .4s cubic-bezier(.2,.7,.2,1);
+}
+.featured-art:hover img{transform:rotate(0deg) scale(1.02)}
+.featured-art-tag{
+  position:absolute;top:18px;right:18px;
+  padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;
+  border:1px solid rgba(255,255,255,.22);font-size:11px;font-weight:600;letter-spacing:.04em;
+  backdrop-filter:blur(8px);
+}
+
+/* ── Section header ────────────────────────────── */
+.section{max-width:1240px;margin:0 auto;padding:80px 24px 24px}
+.section-h{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:22px}
+.section-h h2{margin:0;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;font-weight:800}
+.section-h .meta{color:var(--ink-3);font-size:14px;font-weight:600}
+
+/* ── Filters ────────────────────────────── */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 22px;align-items:center}
+.search{
+  display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;
+  background:#fff;border:1px solid var(--line);color:var(--ink-2);
+  flex:1 1 240px;max-width:340px;
+}
+.search input{
+  border:none;outline:none;background:transparent;color:var(--ink);
+  width:100%;font:inherit;
+}
+.search svg{flex-shrink:0;color:var(--ink-3)}
+.cat-chip{
+  padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);
+  color:var(--ink-2);font-size:13px;font-weight:600;transition:all .15s;
+}
+.cat-chip:hover{border-color:var(--bni-orange);color:var(--bni-orange)}
+.cat-chip.active{background:var(--bni-navy);border-color:var(--bni-navy);color:#fff}
+
+/* ── Grid ────────────────────────────── */
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;
+}
+.card{
+  position:relative;background:#fff;border-radius:var(--r-lg);
+  border:1px solid var(--line);box-shadow:var(--shadow-sm);
+  overflow:hidden;transition:transform .18s ease, box-shadow .18s ease, border-color .18s;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#D7DDE9}
+.card-top{
+  position:relative;height:130px;
+  background:linear-gradient(135deg,#1B3380,#0E1F5C);
+  display:flex;align-items:flex-end;padding:16px;
+}
+.card-top.featured-bg{background:linear-gradient(135deg,#FF8200,#FF6A00)}
+.card-top.archived-bg{background:linear-gradient(135deg,#10B981,#047857)}
+.card-top.upcoming-bg{background:linear-gradient(135deg,#1B3380,#0E1F5C)}
+.card-status{
+  position:absolute;top:12px;right:12px;
+  padding:4px 10px;border-radius:999px;
+  background:rgba(255,255,255,.18);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.04em;
+  backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.2);
+}
+.card-status.feat{background:#fff;color:#A95400}
+.card-status.arch{background:#fff;color:#047857}
+.card-status.up{background:#fff;color:#0E1F5C}
+.card-order{
+  position:absolute;left:14px;top:12px;
+  font-size:11px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.04em;
+}
+.card-body{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1}
+.card-name{font-size:18px;font-weight:800;letter-spacing:-.01em;margin:0}
+.card-role{font-size:13px;color:var(--ink-3);margin:4px 0 10px}
+.card-company{font-size:14px;font-weight:700;color:var(--bni-navy);margin:0 0 6px}
+.card-industry{font-size:13px;color:var(--ink-2);margin:0 0 14px;flex:1}
+.card-go{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 14px;border-radius:999px;
+  background:var(--line-2);color:var(--ink);font-size:12px;font-weight:700;
+  align-self:flex-start;transition:all .15s;
+}
+.card:hover .card-go{background:var(--bni-navy);color:#fff}
+.card-go.disabled{color:var(--ink-3);background:transparent;border:1px dashed var(--line);pointer-events:none}
+
+/* ── Share CTA section ─────────────────────────── */
+.share-cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.share-cta-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:30px;display:flex;flex-direction:column;gap:8px;transition:all .18s}
+.share-cta-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.share-cta-card.highlight{background:linear-gradient(135deg,#FFF4E5,#FFE6C9);border-color:#FFD09A}
+.share-cta-card.highlight .cta-eyebrow{color:var(--bni-orange-deep,#A95400)}
+.cta-eyebrow{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--bni-orange);text-transform:uppercase}
+.share-cta-card h3{margin:6px 0 4px;font-size:20px;letter-spacing:-.015em}
+.share-cta-card p{margin:0 0 14px;color:var(--ink-2);font-size:14px;line-height:1.55;flex:1}
+.share-cta-actions{display:flex;flex-wrap:wrap;gap:8px}
+@media (max-width:760px){.share-cta-grid{grid-template-columns:1fr}}
+
+/* ── How it works ────────────────────────────── */
+.how{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);
+  padding:34px;margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.how-step{display:flex;flex-direction:column;gap:8px}
+.how-num{
+  width:32px;height:32px;border-radius:10px;display:grid;place-items:center;
+  background:var(--bni-orange-bg);color:#A95400;font-weight:900;font-size:14px;
+}
+.how-step h3{margin:0;font-size:16px;letter-spacing:-.01em}
+.how-step p{margin:0;color:var(--ink-2);font-size:14px}
+
+/* ── Footer ────────────────────────────── */
+footer{
+  margin-top:80px;background:var(--bni-navy);color:#A6B0CC;
+}
+.foot-inner{max-width:1240px;margin:0 auto;padding:40px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+.foot-brand{color:#fff;font-weight:700}
+.foot-tag{font-size:12px}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width:880px){
+  .featured{grid-template-columns:1fr}
+  .featured-art{min-height:280px;padding:36px 24px}
+  .featured-art img{max-width:340px}
+  .how{grid-template-columns:1fr;padding:24px}
+}
+@media (max-width:640px){
+  .topbar-inner{padding:12px 16px}
+  .hero-inner{padding:56px 16px 48px}
+  .featured-wrap{padding:0 16px}
+  .featured-meta{padding:28px 22px 24px}
+  .section{padding:56px 16px 16px}
+  .hero-stats{gap:18px}
+  .hero-stat .num{font-size:26px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark">B</span>
+      <span class="brand-text">서초 BNI 메이저<small>검증된 전문가 39인 · 매주 1명 공개</small></span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <nav class="topbar-actions">
+      <a class="btn btn-ghost" href="intro.html">챕터 소개</a>
+      <a class="btn btn-ghost" href="#members">멤버</a>
+      <button class="btn btn-orange" id="topShareBtn">📢 외부에 공유</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="dot"></span>BNI Major · Seocho Chapter · 검증된 전문가 39인</div>
+    <h1>사업의 성공과 성장이<br/>필요한 대표님께,<br/><em>딱 맞는 전문가</em>가 있습니다.</h1>
+    <p>BNI 서초 메이저 챕터의 39명은 각 분야의 검증된 전문가입니다. 매주 한 분씩 깊이 있게 공개하는 디지털 명함 · 실물 명함 · 인포그래픽 · 상세 PPT를 통해, 우리 사업의 다음을 함께해줄 분을 직접 만나보세요.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num" id="statTotal">39</div><div class="lab">검증된 전문가</div></div>
+      <div class="hero-stat"><div class="num" id="statFeatured">1</div><div class="lab">이번 주 소개</div></div>
+      <div class="hero-stat"><div class="num" id="statCategories">10+</div><div class="lab">전문 분야</div></div>
+    </div>
+    <a class="hero-producer" href="#producer">
+      <div class="hp-avatar" id="hpAvatar">F</div>
+      <div class="hp-text">
+        <span class="hp-eyebrow">Producer · 운영자</span>
+        <span class="hp-line">미래소년 <strong>이형진</strong> — AI로 39명의 PR을 <em>자동화</em>하는 마케터</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<div class="featured-wrap" id="featured">
+  <article class="featured" id="featuredCard">
+    <!-- populated by JS -->
+  </article>
+</div>
+
+<section class="producer-section" id="producer">
+  <article class="producer">
+    <div class="producer-head">
+      <span class="pr-eyebrow">Producer · 이 페이지를 만든 사람</span>
+      <div class="pr-avatar" id="prAvatar">F</div>
+      <h3 class="pr-name">이형진<span>·</span>미래소년</h3>
+      <p class="pr-role">한국AI마케팅협회 / AI 토핑 플래너<br/>광고 기획 10년+ · AI 마케팅 자동화 전문</p>
+      <div class="pr-tags">
+        <span class="pr-tag">광고기획 10년+</span>
+        <span class="pr-tag">LG·해외 신제품 발표</span>
+        <span class="pr-tag">AI 강의·워크숍</span>
+        <span class="pr-tag">전자책 3권</span>
+      </div>
+    </div>
+    <div class="producer-body">
+      <p class="pr-quote">"AI가 조수만 다루는 게 아니라, <em>비즈니스를 실제로 움직이는</em> 도구가 된다는 걸 직접 보여드립니다."</p>
+      <p class="pr-text">이 사이트가 그 증명입니다. 39명 전문가를 매주 한 명씩 깊이 있게 소개하는 일은 손으로는 불가능합니다. 자료 정리부터 디지털 명함·인포그래픽 구성, 공유 키트까지 AI로 자동화했습니다.</p>
+      <p class="pr-text">다만 도구 자랑이 목적은 아닙니다. 39명 대표님들의 사업이 더 멀리 닿게 돕고 싶었고, <strong>AI로 비즈니스의 불편을 깨끗하게 없애는 것</strong> — 그게 미래소년이 하는 일입니다.</p>
+      <div class="pr-services">
+        <div class="pr-svc">
+          <span class="pr-svc-icon">🎓</span>
+          <h4 class="pr-svc-name">AI 강의·워크숍</h4>
+          <p class="pr-svc-desc">한국AI마케팅협회 / 대기업·중소기업 사내 교육</p>
+        </div>
+        <div class="pr-svc">
+          <span class="pr-svc-icon">⚙️</span>
+          <h4 class="pr-svc-name">AI 마케팅 자동화</h4>
+          <p class="pr-svc-desc">고객 DB 활용 콘텐츠 발송·운영 자동화 구축</p>
+        </div>
+        <div class="pr-svc">
+          <span class="pr-svc-icon">🎪</span>
+          <h4 class="pr-svc-name">광고·이벤트 기획</h4>
+          <p class="pr-svc-desc">LG·해외 대기업 신제품 발표 10년+ · 옥외광고·PPL 대행</p>
+        </div>
+        <div class="pr-svc">
+          <span class="pr-svc-icon">📚</span>
+          <h4 class="pr-svc-name">AI 콘텐츠 제작</h4>
+          <p class="pr-svc-desc">전자책 3권 · 유튜브 채널 3개월에 구독자 1,000+ 2개</p>
+        </div>
+      </div>
+      <div class="pr-cta">
+        <a class="pr-btn-orange" href="mailto:adjinpr@naver.com?subject=%5BBNI%20%EC%84%9C%EC%B4%88%20%EB%A9%94%EC%9D%B4%EC%A0%80%5D%20AI%20%EB%A7%88%EC%BC%80%ED%8C%85%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EB%AC%B8%EC%9D%98">✉ 비즈니스에 AI 시스템 문의하기</a>
+        <a class="pr-btn-ghost" href="intro.html">챕터 소개 페이지 →</a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="section" id="members">
+  <div class="section-h">
+    <h2>전체 멤버</h2>
+    <div class="meta" id="resultCount">39명</div>
+  </div>
+
+  <div class="filters">
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="search" type="search" placeholder="이름·회사·업종 검색" />
+    </label>
+    <div id="cats" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="section" id="share">
+  <div class="section-h">
+    <div>
+      <h2>도움이 필요한 대표님께 전해주세요</h2>
+      <div class="meta" style="margin-top:6px">주변에 사업의 성장을 고민하는 대표님이 계신가요? 링크 한 줄로 챕터 전체 또는 이번 주 전문가를 추천하실 수 있습니다. 메시지 템플릿·QR·채널별 공유까지 한 번에.</div>
+    </div>
+    <button class="btn btn-orange" id="openShareKit">📢 공유 키트 열기 →</button>
+  </div>
+  <div class="share-cta-grid">
+    <div class="share-cta-card">
+      <span class="cta-eyebrow">CHAPTER LINK</span>
+      <h3>전문가 39인 한 번에 소개</h3>
+      <p>BNI 서초 메이저가 어떤 분야의 검증된 전문가들로 구성됐는지, 매주 어떻게 한 분씩 깊이 있게 공개하는지를 한 페이지로 보여줍니다.</p>
+      <div class="share-cta-actions">
+        <a class="btn btn-primary" href="intro.html">소개 페이지 →</a>
+        <button class="btn btn-outline" data-share-mode="chapter">📋 메시지 템플릿</button>
+      </div>
+    </div>
+    <div class="share-cta-card highlight">
+      <span class="cta-eyebrow">FEATURED LINK · 이번 주</span>
+      <h3 id="featuredShareTitle">이번 주의 전문가 추천</h3>
+      <p id="featuredShareDesc"></p>
+      <div class="share-cta-actions">
+        <a class="btn btn-primary" id="featuredShareLink" href="#">상세 페이지 →</a>
+        <button class="btn btn-orange" id="featuredShareBtn">📢 이 분 추천하기</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="section-h"><h2>이렇게 운영됩니다</h2></div>
+  <div class="how">
+    <div class="how-step">
+      <div class="how-num">1</div>
+      <h3>매주 한 분, 깊이 있게</h3>
+      <p>한 주에 한 명의 전문가를 디지털 명함 · 명함 앞뒤 · 인포그래픽 · 상세 PPT 4종 자산으로 깊이 있게 소개합니다. 어떤 분인지 5분 안에 파악하실 수 있습니다.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-num">2</div>
+      <h3>어떤 분께 도움 되는지 명확</h3>
+      <p>각 전문가가 어떤 사업·어떤 상황의 대표님께 가장 큰 도움을 드릴 수 있는지 명확히 적혀 있어, "내 얘기인지" 바로 확인하실 수 있습니다.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-num">3</div>
+      <h3>바로 연결, 바로 미팅</h3>
+      <p>마음에 드는 전문가가 있다면 상세 페이지의 연락처로 바로 닿으실 수 있습니다. PDF·PPT 다운로드와 링크 공유도 한 번에 가능합니다.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">서초 BNI 메이저 챕터</div>
+      <div class="foot-tag">Givers Gain · Business Referral Organization</div>
+    </div>
+    <div class="foot-tag" id="updatedAt"></div>
+  </div>
+</footer>
+
+<script>
+const STATUS_LABEL = { featured:"이번 주", upcoming:"공개 예정", archived:"이전 피처드" };
+
+let data = null;
+
+async function loadData(){
+  const res = await fetch("data/members.json", {cache:"no-store"});
+  data = await res.json();
+  renderAll();
+}
+
+function renderAll(){
+  document.getElementById("statTotal").textContent = data.members.length;
+  document.getElementById("statFeatured").textContent = data.members.filter(m=>m.status==="featured").length;
+  const cats = [...new Set(data.members.map(m=>m.category).filter(Boolean))];
+  document.getElementById("statCategories").textContent = cats.length;
+  document.getElementById("updatedAt").textContent = "마지막 업데이트 · " + (data.lastUpdated || "");
+
+  renderFeatured();
+  renderCats(cats);
+  renderGrid();
+}
+
+function renderFeatured(){
+  const m = data.members.find(x => x.id === data.featuredId) || data.members[0];
+  // Update OG image dynamically with featured member's digital card
+  if(m.assets?.digitalCard){
+    const ogImg = document.getElementById("ogImage");
+    if(ogImg) ogImg.setAttribute("content", new URL(m.assets.digitalCard, location.href).toString());
+  }
+  // Update share section with featured member info
+  const ftTitle = document.getElementById("featuredShareTitle");
+  const ftDesc = document.getElementById("featuredShareDesc");
+  const ftLink = document.getElementById("featuredShareLink");
+  if(ftTitle) ftTitle.textContent = `${m.company} · ${m.name} 대표`;
+  if(ftDesc) ftDesc.textContent = (m.tagline || "") + (m.subTagline ? " — " + m.subTagline : "");
+  if(ftLink) ftLink.href = `member.html?id=${m.id}`;
+
+  const el = document.getElementById("featuredCard");
+  const expertiseChips = (m.expertise||[]).map(x=>`<span class="chip">${x}</span>`).join("");
+  const referralChips = (m.referralTargets||[]).map(x=>`<span class="chip">${x}</span>`).join("");
+  el.innerHTML = `
+    <div class="featured-meta">
+      <span class="feature-tag">FEATURED · ${data.lastUpdated}</span>
+      <div class="featured-name">${m.company} · ${m.title || "대표"} ${m.name}</div>
+      <h3 class="featured-headline">${m.tagline || ""}</h3>
+      <p class="featured-sub">${m.subTagline || ""}</p>
+      <dl class="featured-info">
+        <dt>전문분야</dt><dd>${(m.expertise||[]).join(" · ") || "-"}</dd>
+        <dt>이런 분께 추천</dt><dd>${(m.referralTargets||[]).join(" · ") || "-"}</dd>
+        <dt>연락처</dt><dd>${m.phone || "-"}</dd>
+      </dl>
+      ${expertiseChips ? `<div class="chips">${expertiseChips}</div>` : ""}
+      <div class="featured-cta">
+        <a class="btn btn-primary" href="member.html?id=${m.id}">상세 페이지 보기 →</a>
+        <a class="btn btn-ghost" href="${m.assets?.presentation || '#'}" download>PPT 다운로드</a>
+      </div>
+    </div>
+    <div class="featured-art">
+      <span class="featured-art-tag">디지털 명함</span>
+      <a href="member.html?id=${m.id}"><img src="${m.assets?.digitalCard || ''}" alt="${m.name} 디지털 명함" onerror="this.style.opacity=.3" /></a>
+    </div>
+  `;
+}
+
+function renderCats(cats){
+  const container = document.getElementById("cats");
+  const all = ["전체", ...cats];
+  container.innerHTML = all.map((c,i)=>`<button class="cat-chip ${i===0?'active':''}" data-cat="${c}">${c}</button>`).join("");
+  container.addEventListener("click", e=>{
+    const btn = e.target.closest(".cat-chip"); if(!btn) return;
+    container.querySelectorAll(".cat-chip").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    renderGrid();
+  });
+}
+
+function renderGrid(){
+  const q = (document.getElementById("search").value || "").trim().toLowerCase();
+  const activeCat = document.querySelector(".cat-chip.active")?.dataset.cat || "전체";
+  const filtered = data.members.filter(m=>{
+    if(activeCat!=="전체" && m.category !== activeCat) return false;
+    if(q){
+      const hay = [m.name,m.company,m.industry,m.category,m.tagline].filter(Boolean).join(" ").toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  document.getElementById("resultCount").textContent = `${filtered.length}명`;
+  const grid = document.getElementById("grid");
+  grid.innerHTML = filtered.map(m=>{
+    const isFeat = m.status==="featured";
+    const isArch = m.status==="archived";
+    const isReady = isFeat || isArch;
+    const stCls = isFeat ? "card-status feat" : isArch ? "card-status arch" : "card-status up";
+    const topCls = isFeat ? "card-top featured-bg" : isArch ? "card-top archived-bg" : "card-top upcoming-bg";
+    const status = STATUS_LABEL[m.status] || "공개 예정";
+    return `
+      <a class="card" href="${isReady?`member.html?id=${m.id}`:'#'}" ${isReady?'':'onclick="return false" style="cursor:default"'}>
+        <div class="${topCls}">
+          <span class="card-order">No. ${String(m.order).padStart(2,"0")}</span>
+          <span class="${stCls}">${status}</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">${m.name}</h3>
+          <div class="card-role">${m.title || "대표"}${m.category ? " · " + m.category : ""}</div>
+          <div class="card-company">${m.company || ""}</div>
+          <div class="card-industry">${m.industry || ""}</div>
+          <span class="card-go ${isReady?'':'disabled'}">${isReady?'프로필 보기 →':'준비중'}</span>
+        </div>
+      </a>
+    `;
+  }).join("");
+}
+
+document.getElementById("search").addEventListener("input", renderGrid);
+
+// Share Kit wiring
+function getFeaturedMember(){ return data?.members?.find(x => x.id === data.featuredId) || data?.members?.[0]; }
+function chapterUrl(){ return location.origin + location.pathname.replace(/[^/]*$/, ""); }
+document.getElementById("topShareBtn").addEventListener("click", ()=>{
+  if(!data || !window.ShareKit) return;
+  ShareKit.open({ mode:"chapter", member:getFeaturedMember(), data, url:chapterUrl(), chapterUrl:chapterUrl() });
+});
+document.getElementById("openShareKit").addEventListener("click", ()=>{
+  if(!data || !window.ShareKit) return;
+  ShareKit.open({ mode:"chapter", member:getFeaturedMember(), data, url:chapterUrl(), chapterUrl:chapterUrl() });
+});
+document.getElementById("featuredShareBtn").addEventListener("click", ()=>{
+  if(!data || !window.ShareKit) return;
+  const m = getFeaturedMember();
+  const memberUrl = chapterUrl() + "member.html?id=" + m.id;
+  ShareKit.open({ mode:"member", member:m, data, url:memberUrl, chapterUrl:chapterUrl() });
+});
+document.querySelectorAll("[data-share-mode]").forEach(b=>{
+  b.addEventListener("click", ()=>{
+    if(!data || !window.ShareKit) return;
+    const mode = b.dataset.shareMode;
+    const m = getFeaturedMember();
+    const url = mode === "member" ? chapterUrl() + "member.html?id=" + m.id : chapterUrl();
+    ShareKit.open({ mode, member:m, data, url, chapterUrl:chapterUrl() });
+  });
+});
+
+loadData().catch(err=>{
+  console.error(err);
+  document.getElementById("grid").innerHTML = `<div style="color:var(--ink-3);grid-column:1/-1;text-align:center;padding:40px">데이터 로드 실패. 로컬 서버로 열어주세요. (예: <code>python -m http.server 8765</code>)</div>`;
+});
+</script>
+</body>
+</html>

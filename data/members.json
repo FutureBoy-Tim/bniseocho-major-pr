@@ -44,7 +44,8 @@
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/jung-jihye/digital-card.png",
-        "infographic": "assets/members/jung-jihye/infographic.png"
+        "infographic": "assets/members/jung-jihye/infographic.png",
+        "weekly": "assets/members/jung-jihye/weekly.jpg"
       },
       "title": "마케팅상무",
       "companyEn": "Wise & Value Insurance",
@@ -724,7 +725,8 @@
       ],
       "assets": {
         "infographic": "assets/members/kim-sehan/infographic.png",
-        "cardFront": "assets/members/kim-sehan/card-front.png"
+        "cardFront": "assets/members/kim-sehan/card-front.png",
+        "weekly": "assets/members/kim-sehan/weekly.jpg"
       }
     },
     {
@@ -765,7 +767,10 @@
       "company": "로하디자인",
       "category": "디자인·공간",
       "industry": "인테리어",
-      "status": "upcoming"
+      "status": "upcoming",
+      "assets": {
+        "weekly": "assets/members/won-jihwan/weekly.jpg"
+      }
     },
     {
       "id": "huh-sungwook",
@@ -804,7 +809,10 @@
       "company": "법무법인 주연",
       "category": "법률·법무",
       "industry": "기업파산 전문 변호사",
-      "status": "upcoming"
+      "status": "upcoming",
+      "assets": {
+        "weekly": "assets/members/hyun-youngwoo/weekly.jpg"
+      }
     },
     {
       "id": "seo-yerim",
@@ -813,7 +821,10 @@
       "company": "성원 노동법률사무소",
       "category": "법률·법무",
       "industry": "공인노무사",
-      "status": "upcoming"
+      "status": "upcoming",
+      "assets": {
+        "weekly": "assets/members/seo-yerim/weekly.jpg"
+      }
     },
     {
       "id": "cho-heejung",
@@ -1290,6 +1301,38 @@
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/baek-eunju/digital-card.png"
+      }
+    },
+    {
+      "id": "na-eunhyuk",
+      "order": 42,
+      "name": "나은혁",
+      "title": "대표원장",
+      "company": "더밸런스 강남",
+      "companyEn": "The Balance Gangnam",
+      "category": "헬스·의료",
+      "industry": "피부과·안티에이징",
+      "tagline": "몸의 균형을 되찾는 강남 피부과",
+      "subTagline": "피부·건강·항노화를 하나로 케어하는 통합 진료",
+      "phone": "",
+      "email": "",
+      "address": "",
+      "expertise": [
+        "피부과 진료",
+        "안티에이징",
+        "통합 건강 케어"
+      ],
+      "referralTargets": [
+        "피부·건강·노화 관리가 필요한 대표",
+        "임원 건강검진·리트리트 프로그램 도입을 검토하는 회사",
+        "메디컬 서비스 파트너를 찾는 뷰티·웰니스 브랜드"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200",
+      "status": "upcoming",
+      "assets": {
+        "weekly": "assets/members/na-eunhyuk/weekly.jpg",
+        "weeklyBanner": "assets/members/na-eunhyuk/weekly-v2.jpg"
       }
     }
   ],

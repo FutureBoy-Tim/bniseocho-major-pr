@@ -1592,12 +1592,16 @@ function renderGrid(){
   document.getElementById("resultCount").textContent = `${filtered.length}명`;
   const grid = document.getElementById("grid");
   grid.innerHTML = filtered.map(m=>{
-    // 카드 상단에 디지털 명함의 회사·인물 부분을 배경으로 (BNI 오렌지 헤더는 잘라냄)
+    // 카드 상단 배경: 위클리 이미지 > 디지털 명함 순 (없으면 그라디언트)
+    const weekly = m.assets?.weekly;
     const dc = m.assets?.digitalCard;
-    const topStyle = dc
-      ? `background-image:url('${dc}');background-size:cover;background-position:center 42%;`
+    const bg = weekly || dc;
+    // 위클리(정사각형·인물 상단 배치)와 디지털 명함(세로형·회사명 하단)의 크롭 위치 다름
+    const bgPos = weekly ? "center 30%" : "center 42%";
+    const topStyle = bg
+      ? `background-image:url('${bg}');background-size:cover;background-position:${bgPos};`
       : "";
-    const topCls = dc ? "card-top card-top-photo" : "card-top";
+    const topCls = bg ? "card-top card-top-photo" : "card-top";
     return `
       <a class="card" href="member.html?id=${m.id}">
         <div class="${topCls}" style="${topStyle}">
