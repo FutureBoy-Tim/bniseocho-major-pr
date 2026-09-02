@@ -1596,8 +1596,11 @@ function renderGrid(){
     const weekly = m.assets?.weekly;
     const dc = m.assets?.digitalCard;
     const bg = weekly || dc;
-    // 위클리(정사각형·인물 상단 배치)와 디지털 명함(세로형·회사명 하단)의 크롭 위치 다름
-    const bgPos = weekly ? "center 30%" : "center 42%";
+    // 얼굴 좌표가 지정돼 있으면 그 값 우선, 없으면 이미지 타입별 기본값
+    // - 위클리(정사각형·얼굴 상단 중앙): "center 18%"
+    // - 디지털 명함(세로형·인물 우측 상단): "72% 22%"
+    const faceCenter = m.assets?.faceCenter?.[weekly ? 'weekly' : 'digitalCard'];
+    const bgPos = faceCenter || (weekly ? "center 18%" : "72% 22%");
     const topStyle = bg
       ? `background-image:url('${bg}');background-size:cover;background-position:${bgPos};`
       : "";
