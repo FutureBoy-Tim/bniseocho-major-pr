@@ -2,7 +2,7 @@
   "chapter": "BNI 서초 메이저 챕터",
   "tagline": "서로의 사업을 추천하는 사람들",
   "subtitle": "Business Referral Organization · Givers Gain",
-  "lastUpdated": "2026-07-19",
+  "lastUpdated": "2026-09-02",
   "featuredId": "lim-jonghee",
   "members": [
     {
@@ -38,7 +38,7 @@
       "id": "jung-jihye",
       "order": 2,
       "name": "정지혜",
-      "company": "밸류 마크 보험",
+      "company": "와이즈 앤 밸류 보험",
       "category": "금융·보험",
       "industry": "생명·손해보험",
       "status": "upcoming",
@@ -47,19 +47,21 @@
         "infographic": "assets/members/jung-jihye/infographic.png"
       },
       "title": "마케팅상무",
-      "companyEn": "Value Mark Insurance (와이즈앤밸류)",
+      "companyEn": "Wise & Value Insurance",
       "tagline": "조립설계로 보상의 꽃을 피우다",
       "subTagline": "11년 경력 생명보험·손해보험 우수 인증 설계사. 상위 0.2% 연도대상 연속 6회 달성",
       "phone": "010-7445-2919",
       "email": "stop1830@naver.com",
       "address": "경기도 성남시 분당구 판교역로 109, SK허브 c동 106호 와이즈앤밸류",
       "expertise": [
-        "딜사이트 경제TV 비급살롱 전문가 패널 정기출연",
+        "딜사이트 경제TV 비급살롱 패널",
+        "이데일리 TV 닥터인사이트 패널",
+        "이데일리 TV 해피라이프 패널",
         "11년 경력 생명보험·손해보험 우수 인증 설계사",
         "약관마스터자격증",
         "전) 인카금융서비스 명예이사",
         "상위 0.2% 연도대상 연속 6회 달성",
-        "억대 연봉 설계사 교육·코칭 전문"
+        "역대 연봉 설계사 교육·코칭 전문"
       ],
       "referralTargets": [
         "개인보험 보장분석·맞춤 컨설팅",
@@ -67,7 +69,7 @@
         "상속·증여 전문보험",
         "건물·공장·사업장 화재보험",
         "개인 연금·퇴직연금",
-        "5년·7년·10년 저축"
+        "5년·7년·10년 비과세 저축"
       ],
       "brandColor": "#1A1A1A",
       "accentColor": "#FF8200"
