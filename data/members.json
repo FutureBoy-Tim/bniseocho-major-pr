@@ -1409,6 +1409,19 @@
       },
       "presenterMemberId": "won-jihwan",
       "imageUrl": "assets/invitations/2026-09-02.jpg"
+    },
+    {
+      "volume": 60,
+      "date": "2026-09-09",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "허성욱",
+        "title": "대표",
+        "company": "케이디자인"
+      },
+      "presenterMemberId": "huh-sungwook",
+      "imageUrl": "assets/invitations/2026-09-09.jpg"
     }
   ]
 }
