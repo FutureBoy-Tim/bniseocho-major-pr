@@ -1370,6 +1370,45 @@
       },
       "presenterMemberId": "kim-jongyoon",
       "imageUrl": "assets/invitations/2026-07-22.jpg"
+    },
+    {
+      "volume": 56,
+      "date": "2026-08-12",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "김민영",
+        "title": "대표",
+        "company": "메디컬 웨이"
+      },
+      "presenterMemberId": "kim-minyoung",
+      "imageUrl": "assets/invitations/2026-08-12.jpg"
+    },
+    {
+      "volume": 57,
+      "date": "2026-08-19",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "정영걸",
+        "title": "대표",
+        "company": "애니픽"
+      },
+      "presenterMemberId": "jung-younggul",
+      "imageUrl": "assets/invitations/2026-08-19.jpg"
+    },
+    {
+      "volume": 59,
+      "date": "2026-09-02",
+      "dayKorean": "수",
+      "time": "06:20",
+      "presenter": {
+        "name": "원지환",
+        "title": "대표",
+        "company": "로하디자인"
+      },
+      "presenterMemberId": "won-jihwan",
+      "imageUrl": "assets/invitations/2026-09-02.jpg"
     }
   ]
 }
