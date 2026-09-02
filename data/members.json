@@ -45,7 +45,10 @@
       "assets": {
         "digitalCard": "assets/members/jung-jihye/digital-card.png",
         "infographic": "assets/members/jung-jihye/infographic.png",
-        "weekly": "assets/members/jung-jihye/weekly.jpg"
+        "weekly": "assets/members/jung-jihye/weekly.jpg",
+        "faceCenter": {
+          "weekly": "center 62%"
+        }
       },
       "title": "마케팅상무",
       "companyEn": "Wise & Value Insurance",
@@ -250,7 +253,10 @@
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/kim-boram/digital-card.png",
-        "infographic": "assets/members/kim-boram/infographic.png"
+        "infographic": "assets/members/kim-boram/infographic.png",
+        "faceCenter": {
+          "digitalCard": "78% 38%"
+        }
       },
       "title": "대표",
       "companyEn": "TSC International",
@@ -835,7 +841,10 @@
       "industry": "해외 인플루언서 마케팅",
       "status": "upcoming",
       "assets": {
-        "digitalCard": "assets/members/cho-heejung/digital-card.png"
+        "digitalCard": "assets/members/cho-heejung/digital-card.png",
+        "faceCenter": {
+          "digitalCard": "75% 34%"
+        }
       },
       "title": "대표",
       "companyEn": "K-Love Marketing",
@@ -1273,39 +1282,8 @@
       "subTagline": "독일 플로리스트 교육을 기반으로 꽃상품과 전문교육을 통해 새로운 직업과 가치를 만들어갑니다"
     },
     {
-      "id": "baek-eunju",
-      "order": 41,
-      "name": "백은주",
-      "title": "대표",
-      "company": "홍콩다방 코리아",
-      "companyEn": "Sweet Hongkong Cafe",
-      "category": "F&B·프랜차이즈",
-      "industry": "홍콩식 디저트 카페",
-      "tagline": "홍콩의 맛과 감성을 담은 디저트 카페, 홍콩다방",
-      "subTagline": "홍콩와플과 홍콩밀크티를 대표 메뉴로 하는 F&B 브랜드",
-      "phone": "010-9918-5593",
-      "email": "candy@hkdabang.com",
-      "address": "김포시 대곶면 율마로 135번길 57",
-      "expertise": [
-        "프랜차이즈",
-        "식품제조",
-        "특수상권 운영"
-      ],
-      "referralTargets": [
-        "쇼핑몰·백화점·호텔·대학 등 특수상권 입점 및 브랜드 콜라보 담당자",
-        "홍콩다방과 함께할 가맹·사업파트너",
-        "새로운 콘텐츠를 만들 수 있는 식품·유통·라이프스타일 브랜드 콜라보 담당자"
-      ],
-      "brandColor": "#1A1A1A",
-      "accentColor": "#FF8200",
-      "status": "upcoming",
-      "assets": {
-        "digitalCard": "assets/members/baek-eunju/digital-card.png"
-      }
-    },
-    {
       "id": "na-eunhyuk",
-      "order": 42,
+      "order": 41,
       "name": "나은혁",
       "title": "대표원장",
       "company": "더밸런스 강남",
@@ -1332,7 +1310,41 @@
       "status": "upcoming",
       "assets": {
         "weekly": "assets/members/na-eunhyuk/weekly.jpg",
-        "weeklyBanner": "assets/members/na-eunhyuk/weekly-v2.jpg"
+        "weeklyBanner": "assets/members/na-eunhyuk/weekly-v2.jpg",
+        "faceCenter": {
+          "weekly": "center 62%"
+        }
+      }
+    },
+    {
+      "id": "baek-eunju",
+      "order": 42,
+      "name": "백은주",
+      "title": "대표",
+      "company": "홍콩다방 코리아",
+      "companyEn": "Sweet Hongkong Cafe",
+      "category": "F&B·프랜차이즈",
+      "industry": "홍콩식 디저트 카페",
+      "tagline": "홍콩의 맛과 감성을 담은 디저트 카페, 홍콩다방",
+      "subTagline": "홍콩와플과 홍콩밀크티를 대표 메뉴로 하는 F&B 브랜드",
+      "phone": "010-9918-5593",
+      "email": "candy@hkdabang.com",
+      "address": "김포시 대곶면 율마로 135번길 57",
+      "expertise": [
+        "프랜차이즈",
+        "식품제조",
+        "특수상권 운영"
+      ],
+      "referralTargets": [
+        "쇼핑몰·백화점·호텔·대학 등 특수상권 입점 및 브랜드 콜라보 담당자",
+        "홍콩다방과 함께할 가맹·사업파트너",
+        "새로운 콘텐츠를 만들 수 있는 식품·유통·라이프스타일 브랜드 콜라보 담당자"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/baek-eunju/digital-card.png"
       }
     }
   ],
