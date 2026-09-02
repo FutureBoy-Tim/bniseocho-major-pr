@@ -44,11 +44,7 @@
       "status": "upcoming",
       "assets": {
         "digitalCard": "assets/members/jung-jihye/digital-card.png",
-        "infographic": "assets/members/jung-jihye/infographic.png",
-        "weekly": "assets/members/jung-jihye/weekly.jpg",
-        "faceCenter": {
-          "weekly": "center 62%"
-        }
+        "infographic": "assets/members/jung-jihye/infographic.png"
       },
       "title": "마케팅상무",
       "companyEn": "Wise & Value Insurance",
