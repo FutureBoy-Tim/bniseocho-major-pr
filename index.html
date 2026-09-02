@@ -1596,10 +1596,13 @@ function renderGrid(){
   document.getElementById("resultCount").textContent = `${filtered.length}명`;
   const grid = document.getElementById("grid");
   grid.innerHTML = filtered.map(m=>{
-    // 카드 본문 최상단 이미지: 위클리 > 디지털 명함 순. 상단 회색 밴드엔 배경 안 넣음(광고 카피 텍스트가 잡히지 않게).
-    const weekly = m.assets?.weekly;
+    // 카드 본문 최상단 이미지 (기준: 정지혜 대표 카드 스타일).
+    // 명함(digitalCard) 우선 사용 → 회사명·얼굴·연락처가 안정적으로 잘 잡힘.
+    // 명함이 없는 대표(김세한·서예림·원지환·현영우·나은혁 등)만 위클리 fallback.
+    // 상단 회색 밴드엔 배경 안 넣음(광고 카피 텍스트가 잡히지 않게).
     const dc = m.assets?.digitalCard;
-    const bg = weekly || dc;
+    const weekly = m.assets?.weekly;
+    const bg = dc || weekly;
     // 얼굴/명함 좌표: 지정값 > 타입 기본값
     // 상단 광고 카피("사업가가 망하지 않도록 하는 전문가" 등)를 잘라내고
     // 회사명·인물·연락처가 잡히도록 세로 크롭 위치를 아래로 이동.
