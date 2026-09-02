@@ -716,9 +716,9 @@ img{max-width:100%;display:block}
   font-size:11px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:.04em;
   text-shadow:0 1px 3px rgba(0,0,0,.35);
 }
-/* 카드 본문 최상단 명함(또는 위클리) 이미지: 명함 전체를 crop 없이 잘 보이게 */
+/* 카드 본문 최상단 명함(또는 위클리) 이미지: 상단 광고 카피는 잘리고 회사·인물이 보이게 */
 .card-photo{
-  width:100%;aspect-ratio:5/3;object-fit:cover;object-position:center 25%;
+  width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 42%;
   background:#F4EEE1;display:block;border-radius:8px;margin:-8px 0 14px;
   transition:transform .3s;
 }
@@ -1601,10 +1601,12 @@ function renderGrid(){
     const dc = m.assets?.digitalCard;
     const bg = weekly || dc;
     // 얼굴/명함 좌표: 지정값 > 타입 기본값
-    // - 위클리(정사각형·얼굴 상단): "center 20%"
-    // - 디지털 명함(세로형·회사~인물 부분): "center 30%"
+    // 상단 광고 카피("사업가가 망하지 않도록 하는 전문가" 등)를 잘라내고
+    // 회사명·인물·연락처가 잡히도록 세로 크롭 위치를 아래로 이동.
+    // - 위클리(정사각형): "center 45%"
+    // - 디지털 명함(세로형): "center 45%"
     const faceCenter = m.assets?.faceCenter?.[weekly ? 'weekly' : 'digitalCard'];
-    const photoPos = faceCenter || (weekly ? "center 20%" : "center 30%");
+    const photoPos = faceCenter || (weekly ? "center 45%" : "center 45%");
     const photoImg = bg
       ? `<img class="card-photo" src="${bg}" alt="${m.name} ${m.company || ''} 소개" loading="lazy" style="object-position:${photoPos}" />`
       : "";
