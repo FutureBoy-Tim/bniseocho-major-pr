@@ -282,7 +282,9 @@
       "industry": "유튜버·인플루언서 마케팅·공동구매",
       "status": "upcoming",
       "assets": {
-        "digitalCard": "assets/members/han-jongtae/digital-card.png"
+        "digitalCard": "assets/members/han-jongtae/digital-card.png",
+        "cardFront": "assets/members/han-jongtae/card-front.png",
+        "cardBack": "assets/members/han-jongtae/card-back.png"
       },
       "title": "대표",
       "companyEn": "FlowLink",
