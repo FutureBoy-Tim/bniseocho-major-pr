@@ -208,39 +208,8 @@
       }
     },
     {
-      "id": "kim-boram",
-      "order": 7,
-      "name": "김보람",
-      "company": "TSC 인터내셔날",
-      "category": "글로벌·유통",
-      "industry": "K뷰티·이미용 제품 미국 수출",
-      "status": "upcoming",
-      "assets": {
-        "digitalCard": "assets/members/kim-boram/digital-card.png",
-        "infographic": "assets/members/kim-boram/infographic.png"
-      },
-      "title": "대표",
-      "companyEn": "TSC International",
-      "tagline": "이미용 제품 미국 수출 및 유통",
-      "subTagline": "K뷰티는 지속적으로 확장될 것입니다. 전세계 바이어와 거래처에 한국의 유망한 이미용 브랜드 제품을 소개",
-      "phone": "010-9633-0385",
-      "email": "b.kim@tscgroupintl.com",
-      "address": "강남구 강남대로 628, 비율라빌딩 2층",
-      "expertise": [
-        "더마 화장품",
-        "전문가용 이미용 제품"
-      ],
-      "referralTargets": [
-        "새로운 비즈니스 모델로 이미용 제품을 수출하고 싶은 대표",
-        "중국 거래처로 이미용 제품을 수출하고 싶은 대표",
-        "이미용 제품들로 지속적인 수익구조를 가지고 싶은 인플루언서"
-      ],
-      "brandColor": "#1A1A1A",
-      "accentColor": "#FF8200"
-    },
-    {
       "id": "lee-giju",
-      "order": 8,
+      "order": 7,
       "name": "이기주",
       "company": "비더",
       "category": "의료·글로벌",
@@ -272,7 +241,7 @@
     },
     {
       "id": "yoo-chihoon",
-      "order": 9,
+      "order": 8,
       "name": "유치훈",
       "company": "점포라인",
       "category": "창업·중개",
@@ -306,7 +275,7 @@
     },
     {
       "id": "han-jongtae",
-      "order": 10,
+      "order": 9,
       "name": "한종태",
       "company": "(주) 플로우링크",
       "category": "인플루언서 마케팅",
@@ -338,7 +307,7 @@
     },
     {
       "id": "chae-mincheol",
-      "order": 11,
+      "order": 10,
       "name": "채민철",
       "company": "브리튼 청담",
       "category": "패션·비스포크",
@@ -368,7 +337,7 @@
     },
     {
       "id": "kim-eunsong",
-      "order": 12,
+      "order": 11,
       "name": "김은송",
       "company": "로야디",
       "category": "F&B·선물",
@@ -399,7 +368,7 @@
     },
     {
       "id": "kang-woogyu",
-      "order": 13,
+      "order": 12,
       "name": "강우규",
       "company": "(주)아이오토스",
       "category": "자동차",
@@ -427,7 +396,7 @@
     },
     {
       "id": "kim-jongyoon",
-      "order": 14,
+      "order": 13,
       "name": "김종윤",
       "company": "와이즈컨설팅",
       "category": "금융·컨설팅",
@@ -458,42 +427,8 @@
       "accentColor": "#FF8200"
     },
     {
-      "id": "park-soochul",
-      "order": 15,
-      "name": "박수철",
-      "company": "에이온",
-      "category": "웹·디자인",
-      "industry": "웹사이트·쇼핑몰 제작",
-      "status": "upcoming",
-      "assets": {
-        "digitalCard": "assets/members/park-soochul/digital-card.png"
-      },
-      "title": "대표",
-      "companyEn": "EYON",
-      "tagline": "웹사이트를 넘어 브랜드의 가치를 설계합니다",
-      "subTagline": "웹사이트와 쇼핑몰을 기획부터 디자인, 개발까지 원스톱으로 제작하는 디지털 크리에이티브 에이전시",
-      "phone": "010-6250-7783",
-      "email": "team@eyon.co.kr",
-      "address": "경기 화성시 동탄대로 677-2 효성ICT타워 1014호",
-      "expertise": [
-        "웹사이트 제작",
-        "쇼핑몰 개발",
-        "웹사이트 유지보수 (기존 웹사이트 수정)",
-        "웹사이트·쇼핑몰 운영대행",
-        "온라인 마케팅 (온라인광고, 콘텐츠 발행)",
-        "상세페이지·랜딩페이지 디자인"
-      ],
-      "referralTargets": [
-        "웹사이트·쇼핑몰 제작이 필요한 업체",
-        "기존 웹사이트의 유지보수가 필요한 업체",
-        "웹사이트·쇼핑몰 운영대행이 필요하신 분"
-      ],
-      "brandColor": "#1A1A1A",
-      "accentColor": "#FF8200"
-    },
-    {
       "id": "kim-minyoung",
-      "order": 16,
+      "order": 14,
       "name": "김민영",
       "company": "메디컬웨이",
       "category": "의료 마케팅",
@@ -530,7 +465,7 @@
     },
     {
       "id": "park-sunyoung",
-      "order": 17,
+      "order": 15,
       "name": "박신영",
       "company": "레르타",
       "category": "패션·주얼리",
@@ -565,7 +500,7 @@
     },
     {
       "id": "jung-younggul",
-      "order": 18,
+      "order": 16,
       "name": "정영걸",
       "company": "(주)애니픽",
       "category": "펫·바이오",
@@ -597,7 +532,7 @@
     },
     {
       "id": "lee-gihaeng",
-      "order": 19,
+      "order": 17,
       "name": "이기행",
       "company": "다유온",
       "category": "경영지원",
@@ -628,7 +563,7 @@
     },
     {
       "id": "kim-sungjun",
-      "order": 20,
+      "order": 18,
       "name": "김성준",
       "company": "아티움 특허법률사무소",
       "category": "법률·특허",
@@ -659,7 +594,7 @@
     },
     {
       "id": "lee-hyungjin",
-      "order": 21,
+      "order": 19,
       "name": "이형진",
       "company": "한국 AI 마케팅 협회",
       "category": "AI 마케팅",
@@ -695,7 +630,7 @@
     },
     {
       "id": "seo-seungwan",
-      "order": 22,
+      "order": 20,
       "name": "서승완",
       "company": "(주)수완메디칼",
       "category": "의료·CSO",
@@ -726,7 +661,7 @@
     },
     {
       "id": "kim-sehan",
-      "order": 23,
+      "order": 21,
       "name": "김세한",
       "company": "하나증권 THE센터필드",
       "category": "금융",
@@ -735,7 +670,7 @@
     },
     {
       "id": "kim-jongmyung",
-      "order": 24,
+      "order": 22,
       "name": "김종명",
       "company": "KT 세이노",
       "category": "통신·IT",
@@ -766,7 +701,7 @@
     },
     {
       "id": "won-jihwan",
-      "order": 25,
+      "order": 23,
       "name": "원지환",
       "company": "로하디자인",
       "category": "디자인·공간",
@@ -775,7 +710,7 @@
     },
     {
       "id": "huh-sungwook",
-      "order": 26,
+      "order": 24,
       "name": "허성욱",
       "company": "케이디자인",
       "category": "인쇄·디자인",
@@ -805,7 +740,7 @@
     },
     {
       "id": "hyun-youngwoo",
-      "order": 27,
+      "order": 25,
       "name": "현영우",
       "company": "법무법인 주연",
       "category": "법률·법무",
@@ -814,7 +749,7 @@
     },
     {
       "id": "seo-yerim",
-      "order": 28,
+      "order": 26,
       "name": "서예림",
       "company": "성원 노동법률사무소",
       "category": "법률·법무",
@@ -823,7 +758,7 @@
     },
     {
       "id": "cho-heejung",
-      "order": 29,
+      "order": 27,
       "name": "조희정",
       "company": "클로버마케팅",
       "category": "글로벌 마케팅",
@@ -854,7 +789,7 @@
     },
     {
       "id": "jung-jinkwon",
-      "order": 30,
+      "order": 28,
       "name": "정진권",
       "company": "법무법인 소울 신사본점",
       "category": "법률·세무",
@@ -885,7 +820,7 @@
     },
     {
       "id": "kim-junghyun",
-      "order": 31,
+      "order": 29,
       "name": "김정현",
       "company": "원즈커피",
       "category": "식음·컨설팅",
@@ -917,7 +852,7 @@
     },
     {
       "id": "jang-hyoseok",
-      "order": 32,
+      "order": 30,
       "name": "장효석",
       "title": "대표",
       "company": "이상한리뷰의앨리스",
@@ -963,7 +898,7 @@
     },
     {
       "id": "kim-suji",
-      "order": 33,
+      "order": 31,
       "name": "김수지",
       "title": "대표",
       "company": "가온솔루션",
@@ -1000,7 +935,7 @@
     },
     {
       "id": "nam-sangwoo",
-      "order": 34,
+      "order": 32,
       "name": "남상우",
       "title": "행정사",
       "company": "서리풀행정사 사무소",
@@ -1044,7 +979,7 @@
     },
     {
       "id": "lee-eunsoo",
-      "order": 35,
+      "order": 33,
       "name": "이은수",
       "title": "대표",
       "company": "주식회사 네오인프라",
@@ -1083,7 +1018,7 @@
     },
     {
       "id": "kim-sunggun",
-      "order": 36,
+      "order": 34,
       "name": "김성군",
       "title": "대표",
       "company": "골든프로",
@@ -1116,7 +1051,7 @@
     },
     {
       "id": "park-sangseol",
-      "order": 37,
+      "order": 35,
       "name": "박상설",
       "title": "대표",
       "company": "메이크원엔터테인먼트",
@@ -1147,7 +1082,7 @@
     },
     {
       "id": "lee-jaegwan",
-      "order": 38,
+      "order": 36,
       "name": "이재관",
       "title": "대표",
       "company": "무한대",
@@ -1177,7 +1112,7 @@
     },
     {
       "id": "ko-ho",
-      "order": 39,
+      "order": 37,
       "name": "고호",
       "title": "대표",
       "company": "애스크",
@@ -1206,7 +1141,7 @@
     },
     {
       "id": "choi-kyungae",
-      "order": 40,
+      "order": 38,
       "name": "최경애",
       "title": "대표",
       "company": "TY라이프",
@@ -1236,7 +1171,7 @@
     },
     {
       "id": "ki-youngae",
-      "order": 41,
+      "order": 39,
       "name": "기영애",
       "title": "대표",
       "company": "꽃스러움",
@@ -1266,6 +1201,37 @@
         "digitalCard": "assets/members/ki-youngae/digital-card.png"
       },
       "subTagline": "독일 플로리스트 교육을 기반으로 꽃상품과 전문교육을 통해 새로운 직업과 가치를 만들어갑니다"
+    },
+    {
+      "id": "baek-eunju",
+      "order": 40,
+      "name": "백은주",
+      "title": "대표",
+      "company": "홍콩다방 코리아",
+      "companyEn": "Sweet Hongkong Cafe",
+      "category": "F&B·프랜차이즈",
+      "industry": "홍콩식 디저트 카페",
+      "tagline": "홍콩의 맛과 감성을 담은 디저트 카페, 홍콩다방",
+      "subTagline": "홍콩와플과 홍콩밀크티를 대표 메뉴로 하는 F&B 브랜드",
+      "phone": "010-9918-5593",
+      "email": "candy@hkdabang.com",
+      "address": "김포시 대곶면 율마로 135번길 57",
+      "expertise": [
+        "프랜차이즈",
+        "식품제조",
+        "특수상권 운영"
+      ],
+      "referralTargets": [
+        "쇼핑몰·백화점·호텔·대학 등 특수상권 입점 및 브랜드 콜라보 담당자",
+        "홍콩다방과 함께할 가맹·사업파트너",
+        "새로운 콘텐츠를 만들 수 있는 식품·유통·라이프스타일 브랜드 콜라보 담당자"
+      ],
+      "brandColor": "#1A1A1A",
+      "accentColor": "#FF8200",
+      "status": "upcoming",
+      "assets": {
+        "digitalCard": "assets/members/baek-eunju/digital-card.png"
+      }
     }
   ],
   "meeting": {
