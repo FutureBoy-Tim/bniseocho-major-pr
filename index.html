@@ -705,13 +705,21 @@ img{max-width:100%;display:block}
 }
 .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#D7DDE9}
 .card-top{
-  position:relative;height:130px;
+  position:relative;height:170px;
   background:linear-gradient(135deg,#1B3380,#0E1F5C);
   display:flex;align-items:flex-end;padding:16px;
+  overflow:hidden;
+}
+/* 명함 배경이 있는 카드: 살짝 어두운 오버레이로 No. 라벨 가독성 확보 */
+.card-top.card-top-photo{background-color:#F4F1E9}
+.card-top.card-top-photo::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 100%);
 }
 .card-order{
-  position:absolute;left:14px;top:12px;
-  font-size:11px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.04em;
+  position:absolute;left:14px;top:12px;z-index:2;
+  font-size:11px;font-weight:700;color:rgba(255,255,255,.9);letter-spacing:.04em;
+  text-shadow:0 1px 3px rgba(0,0,0,.4);
 }
 .card-body{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1}
 .card-name{font-size:18px;font-weight:800;letter-spacing:-.01em;margin:0}
@@ -1096,6 +1104,11 @@ footer{
     <h3 class="invite-upcoming-h">다음 주차 초대장 미리보기</h3>
     <div class="invite-upcoming-grid" id="inviteUpcoming"><!-- populated by JS --></div>
   </div>
+  <!-- 지난 초대장 히스토리 -->
+  <div class="invite-upcoming invite-past" id="invitePastWrap" style="display:none">
+    <h3 class="invite-upcoming-h">지난 조찬모임 초대장 히스토리</h3>
+    <div class="invite-upcoming-grid" id="invitePast"><!-- populated by JS --></div>
+  </div>
 </section>
 
 <section class="section" id="members">
@@ -1410,8 +1423,8 @@ function renderInvitation(){
     navigator.clipboard.writeText(`https://bniseocho.kr/#invitation`).then(()=>toast("초대장 링크가 복사되었습니다."));
   });
 
-  // 다음 주차 미리보기 (전체 표시 + 카드별 다운로드 버튼)
-  upcoming.innerHTML = futureOthers.map(inv=>{
+  // 카드 렌더 헬퍼 (재사용)
+  const renderInviteCard = (inv) => {
     const d = new Date(inv.date);
     const dlName = `BNI_Major_Vol${inv.volume}_${inv.date}.jpg`;
     return `
@@ -1428,11 +1441,34 @@ function renderInvitation(){
         </div>
       </div>
     `;
-  }).join("");
-  // 이미지 영역 클릭 → 라이트박스 (다운로드 링크는 별도)
-  upcoming.querySelectorAll(".invite-upcoming-imgwrap").forEach(c=>{
+  };
+
+  // 다음 주차 미리보기 (미래)
+  upcoming.innerHTML = futureOthers.map(renderInviteCard).join("");
+
+  // 지난 초대장 (cutoff 지난 것들, current 제외) — 최신순
+  const pastList = sorted.filter(inv => {
+    if (inv.date === current.date) return false;
+    const cutoff = new Date(`${inv.date}T09:00:00`);
+    return now >= cutoff;
+  }).reverse();
+  const pastWrap = document.getElementById("invitePastWrap");
+  const pastGrid = document.getElementById("invitePast");
+  if (pastGrid && pastWrap){
+    if (pastList.length){
+      pastGrid.innerHTML = pastList.map(renderInviteCard).join("");
+      pastWrap.style.display = "";
+    } else {
+      pastWrap.style.display = "none";
+    }
+  }
+
+  // 이미지 영역 클릭 → 라이트박스 (미래+과거 모두)
+  document.querySelectorAll("#inviteUpcoming .invite-upcoming-imgwrap, #invitePast .invite-upcoming-imgwrap").forEach(c=>{
     c.addEventListener("click", ()=>{
-      openInviteLightbox(c.dataset.href, c.closest(".invite-upcoming-card").querySelector(".invite-upcoming-dl").href, c.closest(".invite-upcoming-card").querySelector(".invite-upcoming-dl").getAttribute("download"));
+      const card = c.closest(".invite-upcoming-card");
+      const dl = card.querySelector(".invite-upcoming-dl");
+      openInviteLightbox(c.dataset.href, dl.href, dl.getAttribute("download"));
     });
   });
 }
@@ -1556,9 +1592,15 @@ function renderGrid(){
   document.getElementById("resultCount").textContent = `${filtered.length}명`;
   const grid = document.getElementById("grid");
   grid.innerHTML = filtered.map(m=>{
+    // 카드 상단에 디지털 명함의 회사·인물 부분을 배경으로 (BNI 오렌지 헤더는 잘라냄)
+    const dc = m.assets?.digitalCard;
+    const topStyle = dc
+      ? `background-image:url('${dc}');background-size:cover;background-position:center 42%;`
+      : "";
+    const topCls = dc ? "card-top card-top-photo" : "card-top";
     return `
       <a class="card" href="member.html?id=${m.id}">
-        <div class="card-top">
+        <div class="${topCls}" style="${topStyle}">
           <span class="card-order">No. ${String(m.order).padStart(2,"0")}</span>
         </div>
         <div class="card-body">
