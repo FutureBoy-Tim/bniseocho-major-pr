@@ -665,10 +665,36 @@
       "id": "kim-sehan",
       "order": 21,
       "name": "김세한",
-      "company": "하나증권 THE센터필드",
-      "category": "금융",
-      "industry": "PB(해외주식, ETF 전문)",
-      "status": "upcoming"
+      "company": "하나증권 THE 센터필드 W",
+      "category": "금융·자산관리",
+      "industry": "프라이빗 뱅킹·포트폴리오 매니징",
+      "status": "upcoming",
+      "title": "Gold PB팀장",
+      "companyEn": "Hana Securities · THE Centerfield W",
+      "tagline": "포트폴리오 매니징 전략으로 고객 자산의 성장을 설계하는 하나증권 프라이빗뱅커",
+      "subTagline": "금융자산과 부동산자산을 아우르는 맞춤형 포트폴리오 매니징 (자산 진단 → 포트폴리오 설계 → 투자 실행 → 사후 관리)",
+      "phone": "010-6252-5870",
+      "email": "fran174@gmail.com",
+      "address": "서울시 강남구 테헤란로 231, 센터필드 EAST타워 4층",
+      "expertise": [
+        "해외주식",
+        "해외채권",
+        "ETF",
+        "부동산",
+        "퇴직연금",
+        "맞춤형 자산관리·글로벌 투자 솔루션",
+        "장기 동행형 사후관리 (리밸런싱·리스크 관리)"
+      ],
+      "referralTargets": [
+        "고액자산가",
+        "상장사 및 비상장 법인 대표",
+        "법인 CFO(재무담당자)",
+        "퇴직연금 도입 예정인 기업"
+      ],
+      "assets": {
+        "infographic": "assets/members/kim-sehan/infographic.png",
+        "cardFront": "assets/members/kim-sehan/card-front.png"
+      }
     },
     {
       "id": "kim-jongmyung",
