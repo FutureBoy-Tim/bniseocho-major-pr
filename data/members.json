@@ -2,8 +2,8 @@
   "chapter": "BNI 서초 메이저 챕터",
   "tagline": "서로의 사업을 추천하는 사람들",
   "subtitle": "Business Referral Organization · Givers Gain",
-  "lastUpdated": "2026-09-02",
-  "featuredId": "lim-jonghee",
+  "lastUpdated": "2026-11-23",
+  "featuredId": "nam-sangwoo",
   "members": [
     {
       "id": "jung-wonok",
@@ -198,7 +198,7 @@
       "brandColor": "#1A1A1A",
       "accentColor": "#FF8200",
       "publishedAt": "2026-05-23",
-      "status": "featured",
+      "status": "archived",
       "assets": {
         "digitalCard": "assets/members/lim-jonghee/digital-card.png",
         "cardFront": "assets/members/lim-jonghee/card-front.png",
@@ -1016,9 +1016,10 @@
       "brandColor": "#0E1F5C",
       "accentColor": "#FF8200",
       "publishedAt": "2026-05-26",
-      "status": "upcoming",
+      "status": "featured",
       "assets": {
-        "digitalCard": "assets/members/nam-sangwoo/digital-card.png"
+        "digitalCard": "assets/members/nam-sangwoo/digital-card.png",
+        "presentation": "assets/members/nam-sangwoo/presentation.pptx"
       }
     },
     {
